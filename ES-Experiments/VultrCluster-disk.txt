@@ -1,0 +1,243 @@
+root@vm-vultr-2:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.22909 s, 427 MB/s
+root@vm-vultr-2:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.06805 s, 491 MB/s
+root@vm-vultr-2:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-2:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.18524 s, 442 MB/s
+root@vm-vultr-2:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-2:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.27133 s, 412 MB/s
+root@vm-vultr-2:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.1119 s, 472 MB/s
+root@vm-vultr-2:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-2:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.4409 s, 364 MB/s
+root@vm-vultr-2:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.02877 s, 510 MB/s
+root@vm-vultr-2:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-2:~# 
+
+
+root@vm-vultr-3:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.06333 s, 493 MB/s
+root@vm-vultr-3:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.19518 s, 439 MB/s
+root@vm-vultr-3:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-3:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.09901 s, 477 MB/s
+root@vm-vultr-3:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.15525 s, 454 MB/s
+root@vm-vultr-3:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-3:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.2438 s, 422 MB/s
+root@vm-vultr-3:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.05056 s, 499 MB/s
+root@vm-vultr-3:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-3:~# 
+
+
+root@vm-vultr-4:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.18222 s, 443 MB/s
+root@vm-vultr-4:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.17212 s, 447 MB/s
+root@vm-vultr-4:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-4:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.13229 s, 463 MB/s
+root@vm-vultr-4:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 0.995141 s, 527 MB/s
+root@vm-vultr-4:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-4:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.09182 s, 480 MB/s
+root@vm-vultr-4:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.16521 s, 450 MB/s
+root@vm-vultr-4:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-4:~# 
+
+
+root@vm-vultr-5:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.13226 s, 463 MB/s
+root@vm-vultr-5:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.09521 s, 479 MB/s
+root@vm-vultr-5:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-5:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.1088 s, 473 MB/s
+root@vm-vultr-5:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.18511 s, 442 MB/s
+root@vm-vultr-5:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-5:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.1507 s, 456 MB/s
+root@vm-vultr-5:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.01823 s, 515 MB/s
+root@vm-vultr-5:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-5:~# 
+
+
+root@vm-vultr-6:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.08972 s, 481 MB/s
+root@vm-vultr-6:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 0.99512 s, 527 MB/s
+root@vm-vultr-6:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-6:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.06993 s, 490 MB/s
+root@vm-vultr-6:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 0.94998 s, 552 MB/s
+root@vm-vultr-6:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-6:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.09207 s, 480 MB/s
+root@vm-vultr-6:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 0.932294 s, 562 MB/s
+root@vm-vultr-6:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-6:~# 
+
+
+root@vm-vultr-7:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.18091 s, 444 MB/s
+root@vm-vultr-7:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.0633 s, 493 MB/s
+root@vm-vultr-7:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-7:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.36377 s, 384 MB/s
+root@vm-vultr-7:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.29143 s, 406 MB/s
+root@vm-vultr-7:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-7:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.1646 s, 450 MB/s
+root@vm-vultr-7:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.28096 s, 409 MB/s
+root@vm-vultr-7:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-7:~# 
+
+
+root@vm-vultr-8:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.10126 s, 476 MB/s
+root@vm-vultr-8:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 0.982381 s, 534 MB/s
+root@vm-vultr-8:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-8:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.16237 s, 451 MB/s
+root@vm-vultr-8:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 0.935728 s, 560 MB/s
+root@vm-vultr-8:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-8:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.14897 s, 456 MB/s
+root@vm-vultr-8:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 0.959228 s, 547 MB/s
+root@vm-vultr-8:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-8:~#
+
+
+root@vm-vultr-9:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.1249 s, 466 MB/s
+root@vm-vultr-9:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.0269 s, 511 MB/s
+root@vm-vultr-9:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-9:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.18185 s, 444 MB/s
+root@vm-vultr-9:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.17655 s, 446 MB/s
+root@vm-vultr-9:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-9:~# dd if=/dev/zero of=/mnt/beegfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.27489 s, 411 MB/s
+root@vm-vultr-9:~# dd if=/mnt/beegfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.05412 s, 497 MB/s
+root@vm-vultr-9:~# rm /mnt/beegfs/testfile.bin
+root@vm-vultr-9:~# 
