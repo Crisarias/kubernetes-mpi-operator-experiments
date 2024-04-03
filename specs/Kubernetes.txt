@@ -1,0 +1,70 @@
+root@vm-vultr-1:~# kubectl get no -o wide
+NAME         STATUS   ROLES           AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION       CONTAINER-RUNTIME
+vm-vultr-1   Ready    control-plane   9m13s   v1.28.1   10.1.112.3    <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
+vm-vultr-2   Ready    <none>          6m24s   v1.28.1   10.1.112.4    <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
+vm-vultr-3   Ready    <none>          5m7s    v1.28.1   10.1.112.5    <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
+vm-vultr-4   Ready    <none>          4m22s   v1.28.1   10.1.112.6    <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
+vm-vultr-5   Ready    <none>          3m40s   v1.28.1   10.1.112.7    <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
+vm-vultr-6   Ready    <none>          2m57s   v1.28.1   10.1.112.8    <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
+vm-vultr-7   Ready    <none>          2m19s   v1.28.1   10.1.112.9    <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
+vm-vultr-8   Ready    <none>          102s    v1.28.1   10.1.112.10   <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
+vm-vultr-9   Ready    <none>          63s     v1.28.1   10.1.112.11   <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
+root@vm-vultr-1:~# 
+
+root@vm-vultr-1:~# kubectl get pods --all-namespaces
+NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE
+kube-system   calico-kube-controllers-68cdf756d9-96nrv   1/1     Running   0          107s
+kube-system   calico-node-c4fws                          1/1     Running   0          107s
+kube-system   calico-node-dfg52                          1/1     Running   0          107s
+kube-system   calico-node-dljxx                          1/1     Running   0          107s
+kube-system   calico-node-gfwsn                          1/1     Running   0          107s
+kube-system   calico-node-jmq9v                          1/1     Running   0          107s
+kube-system   calico-node-phz9p                          1/1     Running   0          107s
+kube-system   calico-node-stq4l                          1/1     Running   0          107s
+kube-system   calico-node-tqfk9                          1/1     Running   0          107s
+kube-system   calico-node-vmlkt                          1/1     Running   0          107s
+kube-system   coredns-5dd5756b68-4rrgv                   1/1     Running   0          10m
+kube-system   coredns-5dd5756b68-gd6k6                   1/1     Running   0          10m
+kube-system   etcd-vm-vultr-1                            1/1     Running   0          10m
+kube-system   kube-apiserver-vm-vultr-1                  1/1     Running   0          10m
+kube-system   kube-controller-manager-vm-vultr-1         1/1     Running   0          10m
+kube-system   kube-proxy-bkdmk                           1/1     Running   0          6m11s
+kube-system   kube-proxy-bz9rm                           1/1     Running   0          7m28s
+kube-system   kube-proxy-jkw2f                           1/1     Running   0          5m26s
+kube-system   kube-proxy-jvlr8                           1/1     Running   0          4m
+kube-system   kube-proxy-mgpfb                           1/1     Running   0          3m23s
+kube-system   kube-proxy-q9hr7                           1/1     Running   0          4m44s
+kube-system   kube-proxy-sgt45                           1/1     Running   0          2m7s
+kube-system   kube-proxy-zf7s4                           1/1     Running   0          2m46s
+kube-system   kube-proxy-zl5tp                           1/1     Running   0          10m
+kube-system   kube-scheduler-vm-vultr-1                  1/1     Running   0          10m
+root@vm-vultr-1:~# 
+
+root@vm-vultr-1:~# kubectl get pods --all-namespaces -o wide
+NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE     IP              NODE         NOMINATED NODE   READINESS GATES
+kube-system   calico-kube-controllers-68cdf756d9-96nrv   1/1     Running   0          81s     192.168.11.65   vm-vultr-7   <none>           <none>
+kube-system   calico-node-c4fws                          1/1     Running   0          81s     10.1.112.6      vm-vultr-4   <none>           <none>
+kube-system   calico-node-dfg52                          1/1     Running   0          81s     10.1.112.10     vm-vultr-8   <none>           <none>
+kube-system   calico-node-dljxx                          1/1     Running   0          81s     10.1.112.4      vm-vultr-2   <none>           <none>
+kube-system   calico-node-gfwsn                          1/1     Running   0          81s     10.1.112.3      vm-vultr-1   <none>           <none>
+kube-system   calico-node-jmq9v                          1/1     Running   0          81s     10.1.112.8      vm-vultr-6   <none>           <none>
+kube-system   calico-node-phz9p                          1/1     Running   0          81s     10.1.112.5      vm-vultr-3   <none>           <none>
+kube-system   calico-node-stq4l                          1/1     Running   0          81s     10.1.112.9      vm-vultr-7   <none>           <none>
+kube-system   calico-node-tqfk9                          1/1     Running   0          81s     10.1.112.11     vm-vultr-9   <none>           <none>
+kube-system   calico-node-vmlkt                          1/1     Running   0          81s     10.1.112.7      vm-vultr-5   <none>           <none>
+kube-system   coredns-5dd5756b68-4rrgv                   1/1     Running   0          9m43s   192.168.11.67   vm-vultr-7   <none>           <none>
+kube-system   coredns-5dd5756b68-gd6k6                   1/1     Running   0          9m43s   192.168.11.66   vm-vultr-7   <none>           <none>
+kube-system   etcd-vm-vultr-1                            1/1     Running   0          9m48s   10.1.112.3      vm-vultr-1   <none>           <none>
+kube-system   kube-apiserver-vm-vultr-1                  1/1     Running   0          9m50s   10.1.112.3      vm-vultr-1   <none>           <none>
+kube-system   kube-controller-manager-vm-vultr-1         1/1     Running   0          9m50s   10.1.112.3      vm-vultr-1   <none>           <none>
+kube-system   kube-proxy-bkdmk                           1/1     Running   0          5m45s   10.1.112.5      vm-vultr-3   <none>           <none>
+kube-system   kube-proxy-bz9rm                           1/1     Running   0          7m2s    10.1.112.4      vm-vultr-2   <none>           <none>
+kube-system   kube-proxy-jkw2f                           1/1     Running   0          5m      10.1.112.6      vm-vultr-4   <none>           <none>
+kube-system   kube-proxy-jvlr8                           1/1     Running   0          3m34s   10.1.112.8      vm-vultr-6   <none>           <none>
+kube-system   kube-proxy-mgpfb                           1/1     Running   0          2m57s   10.1.112.9      vm-vultr-7   <none>           <none>
+kube-system   kube-proxy-q9hr7                           1/1     Running   0          4m18s   10.1.112.7      vm-vultr-5   <none>           <none>
+kube-system   kube-proxy-sgt45                           1/1     Running   0          101s    10.1.112.11     vm-vultr-9   <none>           <none>
+kube-system   kube-proxy-zf7s4                           1/1     Running   0          2m20s   10.1.112.10     vm-vultr-8   <none>           <none>
+kube-system   kube-proxy-zl5tp                           1/1     Running   0          9m44s   10.1.112.3      vm-vultr-1   <none>           <none>
+kube-system   kube-scheduler-vm-vultr-1                  1/1     Running   0          9m48s   10.1.112.3      vm-vultr-1   <none>           <none>
+root@vm-vultr-1:~# 
