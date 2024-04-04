@@ -1,0 +1,226 @@
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl create -f _v1alpha1_mpich_cluster.yaml
+mpicluster.crisarias.com/irazucluster created
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl get pods -n irazu-ns --watch
+NAME          READY   STATUS    RESTARTS   AGE
+irazu-sts-0   0/1     Pending   0          4s
+irazu-sts-0   0/1     Pending   0          10s
+irazu-sts-0   0/1     ContainerCreating   0          10s
+irazu-sts-0   0/1     ContainerCreating   0          10s
+irazu-sts-0   0/1     Running             0          12s
+irazu-sts-0   0/1     Running             0          30s
+irazu-sts-0   1/1     Running             0          30s
+irazu-sts-1   0/1     Pending             0          0s
+irazu-sts-1   0/1     Pending             0          0s
+irazu-sts-1   0/1     ContainerCreating   0          0s
+irazu-sts-1   0/1     ContainerCreating   0          1s
+irazu-sts-1   0/1     Running             0          2s
+irazu-sts-1   0/1     Running             0          21s
+irazu-sts-1   1/1     Running             0          21s
+irazu-sts-2   0/1     Pending             0          0s
+irazu-sts-2   0/1     Pending             0          0s
+irazu-sts-2   0/1     ContainerCreating   0          0s
+irazu-sts-2   0/1     ContainerCreating   0          0s
+irazu-sts-2   0/1     Running             0          0s
+irazu-sts-2   0/1     Running             0          20s
+irazu-sts-2   1/1     Running             0          20s
+irazu-sts-3   0/1     Pending             0          0s
+irazu-sts-3   0/1     Pending             0          0s
+irazu-sts-3   0/1     ContainerCreating   0          0s
+irazu-sts-3   0/1     ContainerCreating   0          1s
+irazu-sts-3   0/1     Running             0          1s
+irazu-sts-3   0/1     Running             0          21s
+irazu-sts-3   1/1     Running             0          21s
+irazu-sts-4   0/1     Pending             0          0s
+irazu-sts-4   0/1     Pending             0          0s
+irazu-sts-4   0/1     ContainerCreating   0          0s
+irazu-sts-4   0/1     ContainerCreating   0          0s
+irazu-sts-4   0/1     Running             0          1s
+irazu-sts-4   0/1     Running             0          20s
+irazu-sts-4   1/1     Running             0          20s
+irazu-sts-5   0/1     Pending             0          0s
+irazu-sts-5   0/1     Pending             0          0s
+irazu-sts-5   0/1     ContainerCreating   0          0s
+irazu-sts-5   0/1     ContainerCreating   0          1s
+irazu-sts-5   0/1     Running             0          1s
+irazu-sts-5   0/1     Running             0          21s
+irazu-sts-5   1/1     Running             0          21s
+irazu-sts-6   0/1     Pending             0          0s
+irazu-sts-6   0/1     Pending             0          0s
+irazu-sts-6   0/1     ContainerCreating   0          0s
+irazu-sts-6   0/1     ContainerCreating   0          0s
+irazu-sts-6   0/1     Running             0          1s
+irazu-sts-6   0/1     Running             0          20s
+irazu-sts-6   1/1     Running             0          20s
+irazu-sts-7   0/1     Pending             0          0s
+irazu-sts-7   0/1     Pending             0          0s
+irazu-sts-7   0/1     ContainerCreating   0          0s
+irazu-sts-7   0/1     ContainerCreating   0          1s
+irazu-sts-7   0/1     Running             0          1s
+irazu-sts-7   1/1     Running             0          21s
+^Croot@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# 
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl exec -it irazu-sts-0 -n irazu-ns -- bash
+root@irazu-sts-0:/# cd /nfs && git clone https://github.com/Crisarias/mpich-examples && cd mpich-examples/mpi-hello-world/code && make && mpirun -np 120 ./mpi_hello_world > /nfs/out.txt
+Cloning into 'mpich-examples'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 12 (delta 0), reused 9 (delta 0), pack-reused 0
+Receiving objects: 100% (12/12), 8.83 KiB | 904.00 KiB/s, done.
+mpicc -o mpi_hello_world mpi_hello_world.c
+root@irazu-sts-0:/nfs/mpich-examples/mpi-hello-world/code# 
+exit
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl delete -f _v1alpha1_mpich_cluster.yaml
+mpicluster.crisarias.com "irazucluster" deleted
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# 
+
+
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl create -f _v1alpha1_mpich_cluster.yaml
+mpicluster.crisarias.com/irazucluster created
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl get pods -n irazu-ns --watch
+NAME          READY   STATUS    RESTARTS   AGE
+irazu-sts-0   0/1     Running   0          3s
+irazu-sts-0   0/1     Running   0          21s
+irazu-sts-0   1/1     Running   0          21s
+irazu-sts-1   0/1     Pending   0          0s
+irazu-sts-1   0/1     Pending   0          0s
+irazu-sts-1   0/1     ContainerCreating   0          0s
+irazu-sts-1   0/1     ContainerCreating   0          0s
+irazu-sts-1   0/1     Running             0          1s
+irazu-sts-1   0/1     Running             0          20s
+irazu-sts-1   1/1     Running             0          20s
+irazu-sts-2   0/1     Pending             0          0s
+irazu-sts-2   0/1     Pending             0          0s
+irazu-sts-2   0/1     ContainerCreating   0          0s
+irazu-sts-2   0/1     ContainerCreating   0          1s
+irazu-sts-2   0/1     Running             0          2s
+irazu-sts-2   0/1     Running             0          21s
+irazu-sts-2   1/1     Running             0          21s
+irazu-sts-3   0/1     Pending             0          0s
+irazu-sts-3   0/1     Pending             0          0s
+irazu-sts-3   0/1     ContainerCreating   0          0s
+irazu-sts-3   0/1     ContainerCreating   0          0s
+irazu-sts-3   0/1     Running             0          1s
+irazu-sts-3   0/1     Running             0          20s
+irazu-sts-3   1/1     Running             0          20s
+irazu-sts-4   0/1     Pending             0          0s
+irazu-sts-4   0/1     Pending             0          0s
+irazu-sts-4   0/1     ContainerCreating   0          0s
+irazu-sts-4   0/1     ContainerCreating   0          1s
+irazu-sts-4   0/1     Running             0          2s
+irazu-sts-4   0/1     Running             0          21s
+irazu-sts-4   1/1     Running             0          21s
+irazu-sts-5   0/1     Pending             0          0s
+irazu-sts-5   0/1     Pending             0          0s
+irazu-sts-5   0/1     ContainerCreating   0          0s
+irazu-sts-5   0/1     ContainerCreating   0          0s
+irazu-sts-5   0/1     Running             0          1s
+irazu-sts-5   0/1     Running             0          20s
+irazu-sts-5   1/1     Running             0          20s
+irazu-sts-6   0/1     Pending             0          0s
+irazu-sts-6   0/1     Pending             0          0s
+irazu-sts-6   0/1     ContainerCreating   0          0s
+irazu-sts-6   0/1     ContainerCreating   0          1s
+irazu-sts-6   0/1     Running             0          2s
+irazu-sts-6   0/1     Running             0          21s
+irazu-sts-6   1/1     Running             0          21s
+irazu-sts-7   0/1     Pending             0          0s
+irazu-sts-7   0/1     Pending             0          0s
+irazu-sts-7   0/1     ContainerCreating   0          0s
+irazu-sts-7   0/1     ContainerCreating   0          0s
+irazu-sts-7   0/1     Running             0          1s
+irazu-sts-7   0/1     Running             0          20s
+irazu-sts-7   1/1     Running             0          20s
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl exec -it irazu-sts-0 -n irazu-ns -- bash
+root@irazu-sts-0:/# cd /nfs && git clone https://github.com/Crisarias/mpich-examples && cd mpich-examples/mpi-hello-world/code && make && mpirun -np 120 ./mpi_hello_world > /nfs/out.txt
+Cloning into 'mpich-examples'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 12 (delta 0), reused 9 (delta 0), pack-reused 0
+Receiving objects: 100% (12/12), 8.83 KiB | 1.10 MiB/s, done.
+mpicc -o mpi_hello_world mpi_hello_world.c
+root@irazu-sts-0:/nfs/mpich-examples/mpi-hello-world/code# 
+exit
+command terminated with exit code 127
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl delete -f _v1alpha1_mpich_cluster.yaml
+mpicluster.crisarias.com "irazucluster" deleted
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# 
+
+
+
+
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl create -f _v1alpha1_mpich_cluster.yaml
+mpicluster.crisarias.com/irazucluster created
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl get pods -n irazu-ns --watch
+NAME          READY   STATUS    RESTARTS   AGE
+irazu-sts-0   0/1     Pending   0          2s
+irazu-sts-0   0/1     Pending   0          3s
+irazu-sts-0   0/1     ContainerCreating   0          3s
+irazu-sts-0   0/1     ContainerCreating   0          3s
+irazu-sts-0   0/1     Running             0          4s
+irazu-sts-0   0/1     Running             0          23s
+irazu-sts-0   1/1     Running             0          23s
+irazu-sts-1   0/1     Pending             0          0s
+irazu-sts-1   0/1     Pending             0          0s
+irazu-sts-1   0/1     ContainerCreating   0          0s
+irazu-sts-1   0/1     ContainerCreating   0          1s
+irazu-sts-1   0/1     Running             0          3s
+irazu-sts-1   0/1     Running             0          21s
+irazu-sts-1   1/1     Running             0          21s
+irazu-sts-2   0/1     Pending             0          0s
+irazu-sts-2   0/1     Pending             0          0s
+irazu-sts-2   0/1     ContainerCreating   0          0s
+irazu-sts-2   0/1     ContainerCreating   0          0s
+irazu-sts-2   0/1     Running             0          1s
+irazu-sts-2   0/1     Running             0          20s
+irazu-sts-2   1/1     Running             0          20s
+irazu-sts-3   0/1     Pending             0          0s
+irazu-sts-3   0/1     Pending             0          0s
+irazu-sts-3   0/1     ContainerCreating   0          1s
+irazu-sts-3   0/1     ContainerCreating   0          1s
+irazu-sts-3   0/1     Running             0          2s
+irazu-sts-3   0/1     Running             0          21s
+irazu-sts-3   1/1     Running             0          21s
+irazu-sts-4   0/1     Pending             0          0s
+irazu-sts-4   0/1     Pending             0          0s
+irazu-sts-4   0/1     ContainerCreating   0          0s
+irazu-sts-4   0/1     ContainerCreating   0          1s
+irazu-sts-4   0/1     Running             0          1s
+irazu-sts-4   0/1     Running             0          21s
+irazu-sts-4   1/1     Running             0          21s
+irazu-sts-5   0/1     Pending             0          0s
+irazu-sts-5   0/1     Pending             0          0s
+irazu-sts-5   0/1     ContainerCreating   0          0s
+irazu-sts-5   0/1     ContainerCreating   0          0s
+irazu-sts-5   0/1     Running             0          3s
+irazu-sts-5   0/1     Running             0          20s
+irazu-sts-5   1/1     Running             0          20s
+irazu-sts-6   0/1     Pending             0          0s
+irazu-sts-6   0/1     Pending             0          0s
+irazu-sts-6   0/1     ContainerCreating   0          0s
+irazu-sts-6   0/1     ContainerCreating   0          1s
+irazu-sts-6   0/1     Running             0          2s
+irazu-sts-6   0/1     Running             0          21s
+irazu-sts-6   1/1     Running             0          21s
+irazu-sts-7   0/1     Pending             0          0s
+irazu-sts-7   0/1     Pending             0          0s
+irazu-sts-7   0/1     ContainerCreating   0          0s
+irazu-sts-7   0/1     ContainerCreating   0          0s
+irazu-sts-7   0/1     Running             0          1s
+irazu-sts-7   0/1     Running             0          20s
+irazu-sts-7   1/1     Running             0          20s
+irazu-sts-0:/# cd /nfs && git clone https://github.com/Crisarias/mpich-examples && cd mpich-examples/mpi-hello-world/code && make && mpirun -np 120 ./mpi_hello_world > /nfs/out.txt
+Cloning into 'mpich-examples'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 12 (delta 0), reused 9 (delta 0), pack-reused 0
+Receiving objects: 100% (12/12), 8.83 KiB | 1004.00 KiB/s, done.
+mpicc -o mpi_hello_world mpi_hello_world.c
+root@irazu-sts-0:/nfs/mpich-examples/mpi-hello-world/code# 
+exit
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# 
+Receiving objects: 100% (12/12), 8.83 KiB | 1004.00 KiB/s, done.^C
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl delete -f _v1alpha1_mpich_cluster.yaml
+mpicluster.crisarias.com "irazucluster" deleted
+root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# 
