@@ -1,0 +1,169 @@
+SIZE 1
+
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 1 ./miniFE.x nx=500 ny=250 nz=10
+      creating/filling mesh...0.0326071s, total time: 0.032608
+generating matrix structure...0.50519s, total time: 0.537798
+         assembling FE data...2.04116s, total time: 2.57896
+      imposing Dirichlet BC...0.851889s, total time: 3.43085
+      imposing Dirichlet BC...0.332744s, total time: 3.76359
+making matrix indices local...9.53674e-07s, total time: 3.76359
+Starting CG solver ... 
+Initial Residual = 53.332
+Iteration = 5   Residual = 2.02425
+Iteration = 10   Residual = 0.958376
+Iteration = 15   Residual = 0.624232
+Iteration = 20   Residual = 0.46072
+Iteration = 25   Residual = 0.406203
+Iteration = 30   Residual = 0.304299
+Iteration = 35   Residual = 0.257089
+Iteration = 40   Residual = 0.221891
+Iteration = 45   Residual = 0.19462
+Iteration = 50   Residual = 0.18141
+Final Resid Norm: 0.18141
+Mini-Application Name: miniFE
+Mini-Application Version: 2.0
+Global Run Parameters: 
+  dimensions: 
+    nx: 500
+    ny: 250
+    nz: 10
+  load_imbalance: 0
+  mv_overlap_comm_comp: 0 (no)
+  number of processors: 1
+  ScalarType: double
+  GlobalOrdinalType: int
+  LocalOrdinalType: int
+Platform: 
+  hostname: vm-vultr-3
+  kernel name: 'Linux'
+  kernel release: '5.15.0-101-generic'
+  processor: 'x86_64'
+Build: 
+  CXX: '/usr/bin/mpicxx'
+  compiler version: 'g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0'
+  CXXFLAGS: '-O3'
+  using MPI: yes
+  Threading: none
+Run Date/Time: 2024-04-06, 23-43-16
+Rows-per-proc Load Imbalance: 
+  Largest (from avg, %): 0
+  Std Dev (%): 0
+Matrix structure generation: 
+  Mat-struc-gen Time: 0.50519
+FE assembly: 
+  FE assembly Time: 2.04116
+Matrix attributes: 
+  Global Nrows: 1383261
+  Global NNZ: 34944781
+  Global Memory (GB): 0.400844
+  Pll Memory Overhead (MB): 0
+  Rows per proc MIN: 1383261
+  Rows per proc MAX: 1383261
+  Rows per proc AVG: 1.38326e+06
+  NNZ per proc MIN: 34944781
+  NNZ per proc MAX: 34944781
+  NNZ per proc AVG: 3.49448e+07
+CG solve: 
+  Iterations: 50
+  Final Resid Norm: 0.18141
+  WAXPY Time: 0.132954
+  WAXPY Flops: 5.7e+08
+  WAXPY Mflops: 4287.19
+  DOT Time: 0.143515
+  DOT Flops: 2.5e+08
+  DOT Mflops: 1741.98
+  MATVEC Time: 1.31821
+  MATVEC Flops: 3.56437e+09
+  MATVEC Mflops: 2703.95
+  Total: 
+    Total CG Time: 1.60415
+    Total CG Flops: 4.38437e+09
+    Total CG Mflops: 2733.13
+  Time per iteration: 0.0320831
+Total Program Time: 5.39723
+
+Size 2
+
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 1 ./miniFE.x nx=500 ny=500 nz=10
+      creating/filling mesh...0.0682719s, total time: 0.0682719
+generating matrix structure...1.03838s, total time: 1.10665
+         assembling FE data...4.10006s, total time: 5.20671
+      imposing Dirichlet BC...1.69242s, total time: 6.89913
+      imposing Dirichlet BC...0.723591s, total time: 7.62272
+making matrix indices local...9.53674e-07s, total time: 7.62272
+Starting CG solver ... 
+Initial Residual = 74.5169
+Iteration = 5   Residual = 1.54103
+Iteration = 10   Residual = 0.701515
+Iteration = 15   Residual = 0.478411
+Iteration = 20   Residual = 0.34585
+Iteration = 25   Residual = 0.434904
+Iteration = 30   Residual = 0.226795
+Iteration = 35   Residual = 0.190251
+Iteration = 40   Residual = 0.167018
+Iteration = 45   Residual = 0.145526
+Iteration = 50   Residual = 0.174237
+Final Resid Norm: 0.174237
+Mini-Application Name: miniFE
+Mini-Application Version: 2.0
+Global Run Parameters: 
+  dimensions: 
+    nx: 500
+    ny: 500
+    nz: 10
+  load_imbalance: 0
+  mv_overlap_comm_comp: 0 (no)
+  number of processors: 1
+  ScalarType: double
+  GlobalOrdinalType: int
+  LocalOrdinalType: int
+Platform: 
+  hostname: vm-vultr-3
+  kernel name: 'Linux'
+  kernel release: '5.15.0-101-generic'
+  processor: 'x86_64'
+Build: 
+  CXX: '/usr/bin/mpicxx'
+  compiler version: 'g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0'
+  CXXFLAGS: '-O3'
+  using MPI: yes
+  Threading: none
+Run Date/Time: 2024-04-06, 23-44-39
+Rows-per-proc Load Imbalance: 
+  Largest (from avg, %): 0
+  Std Dev (%): 0
+Matrix structure generation: 
+  Mat-struc-gen Time: 1.03838
+FE assembly: 
+  FE assembly Time: 4.10006
+Matrix attributes: 
+  Global Nrows: 2761011
+  Global NNZ: 69843031
+  Global Memory (GB): 0.801128
+  Pll Memory Overhead (MB): 0
+  Rows per proc MIN: 2761011
+  Rows per proc MAX: 2761011
+  Rows per proc AVG: 2.76101e+06
+  NNZ per proc MIN: 69843031
+  NNZ per proc MAX: 69843031
+  NNZ per proc AVG: 6.9843e+07
+CG solve: 
+  Iterations: 50
+  Final Resid Norm: 0.174237
+  WAXPY Time: 0.277681
+  WAXPY Flops: 1.14e+09
+  WAXPY Mflops: 4105.43
+  DOT Time: 0.289742
+  DOT Flops: 5e+08
+  DOT Mflops: 1725.67
+  MATVEC Time: 2.55656
+  MATVEC Flops: 7.12399e+09
+  MATVEC Mflops: 2786.56
+  Total: 
+    Total CG Time: 3.14234
+    Total CG Flops: 8.76399e+09
+    Total CG Mflops: 2789
+  Time per iteration: 0.0628468
+Total Program Time: 10.816
+
+SIZE 3

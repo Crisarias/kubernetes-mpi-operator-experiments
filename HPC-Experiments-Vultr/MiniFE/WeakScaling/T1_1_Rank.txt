@@ -1,0 +1,81 @@
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 1 ./miniFE.x nx=250 ny=250 nz=10
+      creating/filling mesh...0.0160761s, total time: 0.0160761
+generating matrix structure...0.252109s, total time: 0.268185
+         assembling FE data...1.01191s, total time: 1.28009
+      imposing Dirichlet BC...0.341497s, total time: 1.62159
+      imposing Dirichlet BC...0.170591s, total time: 1.79218
+making matrix indices local...9.53674e-07s, total time: 1.79218
+Starting CG solver ... 
+Initial Residual = 52.7427
+Iteration = 5   Residual = 1.08275
+Iteration = 10   Residual = 0.488628
+Iteration = 15   Residual = 0.335432
+Iteration = 20   Residual = 0.236067
+Iteration = 25   Residual = 0.181777
+Iteration = 30   Residual = 0.151166
+Iteration = 35   Residual = 0.12497
+Iteration = 40   Residual = 0.105918
+Iteration = 45   Residual = 0.0930788
+Iteration = 50   Residual = 0.0810316
+Final Resid Norm: 0.0810316
+Mini-Application Name: miniFE
+Mini-Application Version: 2.0
+Global Run Parameters: 
+  dimensions: 
+    nx: 250
+    ny: 250
+    nz: 10
+  load_imbalance: 0
+  mv_overlap_comm_comp: 0 (no)
+  number of processors: 1
+  ScalarType: double
+  GlobalOrdinalType: int
+  LocalOrdinalType: int
+Platform: 
+  hostname: vm-vultr-3
+  kernel name: 'Linux'
+  kernel release: '5.15.0-101-generic'
+  processor: 'x86_64'
+Build: 
+  CXX: '/usr/bin/mpicxx'
+  compiler version: 'g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0'
+  CXXFLAGS: '-O3'
+  using MPI: yes
+  Threading: none
+Run Date/Time: 2024-04-07, 00-07-26
+Rows-per-proc Load Imbalance: 
+  Largest (from avg, %): 0
+  Std Dev (%): 0
+Matrix structure generation: 
+  Mat-struc-gen Time: 0.252109
+FE assembly: 
+  FE assembly Time: 1.01191
+Matrix attributes: 
+  Global Nrows: 693011
+  Global NNZ: 17484031
+  Global Memory (GB): 0.200563
+  Pll Memory Overhead (MB): 0
+  Rows per proc MIN: 693011
+  Rows per proc MAX: 693011
+  Rows per proc AVG: 693011
+  NNZ per proc MIN: 17484031
+  NNZ per proc MAX: 17484031
+  NNZ per proc AVG: 1.7484e+07
+CG solve: 
+  Iterations: 50
+  Final Resid Norm: 0.0810316
+  WAXPY Time: 0.063098
+  WAXPY Flops: 2.85e+08
+  WAXPY Mflops: 4516.79
+  DOT Time: 0.0716705
+  DOT Flops: 1.25e+08
+  DOT Mflops: 1744.09
+  MATVEC Time: 0.643383
+  MATVEC Flops: 1.78337e+09
+  MATVEC Mflops: 2771.87
+  Total: 
+    Total CG Time: 0.783357
+    Total CG Flops: 2.19337e+09
+    Total CG Mflops: 2799.96
+  Time per iteration: 0.0156671
+Total Program Time: 2.59131

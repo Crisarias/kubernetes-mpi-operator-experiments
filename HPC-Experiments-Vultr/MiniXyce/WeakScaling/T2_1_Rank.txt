@@ -1,0 +1,42 @@
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniXyce_1.0/miniXyce_ref# mpirun -np 1 ./miniXyce.x --circuit ../tests/weak1.net
+Mini-Application Name: miniXyce
+Mini-Application Version: 1.0
+Parameter_parsing_time: 0.0039161
+Netlist_parsing_time: 0.00786507
+Netlist_file: ../tests/weak1.net
+Circuit_attributes: 
+  Number_of_devices: 8001
+  Resistors_(R): 4000
+  Capacitors_(C): 4000
+  Voltage_sources_(V): 1
+Matrix_attributes: 
+  Global_rows: 4002
+  Rows_per_proc_MIN: 4002
+  Rows_per_proc_MAX: 4002
+  Rows_per_proc_AVG: 4002
+  Global_NNZ: 16002
+  NNZ_per_proc_MIN: 16002
+  NNZ_per_proc_MAX: 16002
+  NNZ_per_proc_AVG: 16002
+DCOP Calculation: 
+  Init_cond_specified: 0
+  GMRES_tolerance: 1e-12
+  GMRES_subspace_dim: 10
+  GMRES_iterations: 0
+  GMRES_restarts: 0
+  GMRES_native_residual: 0
+  DCOP_calculation_time: 0.000146004
+Transient Calculation: 
+  Number_of_time_steps: 500
+  Time_start: 0
+  Time_end: 5e-06
+  Time_step: 1e-08
+  GMRES_tolerance: 1e-12
+  GMRES_subspace_dim: 10
+  GMRES_average_iters: 5
+  GMRES_average_res: 6.87107e-14
+  Matrix_setup_time: 3.9153e-05
+  Transient_calculation_time: 1.32868
+I/O File Time: 0.69894
+Total Simulation Time: 1.34941
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniXyce_1.0/miniXyce_ref# 
