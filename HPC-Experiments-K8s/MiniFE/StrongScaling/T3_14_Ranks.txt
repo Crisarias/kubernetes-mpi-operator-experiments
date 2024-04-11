@@ -1,0 +1,83 @@
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 14 ./miniFE.x nx=1000 ny=1000 nz=50
+      creating/filling mesh...0.0563331s, total time: 0.056334
+generating matrix structure...4.09265s, total time: 4.14899
+         assembling FE data...6.72074s, total time: 10.8697
+      imposing Dirichlet BC...1.94878s, total time: 12.8185
+      imposing Dirichlet BC...0.086129s, total time: 12.9046
+making matrix indices local...3.16965s, total time: 16.0743
+Starting CG solver ... 
+Initial Residual = 225.987
+Iteration = 5   Residual = 1.0881
+Iteration = 10   Residual = 1.15348
+Iteration = 15   Residual = 0.333839
+Iteration = 20   Residual = 0.254032
+Iteration = 25   Residual = 0.229653
+Iteration = 30   Residual = 0.164616
+Iteration = 35   Residual = 0.141888
+Iteration = 40   Residual = 0.124671
+Iteration = 45   Residual = 0.109173
+Iteration = 50   Residual = 0.0974507
+Final Resid Norm: 0.0974507
+Mini-Application Name: miniFE
+Mini-Application Version: 2.0
+Global Run Parameters: 
+  dimensions: 
+    nx: 1000
+    ny: 1000
+    nz: 50
+  load_imbalance: 0
+  mv_overlap_comm_comp: 0 (no)
+  number of processors: 14
+  ScalarType: double
+  GlobalOrdinalType: int
+  LocalOrdinalType: int
+Platform: 
+  hostname: irazu-sts-0
+  kernel name: 'Linux'
+  kernel release: '5.15.0-101-generic'
+  processor: 'x86_64'
+Build: 
+  CXX: '/usr/bin/mpicxx'
+  compiler version: 'g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0'
+  CXXFLAGS: '-O3'
+  using MPI: yes
+  Threading: none
+Run Date/Time: 2024-04-11, 04-31-03
+Rows-per-proc Load Imbalance: 
+  Largest (from avg, %): 4.072
+  Std Dev (%): 3.84341
+Matrix structure generation: 
+  Mat-struc-gen Time: 4.09265
+FE assembly: 
+  FE assembly Time: 6.72074
+Matrix attributes: 
+  Global Nrows: 51102051
+  Global NNZ: 1359906151
+  Global Memory (GB): 15.5789
+  Pll Memory Overhead (MB): 64.8235
+  Rows per proc MIN: 3432000
+  Rows per proc MAX: 3725436
+  Rows per proc AVG: 3.65015e+06
+  NNZ per proc MIN: 92548260
+  NNZ per proc MAX: 100461270
+  NNZ per proc AVG: 9.71362e+07
+CG solve: 
+  Iterations: 50
+  Final Resid Norm: 0.0974507
+  WAXPY Time: 0.934374
+  WAXPY Flops: 2.28e+10
+  WAXPY Mflops: 24401.4
+  DOT Time: 3.13403
+  DOT Flops: 1e+10
+  DOT Mflops: 3190.78
+  MATVEC Time: 6.46151
+  MATVEC Flops: 1.3871e+11
+  MATVEC Mflops: 21467.2
+  Total: 
+    Total CG Time: 10.5725
+    Total CG Flops: 1.7151e+11
+    Total CG Mflops: 16222.4
+  Time per iteration: 0.211449
+Total Program Time: 26.7781
+
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# 

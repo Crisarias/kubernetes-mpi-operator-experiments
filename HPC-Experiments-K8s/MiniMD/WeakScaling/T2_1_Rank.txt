@@ -1,0 +1,42 @@
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 1 ./miniMD_openmpi
+# Create System:
+# Done .... 
+# miniMD-Reference 1.2 (MPI+OpenMP) output ...
+# Run Settings: 
+        # MPI processes: 1
+        # OpenMP threads: 1
+        # Inputfile: in.lj.miniMD
+        # Datafile: None
+# Physics Settings: 
+        # ForceStyle: LJ
+        # Force Parameters: 1.00 1.00
+        # Units: LJ
+        # Atoms: 524288
+        # System size: 107.49 53.75 107.49 (unit cells: 64 32 64)
+        # Density: 0.844200
+        # Force cutoff: 2.500000
+        # Timestep size: 0.005000
+# Technical Settings: 
+        # Neigh cutoff: 2.800000
+        # Half neighborlists: 1
+        # Neighbor bins: 53 26 53
+        # Neighbor frequency: 20
+        # Sorting frequency: 20
+        # Thermo frequency: 100
+        # Ghost Newton: 1
+        # Use intrinsics: 0
+        # Do safe exchange: 0
+        # Size of float: 8
+
+# Starting dynamics ...
+# Timestep T U P Time
+0 1.440000e+00 -6.773368e+00 -5.019672e+00  0.000
+100 8.132522e-01 -5.846319e+00 1.159193e-01 21.713
+
+
+# Performance Summary:
+# MPI_proc OMP_threads nsteps natoms t_total t_force t_neigh t_comm t_other performance perf/thread grep_string t_extra
+1 1 100 524288 21.713529 17.895036 3.163007 0.313033 0.342453 2414568.367289 2414568.367289 PERF_SUMMARY 0.117603
+
+
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# 

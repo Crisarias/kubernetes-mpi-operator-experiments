@@ -1,9 +1,9 @@
-root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 1 ./miniMD_openmpi
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 14 ./miniMD_openmpi
 # Create System:
 # Done .... 
 # miniMD-Reference 1.2 (MPI+OpenMP) output ...
 # Run Settings: 
-        # MPI processes: 1
+        # MPI processes: 14
         # OpenMP threads: 1
         # Inputfile: in.lj.miniMD
         # Datafile: None
@@ -31,12 +31,12 @@ root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 1 ./miniM
 # Starting dynamics ...
 # Timestep T U P Time
 0 1.440000e+00 -6.773368e+00 -5.019670e+00  0.000
-100 7.783215e-01 -5.788559e+00 -2.310384e-02 124.507
+100 7.783215e-01 -5.788559e+00 -2.310384e-02 10.183
 
 
 # Performance Summary:
 # MPI_proc OMP_threads nsteps natoms t_total t_force t_neigh t_comm t_other performance perf/thread grep_string t_extra
-1 1 100 2949120 124.507366 104.028686 17.398361 1.206708 1.873611 2368630.940968 2368630.940968 PERF_SUMMARY 0.552641
+14 1 100 2949120 10.183106 7.579783 1.296973 1.125344 0.181006 28960907.807796 2068636.271985 PERF_SUMMARY 0.067280
 
 
 root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# 

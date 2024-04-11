@@ -1,0 +1,63 @@
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 15 ./miniMD_openmpi
+# Create System:
+# Done .... 
+# miniMD-Reference 1.2 (MPI+OpenMP) output ...
+# Run Settings: 
+        # MPI processes: 15
+        # OpenMP threads: 1
+        # Inputfile: in.lj.miniMD
+        # Datafile: None
+# Physics Settings: 
+        # ForceStyle: LJ
+        # Force Parameters: 1.00 1.00
+        # Units: LJ
+        # Atoms: 2949120
+        # System size: 161.24 161.24 134.37 (unit cells: 96 96 80)
+        # Density: 0.844200
+        # Force cutoff: 2.500000
+        # Timestep size: 0.005000
+# Technical Settings: 
+        # Neigh cutoff: 2.800000
+        # Half neighborlists: 1
+        # Neighbor bins: 80 80 66
+        # Neighbor frequency: 20
+        # Sorting frequency: 20
+        # Thermo frequency: 100
+        # Ghost Newton: 1
+        # Use intrinsics: 0
+        # Do safe exchange: 0
+        # Size of float: 8
+
+# Starting dynamics ...
+# Timestep T U P Time
+0 1.440000e+00 -6.773368e+00 -5.019670e+00  0.000
+
+miniMD_openmpi:205 terminated with signal 7 at PC=7f183310a980 SP=7ffe7732afa8.  Backtrace:
+/lib/x86_64-linux-gnu/libc.so.6(+0x1a0980)[0x7f183310a980]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x2177c6)[0x7f18337277c6]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x260e01)[0x7f1833770e01]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x2128924)[0x7f1835638924]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fb85)[0x7f183374fb85]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fc7f)[0x7f183374fc7f]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x215a7e6)[0x7f183566a7e6]
+/lib/x86_64-linux-gnu/libmpich.so.12(PMPI_Send+0x507)[0x7f18336250c7]
+./miniMD_openmpi(+0xf2c9)[0x55a43716d2c9]
+./miniMD_openmpi(+0x543c)[0x55a43716343c]
+/lib/x86_64-linux-gnu/libgomp.so.1(GOMP_parallel+0x46)[0x7f18331c7a16]
+./miniMD_openmpi(+0x577c)[0x55a43716377c]
+./miniMD_openmpi(+0x345d)[0x55a43716145d]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7f1832f93d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7f1832f93e40]
+./miniMD_openmpi(+0x4065)[0x55a437162065]
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 197 RUNNING AT irazu-sts-0.irazu-headless-svc.irazu-ns.svc.cluster.local
+=   EXIT CODE: 9
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Killed (signal 9)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# 
