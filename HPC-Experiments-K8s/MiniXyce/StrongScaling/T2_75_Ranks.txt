@@ -1,0 +1,42 @@
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniXyce_1.0/miniXyce_ref# mpirun -np 75 ./miniXyce.x --circuit ../tests/strong.net
+Mini-Application Name: miniXyce
+Mini-Application Version: 1.0
+Parameter_parsing_time: 0.00428702
+Netlist_parsing_time: 0.289461
+Netlist_file: ../tests/strong.net
+Circuit_attributes: 
+  Number_of_devices: 200001
+  Resistors_(R): 100000
+  Capacitors_(C): 100000
+  Voltage_sources_(V): 1
+Matrix_attributes: 
+  Global_rows: 100002
+  Rows_per_proc_MIN: 1333
+  Rows_per_proc_MAX: 1334
+  Rows_per_proc_AVG: 1333.36
+  Global_NNZ: 400002
+  NNZ_per_proc_MIN: 5327
+  NNZ_per_proc_MAX: 5336
+  NNZ_per_proc_AVG: 5333.36
+DCOP Calculation: 
+  Init_cond_specified: 0
+  GMRES_tolerance: 1e-12
+  GMRES_subspace_dim: 10
+  GMRES_iterations: 0
+  GMRES_restarts: 0
+  GMRES_native_residual: 0
+  DCOP_calculation_time: 0.0018914
+Transient Calculation: 
+  Number_of_time_steps: 500
+  Time_start: 0
+  Time_end: 5e-06
+  Time_step: 1e-08
+  GMRES_tolerance: 1e-12
+  GMRES_subspace_dim: 10
+  GMRES_average_iters: 5
+  GMRES_average_res: 6.87107e-14
+  Matrix_setup_time: 2.9265e-05
+  Transient_calculation_time: 24.5519
+I/O File Time: 16.3104
+Total Simulation Time: 25.0648
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniXyce_1.0/miniXyce_ref# 
