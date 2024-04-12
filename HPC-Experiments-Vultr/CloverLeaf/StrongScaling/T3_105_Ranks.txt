@@ -1,0 +1,475 @@
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/CloverLeaf-1.1# cat clover.out 
+
+Clover Version    1.000
+       MPI Version
+   Task Count    105
+
+ Clover will run from the following input:-
+
+*clover                                                                                             
+                                                                                                    
+ state 1 density=0.2 energy 1.0                                                                     
+ state 2 density=1.0 energy=2.5 geometry=rectangle xmin=0.0 xmax=5.0 ymin=0.0 ymax=2.0              
+                                                                                                    
+ x_cells=7680                                                                                       
+ y_cells=3840                                                                                       
+                                                                                                    
+ xmin=0.0                                                                                           
+ ymin=0.0                                                                                           
+ xmax=10.0                                                                                          
+ ymax=10.0                                                                                          
+                                                                                                    
+ initial_timestep=0.04                                                                              
+ timestep_rise=1.5                                                                                  
+ max_timestep=0.04                                                                                  
+ end_time=0.5                                                                                       
+ end_step=87                                                                                        
+                                                                                                    
+*endclover                                                                                          
+
+ Initialising and generating
+
+ Reading input file
+
+ Reading specification for state            1
+
+            state density   0.2000E+00
+             state energy   0.1000E+01
+
+ Reading specification for state            2
+
+            state density   0.1000E+01
+             state energy   0.2500E+01
+ state geometry rectangular
+               state xmin   0.0000E+00
+               state xmax   0.5000E+01
+               state ymin   0.0000E+00
+               state ymax   0.2000E+01
+
+                   x_cells        7680
+                   y_cells        3840
+                      xmin  0.0000E+00
+                      ymin  0.0000E+00
+                      xmax  0.1000E+02
+                      ymax  0.1000E+02
+         initial_timestep   0.4000E-01
+             timestep_rise  0.1500E+01
+              max_timestep  0.4000E-01
+                  end_time  0.5000E+00
+                  end_step          87
+
+     Using Fortran Kernels
+
+ Input read finished.
+
+ Setting up initial geometry
+
+
+ Mesh ratio of    2.0000000000000000     
+ Decomposing the mesh into            7  by           15  chunks
+
+ Generating chunks
+
+ Problem initialised and generated
+
+ Time    0.0000000000000000     
+                       Volume            Mass         Density        Pressure Internal Energy  Kinetic Energy    Total Energy
+ step:      0      0.1000E+03      0.2800E+02      0.2800E+00      0.1720E+00      0.4300E+02      0.0000E+00      0.4300E+02
+
+ Starting the calculation
+ Step       1 time   0.0000000 control    sound    timestep   7.70E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock   0.12322306632995605     
+ Average time per cell    4.1782995039183229E-009
+ Step time per cell       4.1782995039183229E-009
+ Step       2 time   0.0007703 control    sound    timestep   6.49E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock   0.28140306472778320     
+ Average time per cell    4.7709666735803090E-009
+ Step time per cell       5.3599716112431553E-009
+ Step       3 time   0.0014192 control    sound    timestep   5.92E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock   0.43336391448974609     
+ Average time per cell    4.8982285618506100E-009
+ Step time per cell       5.1483786794253521E-009
+ Step       4 time   0.0020112 control    sound    timestep   6.18E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock   0.57710886001586914     
+ Average time per cell    4.8922124228233267E-009
+ Step time per cell       4.8708817404177452E-009
+ Step       5 time   0.0026291 control    sound    timestep   6.70E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock   0.72636389732360840     
+ Average time per cell    4.9259704408339325E-009
+ Step time per cell       5.0578172603208154E-009
+ Step       6 time   0.0032992 control    sound    timestep   6.97E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock   0.85663485527038574     
+ Average time per cell    4.8411890963540857E-009
+ Step time per cell       4.4139273490549791E-009
+ Step       7 time   0.0039962 control    sound    timestep   7.08E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock   0.98735785484313965     
+ Average time per cell    4.7828207099218929E-009
+ Step time per cell       4.4291502692633203E-009
+ Step       8 time   0.0047045 control    sound    timestep   7.33E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    1.1168448925018311     
+ Average time per cell    4.7338057306155357E-009
+ Step time per cell       4.3869739682931040E-009
+ Step       9 time   0.0054372 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    1.2487049102783203     
+ Average time per cell    4.7046234141345377E-009
+ Step time per cell       4.4671226836120092E-009
+ Step      10 time   0.0061653 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+
+ Time    6.8935270991759053E-003
+                       Volume            Mass         Density        Pressure Internal Energy  Kinetic Energy    Total Energy
+ step:     10      0.1000E+03      0.2800E+02      0.2800E+00      0.1719E+00      0.4298E+02      0.1564E-01      0.4300E+02
+
+ Wall clock    1.4143810272216797     
+ Average time per cell    4.7959426107505954E-009
+ Step time per cell       5.6057777126423184E-009
+ Step      11 time   0.0068935 control    sound    timestep   7.27E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    1.5144488811492920     
+ Average time per cell    4.6684153582618544E-009
+ Step time per cell       3.3870067757864793E-009
+ Step      12 time   0.0076201 control    sound    timestep   7.25E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    1.6448659896850586     
+ Average time per cell    4.6479005875341874E-009
+ Step time per cell       4.4121649504328766E-009
+ Step      13 time   0.0083453 control    sound    timestep   7.24E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    1.7773480415344238     
+ Average time per cell    4.6359280096446599E-009
+ Step time per cell       4.4814724889066483E-009
+ Step      14 time   0.0090697 control    sound    timestep   7.26E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    1.8936018943786621     
+ Average time per cell    4.5863606150276843E-009
+ Step time per cell       3.9319598322941201E-009
+ Step      15 time   0.0097954 control    sound    timestep   7.27E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    2.0102069377899170     
+ Average time per cell    4.5441960941793191E-009
+ Step time per cell       3.9441268503045046E-009
+ Step      16 time   0.0105224 control    sound    timestep   7.27E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    2.1216609477996826     
+ Average time per cell    4.4963856756415525E-009
+ Step time per cell       3.7685418242795601E-009
+ Step      17 time   0.0112497 control    sound    timestep   7.27E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    2.2349019050598145     
+ Average time per cell    4.4577642803512562E-009
+ Step time per cell       3.8283582802654968E-009
+ Step      18 time   0.0119768 control    sound    timestep   7.27E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    2.3487389087677002     
+ Average time per cell    4.4245569841694780E-009
+ Step time per cell       3.8499921275716691E-009
+ Step      19 time   0.0127041 control    sound    timestep   7.27E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    2.4669480323791504     
+ Average time per cell    4.4026479127746052E-009
+ Step time per cell       3.9948241060806648E-009
+ Step      20 time   0.0134315 control    sound    timestep   7.27E-04       1,       1 x  6.51E-04 y  1.30E-03
+
+ Time    1.4158930605626587E-002
+                       Volume            Mass         Density        Pressure Internal Energy  Kinetic Energy    Total Energy
+ step:     20      0.1000E+03      0.2800E+02      0.2800E+00      0.1719E+00      0.4297E+02      0.3351E-01      0.4300E+02
+
+ Wall clock    2.6032679080963135     
+ Average time per cell    4.4136350980908094E-009
+ Step time per cell       4.6108309308894806E-009
+ Step      21 time   0.0141589 control    sound    timestep   7.27E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    2.7030899524688721     
+ Average time per cell    4.3646433229297007E-009
+ Step time per cell       3.3782271202653647E-009
+ Step      22 time   0.0148863 control    sound    timestep   7.27E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    2.8183820247650146     
+ Average time per cell    4.3439491730738395E-009
+ Step time per cell       3.8988542251495850E-009
+ Step      23 time   0.0156138 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    2.9355990886688232     
+ Average time per cell    4.3278924894748608E-009
+ Step time per cell       3.9637638514654505E-009
+ Step      24 time   0.0163414 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    3.0495390892028809     
+ Average time per cell    4.3085438611106603E-009
+ Step time per cell       3.8520293957036402E-009
+ Step      25 time   0.0170691 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    3.1701130867004395     
+ Average time per cell    4.2997410572651362E-009
+ Step time per cell       4.0777296008956100E-009
+ Step      26 time   0.0177968 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    3.2896690368652344     
+ Average time per cell    4.2902876853815511E-009
+ Step time per cell       4.0435083469169011E-009
+ Step      27 time   0.0185245 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    3.4044709205627441     
+ Average time per cell    4.2755640861137540E-009
+ Step time per cell       3.8815940368092726E-009
+ Step      28 time   0.0192521 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    3.5247008800506592     
+ Average time per cell    4.2684656537381840E-009
+ Step time per cell       4.0665084573750693E-009
+ Step      29 time   0.0199798 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    3.6405720710754395     
+ Average time per cell    4.2567602528252025E-009
+ Step time per cell       3.9177474617544148E-009
+ Step      30 time   0.0207076 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+
+ Time    2.1435326610404176E-002
+                       Volume            Mass         Density        Pressure Internal Energy  Kinetic Energy    Total Energy
+ step:     30      0.1000E+03      0.2800E+02      0.2800E+00      0.1718E+00      0.4295E+02      0.5152E-01      0.4300E+02
+
+ Wall clock    3.7852990627288818     
+ Average time per cell    4.2784503656784417E-009
+ Step time per cell       4.8946498686240776E-009
+ Step      31 time   0.0214353 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    3.8864159584045410     
+ Average time per cell    4.2510395210343126E-009
+ Step time per cell       3.4217939375796251E-009
+ Step      32 time   0.0221631 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    4.0078978538513184     
+ Average time per cell    4.2469213844419251E-009
+ Step time per cell       4.1078278122262820E-009
+ Step      33 time   0.0228909 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    4.1266899108886719     
+ Average time per cell    4.2402889479190011E-009
+ Step time per cell       4.0160779867114289E-009
+ Step      34 time   0.0236187 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    4.2508740425109863     
+ Average time per cell    4.2394242056164574E-009
+ Step time per cell       4.1990521519134443E-009
+ Step      35 time   0.0243466 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    4.3728029727935791     
+ Average time per cell    4.2364240110304859E-009
+ Step time per cell       4.1224848246201875E-009
+ Step      36 time   0.0250744 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    4.4889039993286133     
+ Average time per cell    4.2281011881214787E-009
+ Step time per cell       3.9255084832095434E-009
+ Step      37 time   0.0258023 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    4.6054520606994629     
+ Average time per cell    4.2206379298299731E-009
+ Step time per cell       3.9402948459610340E-009
+ Step      38 time   0.0265302 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    4.7343809604644775     
+ Average time per cell    4.2246152290785736E-009
+ Step time per cell       4.3619123365109166E-009
+ Step      39 time   0.0272581 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    4.8743278980255127     
+ Average time per cell    4.2379681605373399E-009
+ Step time per cell       4.7356540259594719E-009
+ Step      40 time   0.0279860 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+
+ Time    2.8713926265169783E-002
+                       Volume            Mass         Density        Pressure Internal Energy  Kinetic Energy    Total Energy
+ step:     40      0.1000E+03      0.2800E+02      0.2800E+00      0.1717E+00      0.4293E+02      0.6952E-01      0.4300E+02
+
+ Wall clock    5.0551710128784180     
+ Average time per cell    4.2853215644653474E-009
+ Step time per cell       6.1232842401497894E-009
+ Step      41 time   0.0287139 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    5.1758968830108643     
+ Average time per cell    4.2806460025536051E-009
+ Step time per cell       4.0873581181383797E-009
+ Step      42 time   0.0294419 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    5.3251099586486816     
+ Average time per cell    4.2991920419914459E-009
+ Step time per cell       5.0488920856474177E-009
+ Step      43 time   0.0301698 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    5.4617528915405273     
+ Average time per cell    4.3069630637476151E-009
+ Step time per cell       4.6240974269393421E-009
+ Step      44 time   0.0308978 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    5.5930988788604736     
+ Average time per cell    4.3102987877897582E-009
+ Step time per cell       4.4444782866372002E-009
+ Step      45 time   0.0316258 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    5.7219030857086182     
+ Average time per cell    4.3115709738713908E-009
+ Step time per cell       4.3585896492004392E-009
+ Step      46 time   0.0323538 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    5.8490519523620605     
+ Average time per cell    4.3115676307582837E-009
+ Step time per cell       4.3019261081806490E-009
+ Step      47 time   0.0330819 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    5.9762580394744873     
+ Average time per cell    4.3116057119343262E-009
+ Step time per cell       4.3033489621140891E-009
+ Step      48 time   0.0338099 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    6.1303250789642334     
+ Average time per cell    4.3306174659476341E-009
+ Step time per cell       5.2129487610525552E-009
+ Step      49 time   0.0345380 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    6.2599089145660400     
+ Average time per cell    4.3319106429853305E-009
+ Step time per cell       4.3839180660951473E-009
+ Step      50 time   0.0352661 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+
+ Time    3.5994249410112977E-002
+                       Volume            Mass         Density        Pressure Internal Energy  Kinetic Energy    Total Energy
+ step:     50      0.1000E+03      0.2800E+02      0.2800E+00      0.1716E+00      0.4291E+02      0.8750E-01      0.4300E+02
+
+ Wall clock    6.4259099960327148     
+ Average time per cell    4.3578491184032623E-009
+ Step time per cell       5.6184863852750922E-009
+ Step      51 time   0.0359942 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    6.5324509143829346     
+ Average time per cell    4.3432370615993220E-009
+ Step time per cell       3.6057867368476260E-009
+ Step      52 time   0.0367224 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    6.6691980361938477     
+ Average time per cell    4.3488840192444943E-009
+ Step time per cell       4.6259891759190297E-009
+ Step      53 time   0.0374505 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    6.7995848655700684     
+ Average time per cell    4.3502486866373620E-009
+ Step time per cell       4.4101357666982542E-009
+ Step      54 time   0.0381786 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    6.9269809722900391     
+ Average time per cell    4.3496848352314757E-009
+ Step time per cell       4.3091858970001340E-009
+ Step      55 time   0.0389068 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    7.0535678863525391     
+ Average time per cell    4.3486426067021159E-009
+ Step time per cell       4.2825720609269205E-009
+ Step      56 time   0.0396350 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    7.1828069686889648     
+ Average time per cell    4.3492435084079349E-009
+ Step time per cell       4.3727615977533988E-009
+ Step      57 time   0.0403632 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    7.3242690563201904     
+ Average time per cell    4.3570946030169867E-009
+ Step time per cell       4.7860359902390178E-009
+ Step      58 time   0.0410914 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    7.4530448913574219     
+ Average time per cell    4.3572582325887408E-009
+ Step time per cell       4.3562532583665513E-009
+ Step      59 time   0.0418196 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    7.5889060497283936     
+ Average time per cell    4.3614883852329826E-009
+ Step time per cell       4.5951714532242880E-009
+ Step      60 time   0.0425479 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+
+ Time    4.3276170406573562E-002
+                       Volume            Mass         Density        Pressure Internal Energy  Kinetic Energy    Total Energy
+ step:     60      0.1000E+03      0.2800E+02      0.2800E+00      0.1716E+00      0.4289E+02      0.1055E+00      0.4300E+02
+
+ Wall clock    7.7402930259704590     
+ Average time per cell    4.3743517987119653E-009
+ Step time per cell       5.1200752043061787E-009
+ Step      61 time   0.0432762 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    7.8404700756072998     
+ Average time per cell    4.3583271050832499E-009
+ Step time per cell       3.3901677751499747E-009
+ Step      62 time   0.0440045 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    7.9766988754272461     
+ Average time per cell    4.3625363998288640E-009
+ Step time per cell       4.6073465556320213E-009
+ Step      63 time   0.0447329 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    8.1041998863220215     
+ Average time per cell    4.3619145180149627E-009
+ Step time per cell       4.3119022545094291E-009
+ Step      64 time   0.0454613 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    8.2357718944549561     
+ Average time per cell    4.3634689619567424E-009
+ Step time per cell       4.4502101243577072E-009
+ Step      65 time   0.0461897 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    8.3737800121307373     
+ Average time per cell    4.3683330892609094E-009
+ Step time per cell       4.6679714513528680E-009
+ Step      66 time   0.0469181 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    8.5153770446777344     
+ Average time per cell    4.3748936738179191E-009
+ Step time per cell       4.7902075392711492E-009
+ Step      67 time   0.0476465 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    8.6503090858459473     
+ Average time per cell    4.3778852957330188E-009
+ Step time per cell       4.5647902879863977E-009
+ Step      68 time   0.0483750 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    8.7854828834533691     
+ Average time per cell    4.3809094813993217E-009
+ Step time per cell       4.5733597491764362E-009
+ Step      69 time   0.0491034 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    8.9231400489807129     
+ Average time per cell    4.3850664020142548E-009
+ Step time per cell       4.6581327397790217E-009
+ Step      70 time   0.0498319 control    sound    timestep   7.28E-04       1,       1 x  6.51E-04 y  1.30E-03
+
+ Time    5.0560330060562611E-002
+                       Volume            Mass         Density        Pressure Internal Energy  Kinetic Energy    Total Energy
+ step:     70      0.1000E+03      0.2800E+02      0.2800E+00      0.1715E+00      0.4287E+02      0.1234E+00      0.4300E+02
+
+ Wall clock    9.0830249786376953     
+ Average time per cell    4.3998718158238462E-009
+ Step time per cell       5.4102889003439082E-009
+ Step      71 time   0.0505603 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    9.1972649097442627     
+ Average time per cell    4.3924608829333584E-009
+ Step time per cell       3.8635900839128425E-009
+ Step      72 time   0.0512888 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    9.3307089805603027     
+ Average time per cell    4.3943000042575334E-009
+ Step time per cell       4.5143598173227573E-009
+ Step      73 time   0.0520174 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    9.4645290374755859     
+ Average time per cell    4.3962633838278883E-009
+ Step time per cell       4.5267774516509640E-009
+ Step      74 time   0.0527459 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    9.6055350303649902     
+ Average time per cell    4.4014664522760940E-009
+ Step time per cell       4.7703765125738252E-009
+ Step      75 time   0.0534745 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    9.7424199581146240     
+ Average time per cell    4.4046675881232931E-009
+ Step time per cell       4.6313491313614783E-009
+ Step      76 time   0.0542031 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    9.8829488754272461     
+ Average time per cell    4.4094102984098231E-009
+ Step time per cell       4.7536903164452973E-009
+ Step      77 time   0.0549317 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    10.024710893630981     
+ Average time per cell    4.4145728409368257E-009
+ Step time per cell       4.7948884053362737E-009
+ Step      78 time   0.0556604 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    10.163040876388550     
+ Average time per cell    4.4181110246831341E-009
+ Step time per cell       4.6791602572840117E-009
+ Step      79 time   0.0563891 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    10.300639867782593     
+ Average time per cell    4.4212458776729247E-009
+ Step time per cell       4.6545109297666285E-009
+ Step      80 time   0.0571179 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+
+ Time    5.7846621546484657E-002
+                       Volume            Mass         Density        Pressure Internal Energy  Kinetic Energy    Total Energy
+ step:     80      0.1000E+03      0.2800E+02      0.2800E+00      0.1714E+00      0.4286E+02      0.1413E+00      0.4300E+02
+
+ Wall clock    10.452841043472290     
+ Average time per cell    4.4304915718385022E-009
+ Step time per cell       5.1466567027899953E-009
+ Step      81 time   0.0578466 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    10.566629886627197     
+ Average time per cell    4.4234287117024057E-009
+ Step time per cell       3.8481327161813775E-009
+ Step      82 time   0.0585754 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    10.697252988815308     
+ Average time per cell    4.4234993741065160E-009
+ Step time per cell       4.4176219186435141E-009
+ Step      83 time   0.0593041 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    10.829150915145874     
+ Average time per cell    4.4240891443156553E-009
+ Step time per cell       4.4613261707127092E-009
+ Step      84 time   0.0600329 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    10.966678857803345     
+ Average time per cell    4.4269375504603091E-009
+ Step time per cell       4.6521017793565988E-009
+ Step      85 time   0.0607617 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    11.103232860565186     
+ Average time per cell    4.4293304086583697E-009
+ Step time per cell       4.6181230572983625E-009
+ Step      86 time   0.0614905 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+ Wall clock    11.231991052627563     
+ Average time per cell    4.4285938559155382E-009
+ Step time per cell       4.3541189774663911E-009
+ Step      87 time   0.0622193 control    sound    timestep   7.29E-04       1,       1 x  6.51E-04 y  1.30E-03
+
+ Time    6.2948200977518326E-002
+                       Volume            Mass         Density        Pressure Internal Energy  Kinetic Energy    Total Energy
+ step:     87      0.1000E+03      0.2800E+02      0.2800E+00      0.1714E+00      0.4284E+02      0.1539E+00      0.4300E+02
+
+
+ Calculation complete
+ Clover is finishing
+ Wall clock    11.382688045501709     
+ First step overhead  -3.4848928451538086E-002
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/CloverLeaf-1.1# 
