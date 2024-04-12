@@ -1,214 +1,84 @@
-root@vm-vultr-2:~# iperf -c vm-vultr-9
+root@vm-vultr-3:~# iperf -s
 ------------------------------------------------------------
-Client connecting to vm-vultr-9, TCP port 5001
-TCP window size:  128 KByte (default)
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
 ------------------------------------------------------------
-[  1] local 10.1.96.4 port 52716 connected with 10.1.96.11 port 5001
+[  1] local 10.1.96.5 port 5001 connected with 10.1.96.6 port 34550
 [ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2276 sec  5.44 GBytes  4.57 Gbits/sec
-root@vm-vultr-2:~# iperf -c vm-vultr-9
-------------------------------------------------------------
-Client connecting to vm-vultr-9, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.4 port 42934 connected with 10.1.96.11 port 5001
+[  1] 0.0000-5.0239 sec  2.50 GBytes  4.28 Gbits/sec
+[  2] local 10.1.96.5 port 5001 connected with 10.1.96.6 port 44510
 [ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.1961 sec  5.18 GBytes  4.37 Gbits/sec
-root@vm-vultr-2:~# iperf -c vm-vultr-9
-------------------------------------------------------------
-Client connecting to vm-vultr-9, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.4 port 52326 connected with 10.1.96.11 port 5001
+[  2] 0.0000-5.0197 sec  1.91 GBytes  3.26 Gbits/sec
+[  3] local 10.1.96.5 port 5001 connected with 10.1.96.6 port 57540
 [ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2138 sec  5.33 GBytes  4.49 Gbits/sec
-root@vm-vultr-2:~# 
+[  3] 0.0000-5.0250 sec  2.46 GBytes  4.21 Gbits/sec
+[  4] local 10.1.96.5 port 5001 connected with 10.1.96.7 port 46390
+[ ID] Interval       Transfer     Bandwidth
+[  4] 0.0000-5.0210 sec  2.36 GBytes  4.05 Gbits/sec
+[  5] local 10.1.96.5 port 5001 connected with 10.1.96.7 port 33254
+[ ID] Interval       Transfer     Bandwidth
+[  5] 0.0000-5.0210 sec  2.31 GBytes  3.94 Gbits/sec
+[  6] local 10.1.96.5 port 5001 connected with 10.1.96.7 port 33264
+[ ID] Interval       Transfer     Bandwidth
+[  6] 0.0000-5.0202 sec  2.44 GBytes  4.17 Gbits/sec
+[  7] local 10.1.96.5 port 5001 connected with 10.1.96.8 port 54774
+[ ID] Interval       Transfer     Bandwidth
+[  7] 0.0000-5.0131 sec  2.53 GBytes  4.34 Gbits/sec
+[  8] local 10.1.96.5 port 5001 connected with 10.1.96.8 port 54776
+[ ID] Interval       Transfer     Bandwidth
+[  8] 0.0000-5.0169 sec  2.77 GBytes  4.75 Gbits/sec
+[  9] local 10.1.96.5 port 5001 connected with 10.1.96.8 port 59446
+[ ID] Interval       Transfer     Bandwidth
+[  9] 0.0000-5.0208 sec  2.63 GBytes  4.50 Gbits/sec
+[ 10] local 10.1.96.5 port 5001 connected with 10.1.96.9 port 52446
+[ ID] Interval       Transfer     Bandwidth
+[ 10] 0.0000-5.0256 sec  1.68 GBytes  2.87 Gbits/sec
+[ 11] local 10.1.96.5 port 5001 connected with 10.1.96.9 port 47348
+[ ID] Interval       Transfer     Bandwidth
+[ 11] 0.0000-5.0176 sec  2.21 GBytes  3.78 Gbits/sec
+[ 12] local 10.1.96.5 port 5001 connected with 10.1.96.9 port 44796
+[ ID] Interval       Transfer     Bandwidth
+[ 12] 0.0000-5.0257 sec  2.23 GBytes  3.80 Gbits/sec
+[ 13] local 10.1.96.5 port 5001 connected with 10.1.96.10 port 60398
+[ ID] Interval       Transfer     Bandwidth
+[ 13] 0.0000-5.0290 sec  2.26 GBytes  3.87 Gbits/sec
+[ 14] local 10.1.96.5 port 5001 connected with 10.1.96.10 port 60402
+[ ID] Interval       Transfer     Bandwidth
+[ 14] 0.0000-5.0222 sec  2.66 GBytes  4.55 Gbits/sec
+[ 15] local 10.1.96.5 port 5001 connected with 10.1.96.10 port 60578
+[ ID] Interval       Transfer     Bandwidth
+[ 15] 0.0000-5.0142 sec  2.59 GBytes  4.43 Gbits/sec
+[ 16] local 10.1.96.5 port 5001 connected with 10.1.96.11 port 39452
+[ ID] Interval       Transfer     Bandwidth
+[ 16] 0.0000-5.0269 sec  2.45 GBytes  4.19 Gbits/sec
+[ 17] local 10.1.96.5 port 5001 connected with 10.1.96.11 port 39456
+[ ID] Interval       Transfer     Bandwidth
+[ 17] 0.0000-5.0199 sec  2.31 GBytes  3.95 Gbits/sec
+[ 18] local 10.1.96.5 port 5001 connected with 10.1.96.11 port 42242
+[ ID] Interval       Transfer     Bandwidth
+[ 18] 0.0000-5.0267 sec  2.39 GBytes  4.09 Gbits/sec
+[ 19] local 10.1.96.5 port 5001 connected with 10.1.96.12 port 53360
+[ ID] Interval       Transfer     Bandwidth
+[ 19] 0.0000-5.0194 sec  2.61 GBytes  4.47 Gbits/sec
+[ 20] local 10.1.96.5 port 5001 connected with 10.1.96.12 port 53368
+[ ID] Interval       Transfer     Bandwidth
+[ 20] 0.0000-5.0198 sec  2.51 GBytes  4.30 Gbits/sec
+[ 21] local 10.1.96.5 port 5001 connected with 10.1.96.12 port 35098
+[ ID] Interval       Transfer     Bandwidth
+[ 21] 0.0000-5.0166 sec  2.28 GBytes  3.90 Gbits/sec
 
 
-root@vm-vultr-3:~# iperf -c vm-vultr-2
+root@vm-vultr-10:~# iperf -s
 ------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size:  128 KByte (default)
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
 ------------------------------------------------------------
-[  1] local 10.1.96.5 port 50958 connected with 10.1.96.4 port 5001
+[  1] local 10.1.96.12 port 5001 connected with 10.1.96.5 port 54294
 [ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2277 sec  5.19 GBytes  4.36 Gbits/sec
-root@vm-vultr-3:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.5 port 38128 connected with 10.1.96.4 port 5001
+[  1] 0.0000-5.0203 sec  2.39 GBytes  4.09 Gbits/sec
+[  2] local 10.1.96.12 port 5001 connected with 10.1.96.5 port 54310
 [ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2357 sec  2.45 GBytes  2.06 Gbits/sec
-root@vm-vultr-3:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.5 port 52510 connected with 10.1.96.4 port 5001
+[  2] 0.0000-5.0242 sec  2.49 GBytes  4.27 Gbits/sec
+[  3] local 10.1.96.12 port 5001 connected with 10.1.96.5 port 34484
 [ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2226 sec  4.97 GBytes  4.17 Gbits/sec
-root@vm-vultr-3:~# 
-
-
-root@vm-vultr-4:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size:  128 KByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.6 port 37000 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2287 sec  5.02 GBytes  4.22 Gbits/sec
-root@vm-vultr-4:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.6 port 34792 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2424 sec  2.76 GBytes  2.31 Gbits/sec
-root@vm-vultr-4:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.6 port 53952 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2245 sec  4.59 GBytes  3.85 Gbits/sec
-root@vm-vultr-4:~# 
-
-
-root@vm-vultr-5:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size:  128 KByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.7 port 53256 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2204 sec  4.84 GBytes  4.07 Gbits/sec
-root@vm-vultr-5:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.7 port 51180 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2218 sec  5.33 GBytes  4.48 Gbits/sec
-root@vm-vultr-5:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.7 port 37216 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2197 sec  4.62 GBytes  3.89 Gbits/sec
-root@vm-vultr-5:~# 
-
-
-root@vm-vultr-6:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size:  128 KByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.8 port 38410 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2235 sec  4.75 GBytes  3.99 Gbits/sec
-root@vm-vultr-6:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.8 port 39642 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2227 sec  4.85 GBytes  4.08 Gbits/sec
-root@vm-vultr-6:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.8 port 54498 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2214 sec  4.59 GBytes  3.86 Gbits/sec
-root@vm-vultr-6:~# 
-
-
-root@vm-vultr-7:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size:  128 KByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.9 port 58410 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2196 sec  4.88 GBytes  4.10 Gbits/sec
-root@vm-vultr-7:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.9 port 48912 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2361 sec  4.74 GBytes  3.98 Gbits/sec
-root@vm-vultr-7:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.9 port 44414 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2194 sec  4.07 GBytes  3.42 Gbits/sec
-root@vm-vultr-7:~# 
-
-
-root@vm-vultr-8:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size:  128 KByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.10 port 35690 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2171 sec  4.76 GBytes  4.00 Gbits/sec
-root@vm-vultr-8:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.10 port 44402 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2477 sec  2.55 GBytes  2.13 Gbits/sec
-root@vm-vultr-8:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.10 port 44784 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2192 sec  4.94 GBytes  4.16 Gbits/sec
-root@vm-vultr-8:~# 
-
-
-root@vm-vultr-9:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size:  128 KByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.11 port 43040 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2332 sec  4.79 GBytes  4.02 Gbits/sec
-root@vm-vultr-9:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.11 port 54504 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2161 sec  4.85 GBytes  4.08 Gbits/sec
-root@vm-vultr-9:~# iperf -c vm-vultr-2
-------------------------------------------------------------
-Client connecting to vm-vultr-2, TCP port 5001
-TCP window size: 3.75 MByte (default)
-------------------------------------------------------------
-[  1] local 10.1.96.11 port 49530 connected with 10.1.96.4 port 5001
-[ ID] Interval       Transfer     Bandwidth
-[  1] 0.0000-10.2189 sec  5.23 GBytes  4.39 Gbits/sec
-root@vm-vultr-9:~# 
+[  3] 0.0000-5.0222 sec  2.55 GBytes  4.36 Gbits/sec
