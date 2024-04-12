@@ -1,29 +1,29 @@
-root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 45 ./miniFE.x nx=1000 ny=500 nz=10
-      creating/filling mesh...0.0156412s, total time: 0.0156422
-generating matrix structure...0.437919s, total time: 0.453561
-         assembling FE data...0.328572s, total time: 0.782133
-      imposing Dirichlet BC...0.049089s, total time: 0.831222
-      imposing Dirichlet BC...0.00213885s, total time: 0.833361
-making matrix indices local...0.223164s, total time: 1.05652
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 45 ./miniFE.x nx=3000 ny=2000 nz=10
+      creating/filling mesh...0.183591s, total time: 0.183592
+generating matrix structure...7.21591s, total time: 7.3995
+         assembling FE data...3.42981s, total time: 10.8293
+      imposing Dirichlet BC...0.744563s, total time: 11.5739
+      imposing Dirichlet BC...0.026144s, total time: 11.6
+making matrix indices local...2.29945s, total time: 13.8995
 Starting CG solver ... 
-Initial Residual = 75.3538
-Iteration = 5   Residual = 2.87276
-Iteration = 10   Residual = 1.36507
-Iteration = 15   Residual = 0.892875
-Iteration = 20   Residual = 0.662075
-Iteration = 25   Residual = 0.525219
-Iteration = 30   Residual = 0.454589
-Iteration = 35   Residual = 0.375444
-Iteration = 40   Residual = 0.325947
-Iteration = 45   Residual = 0.287712
-Iteration = 50   Residual = 0.257238
-Final Resid Norm: 0.257238
+Initial Residual = 149.627
+Iteration = 5   Residual = 4.49811
+Iteration = 10   Residual = 2.09601
+Iteration = 15   Residual = 1.36528
+Iteration = 20   Residual = 1.30551
+Iteration = 25   Residual = 0.825098
+Iteration = 30   Residual = 0.680723
+Iteration = 35   Residual = 0.579145
+Iteration = 40   Residual = 0.633562
+Iteration = 45   Residual = 0.452354
+Iteration = 50   Residual = 0.404833
+Final Resid Norm: 0.404833
 Mini-Application Name: miniFE
 Mini-Application Version: 2.0
 Global Run Parameters: 
   dimensions: 
-    nx: 1000
-    ny: 500
+    nx: 3000
+    ny: 2000
     nz: 10
   load_imbalance: 0
   mv_overlap_comm_comp: 0 (no)
@@ -42,42 +42,42 @@ Build:
   CXXFLAGS: '-O3'
   using MPI: yes
   Threading: none
-Run Date/Time: 2024-04-12, 17-56-53
+Run Date/Time: 2024-04-12, 20-23-11
 Rows-per-proc Load Imbalance: 
-  Largest (from avg, %): 23.606
-  Std Dev (%): 16.5955
+  Largest (from avg, %): 22.9454
+  Std Dev (%): 16.6028
 Matrix structure generation: 
-  Mat-struc-gen Time: 0.437919
+  Mat-struc-gen Time: 7.21591
 FE assembly: 
-  FE assembly Time: 0.328572
+  FE assembly Time: 3.42981
 Matrix attributes: 
-  Global Nrows: 5516511
-  Global NNZ: 139639531
-  Global Memory (GB): 1.60169
-  Pll Memory Overhead (MB): 36.0302
-  Rows per proc MIN: 90636
-  Rows per proc MAX: 145920
-  Rows per proc AVG: 122589
-  NNZ per proc MIN: 2444184
-  NNZ per proc MAX: 3606240
-  NNZ per proc AVG: 3.1031e+06
+  Global Nrows: 66055011
+  Global NNZ: 1674465031
+  Global Memory (GB): 19.2058
+  Pll Memory Overhead (MB): 417.51
+  Rows per proc MIN: 1089576
+  Rows per proc MAX: 1740464
+  Rows per proc AVG: 1.46789e+06
+  NNZ per proc MIN: 29418552
+  NNZ per proc MAX: 43076484
+  NNZ per proc AVG: 3.72103e+07
 CG solve: 
   Iterations: 50
-  Final Resid Norm: 0.257238
-  WAXPY Time: 0.0311162
-  WAXPY Flops: 2.28e+09
-  WAXPY Mflops: 73273.6
-  DOT Time: 0.414166
-  DOT Flops: 1e+09
-  DOT Mflops: 2414.49
-  MATVEC Time: 0.36647
-  MATVEC Flops: 1.42432e+10
-  MATVEC Mflops: 38866
+  Final Resid Norm: 0.404833
+  WAXPY Time: 0.589459
+  WAXPY Flops: 2.736e+10
+  WAXPY Mflops: 46415.4
+  DOT Time: 3.1565
+  DOT Flops: 1.2e+10
+  DOT Mflops: 3801.68
+  MATVEC Time: 4.05092
+  MATVEC Flops: 1.70795e+11
+  MATVEC Mflops: 42162.1
   Total: 
-    Total CG Time: 0.814247
-    Total CG Flops: 1.75232e+10
-    Total CG Mflops: 21520.8
-  Time per iteration: 0.0162849
-Total Program Time: 1.89202
+    Total CG Time: 7.82492
+    Total CG Flops: 2.10155e+11
+    Total CG Mflops: 26857.2
+  Time per iteration: 0.156498
+Total Program Time: 21.9
 
 root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# 

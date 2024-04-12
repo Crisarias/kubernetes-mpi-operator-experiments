@@ -1,0 +1,43 @@
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref# cp in.lj.weak6.miniMD in.lj.miniMD
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 90 ./miniMD_openmpi
+# Create System:
+# Done .... 
+# miniMD-Reference 1.2 (MPI+OpenMP) output ...
+# Run Settings: 
+        # MPI processes: 90
+        # OpenMP threads: 1
+        # Inputfile: in.lj.miniMD
+        # Datafile: None
+# Physics Settings: 
+        # ForceStyle: LJ
+        # Force Parameters: 1.00 1.00
+        # Units: LJ
+        # Atoms: 16777216
+        # System size: 429.98 429.98 107.49 (unit cells: 256 256 64)
+        # Density: 0.844200
+        # Force cutoff: 2.500000
+        # Timestep size: 0.005000
+# Technical Settings: 
+        # Neigh cutoff: 2.800000
+        # Half neighborlists: 1
+        # Neighbor bins: 213 213 53
+        # Neighbor frequency: 20
+        # Sorting frequency: 20
+        # Thermo frequency: 100
+        # Ghost Newton: 1
+        # Use intrinsics: 0
+        # Do safe exchange: 0
+        # Size of float: 8
+
+# Starting dynamics ...
+# Timestep T U P Time
+0 1.440000e+00 -6.773368e+00 -5.019669e+00  0.000
+100 8.115069e-01 -5.839611e+00 3.788907e-02 11.439
+
+
+# Performance Summary:
+# MPI_proc OMP_threads nsteps natoms t_total t_force t_neigh t_comm t_other performance perf/thread grep_string t_extra
+90 1 100 16777216 11.439108 7.051536 1.111011 3.109540 0.167022 146665420.634789 1629615.784831 PERF_SUMMARY 0.141354
+
+
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref# 

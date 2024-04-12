@@ -1,29 +1,29 @@
-root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 75 ./miniFE.x nx=2000 ny=1000 nz=10
-      creating/filling mesh...0.0692689s, total time: 0.0692689
-generating matrix structure...1.03385s, total time: 1.10312
-         assembling FE data...0.836341s, total time: 1.93946
-      imposing Dirichlet BC...0.218104s, total time: 2.15757
-      imposing Dirichlet BC...0.00768304s, total time: 2.16525
-making matrix indices local...0.46266s, total time: 2.62791
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 75 ./miniFE.x nx=4000 ny=2500 nz=10
+      creating/filling mesh...0.19559s, total time: 0.195591
+generating matrix structure...5.46812s, total time: 5.66372
+         assembling FE data...4.30909s, total time: 9.97281
+      imposing Dirichlet BC...1.2155s, total time: 11.1883
+      imposing Dirichlet BC...0.035229s, total time: 11.2235
+making matrix indices local...3.09138s, total time: 14.3149
 Starting CG solver ... 
-Initial Residual = 106.517
-Iteration = 5   Residual = 4.0696
-Iteration = 10   Residual = 1.93698
-Iteration = 15   Residual = 1.26928
-Iteration = 20   Residual = 0.943025
-Iteration = 25   Residual = 0.755201
-Iteration = 30   Residual = 0.632801
-Iteration = 35   Residual = 0.538048
-Iteration = 40   Residual = 0.46835
-Iteration = 45   Residual = 0.414449
-Iteration = 50   Residual = 0.37153
-Final Resid Norm: 0.37153
+Initial Residual = 167.474
+Iteration = 5   Residual = 5.32705
+Iteration = 10   Residual = 2.49255
+Iteration = 15   Residual = 1.62592
+Iteration = 20   Residual = 1.20602
+Iteration = 25   Residual = 0.995157
+Iteration = 30   Residual = 0.811357
+Iteration = 35   Residual = 0.690722
+Iteration = 40   Residual = 0.601201
+Iteration = 45   Residual = 0.55884
+Iteration = 50   Residual = 0.483227
+Final Resid Norm: 0.483227
 Mini-Application Name: miniFE
 Mini-Application Version: 2.0
 Global Run Parameters: 
   dimensions: 
-    nx: 2000
-    ny: 1000
+    nx: 4000
+    ny: 2500
     nz: 10
   load_imbalance: 0
   mv_overlap_comm_comp: 0 (no)
@@ -42,42 +42,42 @@ Build:
   CXXFLAGS: '-O3'
   using MPI: yes
   Threading: none
-Run Date/Time: 2024-04-12, 17-54-22
+Run Date/Time: 2024-04-12, 20-27-09
 Rows-per-proc Load Imbalance: 
-  Largest (from avg, %): 61.4053
-  Std Dev (%): 29.8427
+  Largest (from avg, %): 61.836
+  Std Dev (%): 29.8433
 Matrix structure generation: 
-  Mat-struc-gen Time: 1.03385
+  Mat-struc-gen Time: 5.46812
 FE assembly: 
-  FE assembly Time: 0.836341
+  FE assembly Time: 4.30909
 Matrix attributes: 
-  Global Nrows: 22033011
-  Global NNZ: 558279031
-  Global Memory (GB): 6.40341
-  Pll Memory Overhead (MB): 192.676
-  Rows per proc MIN: 189600
-  Rows per proc MAX: 432432
-  Rows per proc AVG: 293773
-  NNZ per proc MIN: 5119200
-  NNZ per proc MAX: 11392260
-  NNZ per proc AVG: 7.44372e+06
+  Global Nrows: 110071511
+  Global NNZ: 2790604531
+  Global Memory (GB): 32.0075
+  Pll Memory Overhead (MB): 951.62
+  Rows per proc MIN: 947250
+  Rows per proc MAX: 2162160
+  Rows per proc AVG: 1.46762e+06
+  NNZ per proc MIN: 25575750
+  NNZ per proc MAX: 56899032
+  NNZ per proc AVG: 3.72081e+07
 CG solve: 
   Iterations: 50
-  Final Resid Norm: 0.37153
-  WAXPY Time: 0.0787699
-  WAXPY Flops: 9.12e+09
-  WAXPY Mflops: 115780
-  DOT Time: 1.48667
-  DOT Flops: 4e+09
-  DOT Mflops: 2690.57
-  MATVEC Time: 0.682835
-  MATVEC Flops: 5.69445e+10
-  MATVEC Mflops: 83394.2
+  Final Resid Norm: 0.483227
+  WAXPY Time: 0.538234
+  WAXPY Flops: 4.56e+10
+  WAXPY Mflops: 84721.6
+  DOT Time: 8.6284
+  DOT Flops: 2e+10
+  DOT Mflops: 2317.93
+  MATVEC Time: 3.78206
+  MATVEC Flops: 2.84642e+11
+  MATVEC Mflops: 75261
   Total: 
-    Total CG Time: 2.25364
-    Total CG Flops: 7.00645e+10
-    Total CG Mflops: 31089.4
-  Time per iteration: 0.0450728
-Total Program Time: 4.96057
+    Total CG Time: 12.9822
+    Total CG Flops: 3.50242e+11
+    Total CG Mflops: 26978.6
+  Time per iteration: 0.259644
+Total Program Time: 27.7796
 
-root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# 
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic#
