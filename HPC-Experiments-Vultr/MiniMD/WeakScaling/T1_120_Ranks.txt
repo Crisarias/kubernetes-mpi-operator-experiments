@@ -32,12 +32,12 @@ root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 120
 # Starting dynamics ...
 # Timestep T U P Time
 0 1.440000e+00 -6.773368e+00 -5.019669e+00  0.000
-100 7.337429e-01 -5.725165e+00 4.616927e-01 31.555
+100 7.337429e-01 -5.725165e+00 4.616927e-01 32.105
 
 
 # Performance Summary:
 # MPI_proc OMP_threads nsteps natoms t_total t_force t_neigh t_comm t_other performance perf/thread grep_string t_extra
-120 1 100 67108864 31.555737 19.744527 3.386715 7.732235 0.692259 212667714.117435 1772230.950979 PERF_SUMMARY 0.491620
+120 1 100 67108864 32.105233 20.015490 3.444525 7.913182 0.732037 209027807.072435 1741898.392270 PERF_SUMMARY 0.582513
 
 
-root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref#
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref# 

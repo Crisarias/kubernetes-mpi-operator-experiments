@@ -11,15 +11,15 @@ root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 1 .
         # ForceStyle: LJ
         # Force Parameters: 1.00 1.00
         # Units: LJ
-        # Atoms: 1048576
-        # System size: 107.49 107.49 107.49 (unit cells: 64 64 64)
+        # Atoms: 557056
+        # System size: 107.49 57.11 107.49 (unit cells: 64 34 64)
         # Density: 0.844200
         # Force cutoff: 2.500000
         # Timestep size: 0.005000
 # Technical Settings: 
         # Neigh cutoff: 2.800000
         # Half neighborlists: 1
-        # Neighbor bins: 53 53 53
+        # Neighbor bins: 53 28 53
         # Neighbor frequency: 20
         # Sorting frequency: 20
         # Thermo frequency: 100
@@ -30,13 +30,13 @@ root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 1 .
 
 # Starting dynamics ...
 # Timestep T U P Time
-0 1.440000e+00 -6.773368e+00 -5.019670e+00  0.000
-100 8.187390e-01 -5.848396e+00 -2.165620e-01 45.672
+0 1.440000e+00 -6.773368e+00 -5.019671e+00  0.000
+100 9.669565e-01 -6.068603e+00 -1.061587e+00 24.846
 
 
 # Performance Summary:
 # MPI_proc OMP_threads nsteps natoms t_total t_force t_neigh t_comm t_other performance perf/thread grep_string t_extra
-1 1 100 1048576 45.671602 37.875359 6.412093 0.616037 0.768113 2295903.706722 2295903.706722 PERF_SUMMARY 0.230695
+1 1 100 557056 24.846107 20.325369 3.735315 0.373823 0.411599 2242025.323530 2242025.323530 PERF_SUMMARY 0.128824
 
 
 root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref# 
