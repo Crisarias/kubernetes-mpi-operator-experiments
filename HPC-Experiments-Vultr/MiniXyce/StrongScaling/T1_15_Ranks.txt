@@ -1,8 +1,8 @@
 root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniXyce_1.0/miniXyce_ref# mpirun -np 15 ./miniXyce.x --circuit ../tests/strong.net
 Mini-Application Name: miniXyce
 Mini-Application Version: 1.0
-Parameter_parsing_time: 0.00494718
-Netlist_parsing_time: 0.319611
+Parameter_parsing_time: 0.00585403
+Netlist_parsing_time: 0.288292
 Netlist_file: ../tests/strong.net
 Circuit_attributes: 
   Number_of_devices: 200001
@@ -25,7 +25,7 @@ DCOP Calculation:
   GMRES_iterations: 0
   GMRES_restarts: 0
   GMRES_native_residual: 0
-  DCOP_calculation_time: 0.000707983
+  DCOP_calculation_time: 0.000529384
 Transient Calculation: 
   Number_of_time_steps: 500
   Time_start: 0
@@ -35,8 +35,8 @@ Transient Calculation:
   GMRES_subspace_dim: 10
   GMRES_average_iters: 5
   GMRES_average_res: 6.87107e-14
-  Matrix_setup_time: 0.000103954
-  Transient_calculation_time: 18.4817
-I/O File Time: 16.7652
-Total Simulation Time: 19.0367
+  Matrix_setup_time: 8.6112e-05
+  Transient_calculation_time: 17.7303
+I/O File Time: 15.8739
+Total Simulation Time: 18.2054
 root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniXyce_1.0/miniXyce_ref# 
