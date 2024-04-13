@@ -1,23 +1,23 @@
 root@irazu-sts-0:/nfs/mantevo-benchmarks/miniXyce_1.0/miniXyce_ref# mpirun -np 15 ./miniXyce.x --circuit ../tests/weak2.net
 Mini-Application Name: miniXyce
 Mini-Application Version: 1.0
-Parameter_parsing_time: 0.00818963
-Netlist_parsing_time: 0.0221542
+Parameter_parsing_time: 0.00507501
+Netlist_parsing_time: 0.170441
 Netlist_file: ../tests/weak2.net
 Circuit_attributes: 
-  Number_of_devices: 16001
-  Resistors_(R): 8000
-  Capacitors_(C): 8000
+  Number_of_devices: 128001
+  Resistors_(R): 64000
+  Capacitors_(C): 64000
   Voltage_sources_(V): 1
 Matrix_attributes: 
-  Global_rows: 8002
-  Rows_per_proc_MIN: 533
-  Rows_per_proc_MAX: 534
-  Rows_per_proc_AVG: 533.467
-  Global_NNZ: 32002
-  NNZ_per_proc_MIN: 2127
-  NNZ_per_proc_MAX: 2136
-  NNZ_per_proc_AVG: 2133.47
+  Global_rows: 64002
+  Rows_per_proc_MIN: 4266
+  Rows_per_proc_MAX: 4267
+  Rows_per_proc_AVG: 4266.8
+  Global_NNZ: 256002
+  NNZ_per_proc_MIN: 17059
+  NNZ_per_proc_MAX: 17068
+  NNZ_per_proc_AVG: 17066.8
 DCOP Calculation: 
   Init_cond_specified: 0
   GMRES_tolerance: 1e-12
@@ -25,7 +25,7 @@ DCOP Calculation:
   GMRES_iterations: 0
   GMRES_restarts: 0
   GMRES_native_residual: 0
-  DCOP_calculation_time: 0.000177213
+  DCOP_calculation_time: 0.000485689
 Transient Calculation: 
   Number_of_time_steps: 500
   Time_start: 0
@@ -35,8 +35,8 @@ Transient Calculation:
   GMRES_subspace_dim: 10
   GMRES_average_iters: 5
   GMRES_average_res: 6.87107e-14
-  Matrix_setup_time: 1.5599e-05
-  Transient_calculation_time: 1.65154
-I/O File Time: 1.41857
-Total Simulation Time: 1.69612
+  Matrix_setup_time: 5.4372e-05
+  Transient_calculation_time: 10.6812
+I/O File Time: 9.73389
+Total Simulation Time: 10.9537
 root@irazu-sts-0:/nfs/mantevo-benchmarks/miniXyce_1.0/miniXyce_ref# 
