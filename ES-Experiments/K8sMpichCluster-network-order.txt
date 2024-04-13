@@ -1,0 +1,81 @@
+root@irazu-sts-4:/# iperf -s
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  1] local 192.168.84.197 port 5001 connected with 192.168.14.8 port 53728
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-5.0138 sec  2.79 GBytes  4.79 Gbits/sec
+[  2] local 192.168.84.197 port 5001 connected with 192.168.14.8 port 53732
+[ ID] Interval       Transfer     Bandwidth
+[  2] 0.0000-5.0126 sec  2.79 GBytes  4.78 Gbits/sec
+[  3] local 192.168.84.197 port 5001 connected with 192.168.14.8 port 59438
+[ ID] Interval       Transfer     Bandwidth
+[  3] 0.0000-5.0099 sec  2.74 GBytes  4.71 Gbits/sec
+[  4] local 192.168.84.197 port 5001 connected with 192.168.207.196 port 46038
+[ ID] Interval       Transfer     Bandwidth
+[  4] 0.0000-5.0093 sec  2.82 GBytes  4.84 Gbits/sec
+[  5] local 192.168.84.197 port 5001 connected with 192.168.207.196 port 46444
+[ ID] Interval       Transfer     Bandwidth
+[  5] 0.0000-5.0116 sec  2.08 GBytes  3.56 Gbits/sec
+[  6] local 192.168.84.197 port 5001 connected with 192.168.207.196 port 44776
+[ ID] Interval       Transfer     Bandwidth
+[  6] 0.0000-5.0144 sec  3.01 GBytes  5.16 Gbits/sec
+[  7] local 192.168.84.197 port 5001 connected with 192.168.204.133 port 57096
+[ ID] Interval       Transfer     Bandwidth
+[  7] 0.0000-5.0120 sec  2.95 GBytes  5.06 Gbits/sec
+[  8] local 192.168.84.197 port 5001 connected with 192.168.204.133 port 57110
+[ ID] Interval       Transfer     Bandwidth
+[  8] 0.0000-5.0113 sec  3.01 GBytes  5.15 Gbits/sec
+[  9] local 192.168.84.197 port 5001 connected with 192.168.204.133 port 58530
+[ ID] Interval       Transfer     Bandwidth
+[  9] 0.0000-5.0100 sec  3.07 GBytes  5.27 Gbits/sec
+root@irazu-sts-4:/# iperf -s
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  1] local 192.168.84.197 port 5001 connected with 192.168.11.66 port 57234
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-5.0101 sec  2.76 GBytes  4.73 Gbits/sec
+[  2] local 192.168.84.197 port 5001 connected with 192.168.11.66 port 42552
+[ ID] Interval       Transfer     Bandwidth
+[  2] 0.0000-5.0126 sec  2.99 GBytes  5.13 Gbits/sec
+[  3] local 192.168.84.197 port 5001 connected with 192.168.11.66 port 33690
+[ ID] Interval       Transfer     Bandwidth
+[  3] 0.0000-5.0155 sec  2.75 GBytes  4.70 Gbits/sec
+[  4] local 192.168.84.197 port 5001 connected with 192.168.114.3 port 60368
+[ ID] Interval       Transfer     Bandwidth
+[  4] 0.0000-5.0145 sec  2.83 GBytes  4.84 Gbits/sec
+[  5] local 192.168.84.197 port 5001 connected with 192.168.114.3 port 33154
+[ ID] Interval       Transfer     Bandwidth
+[  5] 0.0000-5.0115 sec  2.76 GBytes  4.74 Gbits/sec
+[  6] local 192.168.84.197 port 5001 connected with 192.168.114.3 port 33312
+[ ID] Interval       Transfer     Bandwidth
+[  6] 0.0000-5.0128 sec  2.77 GBytes  4.75 Gbits/sec
+[  7] local 192.168.84.197 port 5001 connected with 192.168.51.68 port 33770
+[ ID] Interval       Transfer     Bandwidth
+[  7] 0.0000-5.0128 sec  2.68 GBytes  4.60 Gbits/sec
+[  8] local 192.168.84.197 port 5001 connected with 192.168.51.68 port 33778
+[ ID] Interval       Transfer     Bandwidth
+[  8] 0.0000-5.0121 sec  2.97 GBytes  5.09 Gbits/sec
+[  9] local 192.168.84.197 port 5001 connected with 192.168.51.68 port 59088
+[ ID] Interval       Transfer     Bandwidth
+[  9] 0.0000-5.0170 sec  2.25 GBytes  3.86 Gbits/sec
+
+
+
+root@irazu-sts-7:/# iperf -s
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  1] local 192.168.51.68 port 5001 connected with 192.168.84.197 port 39568
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-5.0148 sec  2.58 GBytes  4.41 Gbits/sec
+[  2] local 192.168.51.68 port 5001 connected with 192.168.84.197 port 53980
+[ ID] Interval       Transfer     Bandwidth
+[  2] 0.0000-5.0143 sec  3.04 GBytes  5.22 Gbits/sec
+[  3] local 192.168.51.68 port 5001 connected with 192.168.84.197 port 53988
+[ ID] Interval       Transfer     Bandwidth
+[  3] 0.0000-5.0130 sec  2.83 GBytes  4.85 Gbits/sec

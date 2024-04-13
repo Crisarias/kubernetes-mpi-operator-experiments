@@ -1,41 +1,58 @@
-root@vm-vultr-1:~# kubectl get no -o wide
-NAME         STATUS   ROLES           AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION       CONTAINER-RUNTIME
-vm-vultr-1   Ready    control-plane   13m     v1.28.1   10.1.96.3     <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
-vm-vultr-2   Ready    <none>          8m7s    v1.28.1   10.1.96.4     <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
-vm-vultr-3   Ready    <none>          7m28s   v1.28.1   10.1.96.5     <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
-vm-vultr-4   Ready    <none>          6m49s   v1.28.1   10.1.96.6     <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
-vm-vultr-5   Ready    <none>          6m11s   v1.28.1   10.1.96.7     <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
-vm-vultr-6   Ready    <none>          5m30s   v1.28.1   10.1.96.8     <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
-vm-vultr-7   Ready    <none>          4m46s   v1.28.1   10.1.96.9     <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
-vm-vultr-8   Ready    <none>          4m3s    v1.28.1   10.1.96.10    <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
-vm-vultr-9   Ready    <none>          3m27s   v1.28.1   10.1.96.11    <none>        Ubuntu 22.04.4 LTS   5.15.0-101-generic   containerd://1.6.28
-root@vm-vultr-1:~# 
+iperf -c 192.168.84.197 -t 5
 
-root@vm-vultr-1:~# kubectl get pods --all-namespaces
-NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE
-kube-system   calico-kube-controllers-68cdf756d9-5mjcw   1/1     Running   0          78s
-kube-system   calico-node-2b5dd                          1/1     Running   0          78s
-kube-system   calico-node-42822                          1/1     Running   0          78s
-kube-system   calico-node-4swcc                          1/1     Running   0          78s
-kube-system   calico-node-5hsnt                          1/1     Running   0          78s
-kube-system   calico-node-gcl84                          1/1     Running   0          78s
-kube-system   calico-node-j5zm4                          1/1     Running   0          78s
-kube-system   calico-node-j7fk4                          1/1     Running   0          78s
-kube-system   calico-node-q58z7                          1/1     Running   0          78s
-kube-system   calico-node-zxwkc                          1/1     Running   0          78s
-kube-system   coredns-5dd5756b68-c2bl9                   1/1     Running   0          9m5s
-kube-system   coredns-5dd5756b68-lwnzx                   1/1     Running   0          9m5s
-kube-system   etcd-vm-vultr-1                            1/1     Running   0          9m11s
-kube-system   kube-apiserver-vm-vultr-1                  1/1     Running   0          9m13s
-kube-system   kube-controller-manager-vm-vultr-1         1/1     Running   0          9m13s
-kube-system   kube-proxy-5dwqt                           1/1     Running   0          9m6s
-kube-system   kube-proxy-bw46m                           1/1     Running   0          3m41s
-kube-system   kube-proxy-fw28j                           1/1     Running   0          4m25s
-kube-system   kube-proxy-p6btg                           1/1     Running   0          3m5s
-kube-system   kube-proxy-t8lwz                           1/1     Running   0          5m2s
-kube-system   kube-proxy-tcr7d                           1/1     Running   0          7m11s
-kube-system   kube-proxy-vc5hn                           1/1     Running   0          6m14s
-kube-system   kube-proxy-xth9w                           1/1     Running   0          5m38s
-kube-system   kube-proxy-zft4f                           1/1     Running   0          2m27s
-kube-system   kube-scheduler-vm-vultr-1                  1/1     Running   0          9m11s
-root@vm-vultr-1:~# 
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl get pods -n irazu-ns -o wide
+NAME          READY   STATUS    RESTARTS   AGE   IP                NODE          NOMINATED NODE   READINESS GATES
+irazu-sts-0   1/1     Running   0          20m   192.168.68.2      vm-vultr-10   <none>           <none>
+irazu-sts-1   1/1     Running   0          20m   192.168.204.133   vm-vultr-6    <none>           <none>
+irazu-sts-2   1/1     Running   0          20m   192.168.207.196   vm-vultr-5    <none>           <none>
+irazu-sts-3   1/1     Running   0          19m   192.168.114.3     vm-vultr-8    <none>           <none>
+irazu-sts-4   1/1     Running   0          19m   192.168.84.197    vm-vultr-3    <none>           <none>
+irazu-sts-5   1/1     Running   0          19m   192.168.11.66     vm-vultr-7    <none>           <none>
+irazu-sts-6   1/1     Running   0          18m   192.168.14.8      vm-vultr-4    <none>           <none>
+irazu-sts-7   1/1     Running   0          18m   192.168.51.68     vm-vultr-9    <none>           <none>
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# 
+
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl get pods --all-namespaces
+NAMESPACE     NAME                                                              READY   STATUS      RESTARTS   AGE
+irazu-ns      irazu-sts-0                                                       1/1     Running     0          21m
+irazu-ns      irazu-sts-1                                                       1/1     Running     0          20m
+irazu-ns      irazu-sts-2                                                       1/1     Running     0          20m
+irazu-ns      irazu-sts-3                                                       1/1     Running     0          20m
+irazu-ns      irazu-sts-4                                                       1/1     Running     0          19m
+irazu-ns      irazu-sts-5                                                       1/1     Running     0          19m
+irazu-ns      irazu-sts-6                                                       1/1     Running     0          19m
+irazu-ns      irazu-sts-7                                                       1/1     Running     0          18m
+kube-system   calico-kube-controllers-787f445f84-7b74l                          1/1     Running     0          28m
+kube-system   calico-node-2qrps                                                 1/1     Running     0          28m
+kube-system   calico-node-76lww                                                 1/1     Running     0          28m
+kube-system   calico-node-8tv6p                                                 1/1     Running     0          28m
+kube-system   calico-node-b447v                                                 1/1     Running     0          28m
+kube-system   calico-node-h7nxq                                                 1/1     Running     0          28m
+kube-system   calico-node-mv2bn                                                 1/1     Running     0          28m
+kube-system   calico-node-t7nt5                                                 1/1     Running     0          28m
+kube-system   calico-node-tq7pp                                                 1/1     Running     0          28m
+kube-system   calico-node-vvx27                                                 1/1     Running     0          28m
+kube-system   coredns-5dd5756b68-rvrsk                                          1/1     Running     0          30m
+kube-system   coredns-5dd5756b68-x6cts                                          1/1     Running     0          30m
+kube-system   etcd-vm-vultr-2                                                   1/1     Running     0          31m
+kube-system   kube-apiserver-vm-vultr-2                                         1/1     Running     0          31m
+kube-system   kube-controller-manager-vm-vultr-2                                1/1     Running     0          31m
+kube-system   kube-proxy-4nclb                                                  1/1     Running     0          29m
+kube-system   kube-proxy-6r86g                                                  1/1     Running     0          29m
+kube-system   kube-proxy-b9q2l                                                  1/1     Running     0          29m
+kube-system   kube-proxy-bjjj4                                                  1/1     Running     0          29m
+kube-system   kube-proxy-kzgm2                                                  1/1     Running     0          29m
+kube-system   kube-proxy-tgjl6                                                  1/1     Running     0          28m
+kube-system   kube-proxy-tswq8                                                  1/1     Running     0          30m
+kube-system   kube-proxy-wz426                                                  1/1     Running     0          29m
+kube-system   kube-proxy-xjcq4                                                  1/1     Running     0          29m
+kube-system   kube-scheduler-vm-vultr-2                                         1/1     Running     0          31m
+olm           catalog-operator-59dfc8c594-rcxd8                                 1/1     Running     0          27m
+olm           olm-operator-79978456c6-9lgxg                                     1/1     Running     0          27m
+olm           operatorhubio-catalog-8d7d5                                       1/1     Running     0          27m
+olm           packageserver-777c5c9d74-4zv5l                                    1/1     Running     0          27m
+olm           packageserver-777c5c9d74-vpxbb                                    1/1     Running     0          27m
+operators     3625f8a9d54bb318f9d6dd0431a6a9cc681b5e7bf2a1227ae9b378cf2cx56r5   0/1     Completed   0          24m
+operators     kubernetes-mpi-operator-catalog-x8tzk                             1/1     Running     0          26m
+operators     kubernetes-mpi-operator-controller-manager-858dd79f75-v69dd       2/2     Running     0          23m
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# 

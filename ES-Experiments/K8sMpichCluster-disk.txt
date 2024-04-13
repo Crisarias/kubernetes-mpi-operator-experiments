@@ -1,0 +1,238 @@
+root@irazu-sts-0:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.49949 s, 350 MB/s
+root@irazu-sts-0:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.66638 s, 315 MB/s
+root@irazu-sts-0:/# rm /nfs/testfile.bin
+root@irazu-sts-0:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.28725 s, 407 MB/s
+root@irazu-sts-0:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.65787 s, 316 MB/s
+root@irazu-sts-0:/# rm /nfs/testfile.bin
+root@irazu-sts-0:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.37914 s, 380 MB/s
+root@irazu-sts-0:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.74816 s, 300 MB/s
+root@irazu-sts-0:/# rm /nfs/testfile.bin
+root@irazu-sts-0:/# 
+
+
+root@irazu-sts-1:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.43183 s, 366 MB/s
+root@irazu-sts-1:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.83421 s, 286 MB/s
+root@irazu-sts-1:/# rm /nfs/testfile.bin
+root@irazu-sts-1:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.29873 s, 404 MB/s
+root@irazu-sts-1:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.71547 s, 306 MB/s
+root@irazu-sts-1:/# rm /nfs/testfile.bin
+root@irazu-sts-1:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.35582 s, 387 MB/s
+root@irazu-sts-1:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.77019 s, 296 MB/s
+root@irazu-sts-1:/# rm /nfs/testfile.bin
+root@irazu-sts-1:/# 
+
+
+root@irazu-sts-2:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.33509 s, 393 MB/s
+root@irazu-sts-2:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.6512 s, 318 MB/s
+root@irazu-sts-2:/# rm /nfs/testfile.bin
+root@irazu-sts-2:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.31936 s, 397 MB/s
+root@irazu-sts-2:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.73595 s, 302 MB/s
+root@irazu-sts-2:/# rm /nfs/testfile.bin
+root@irazu-sts-2:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.38271 s, 379 MB/s
+root@irazu-sts-2:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.70103 s, 308 MB/s
+root@irazu-sts-2:/# rm /nfs/testfile.bin
+root@irazu-sts-2:/# 
+
+
+root@irazu-sts-3:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.36615 s, 384 MB/s
+root@irazu-sts-3:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.76233 s, 297 MB/s
+root@irazu-sts-3:/# rm /nfs/testfile.bin
+root@irazu-sts-3:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.52522 s, 344 MB/s
+root@irazu-sts-3:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.77267 s, 296 MB/s
+root@irazu-sts-3:/# rm /nfs/testfile.bin
+root@irazu-sts-3:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.53859 s, 341 MB/s
+root@irazu-sts-3:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.6557 s, 317 MB/s
+root@irazu-sts-3:/# rm /nfs/testfile.bin
+root@irazu-sts-3:/# 
+
+
+root@irazu-sts-4:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.35385 s, 387 MB/s
+root@irazu-sts-4:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.62969 s, 322 MB/s
+root@irazu-sts-4:/# rm /nfs/testfile.bin
+root@irazu-sts-4:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.43672 s, 365 MB/s
+root@irazu-sts-4:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.67704 s, 313 MB/s
+root@irazu-sts-4:/# rm /nfs/testfile.bin
+root@irazu-sts-4:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.3613 s, 385 MB/s
+root@irazu-sts-4:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.73713 s, 302 MB/s
+root@irazu-sts-4:/# rm /nfs/testfile.bin
+root@irazu-sts-4:/# 
+
+
+root@irazu-sts-5:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.40559 s, 373 MB/s
+root@irazu-sts-5:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.59145 s, 329 MB/s
+root@irazu-sts-5:/# rm /nfs/testfile.bin
+root@irazu-sts-5:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.43818 s, 365 MB/s
+root@irazu-sts-5:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.58168 s, 331 MB/s
+root@irazu-sts-5:/# rm /nfs/testfile.bin
+root@irazu-sts-5:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.39647 s, 375 MB/s
+root@irazu-sts-5:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.69753 s, 309 MB/s
+root@irazu-sts-5:/# rm /nfs/testfile.bin
+root@irazu-sts-5:/# 
+
+
+root@irazu-sts-6:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.15795 s, 453 MB/s
+root@irazu-sts-6:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.019 s, 515 MB/s
+root@irazu-sts-6:/# rm /nfs/testfile.bin
+root@irazu-sts-6:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.16813 s, 449 MB/s
+root@irazu-sts-6:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.01967 s, 514 MB/s
+root@irazu-sts-6:/# rm /nfs/testfile.bin
+root@irazu-sts-6:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.10143 s, 476 MB/s
+root@irazu-sts-6:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.07624 s, 487 MB/s
+root@irazu-sts-6:/# rm /nfs/testfile.bin
+root@irazu-sts-6:/# 
+
+
+root@irazu-sts-7:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.32678 s, 395 MB/s
+root@irazu-sts-7:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.56344 s, 335 MB/s
+root@irazu-sts-7:/# rm /nfs/testfile.bin
+root@irazu-sts-7:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.32432 s, 396 MB/s
+root@irazu-sts-7:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.62597 s, 322 MB/s
+root@irazu-sts-7:/# rm /nfs/testfile.bin
+root@irazu-sts-7:/# dd if=/dev/zero of=/nfs/testfile.bin bs=1M count=500 conv=fsync
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.30941 s, 400 MB/s
+root@irazu-sts-7:/# dd if=/nfs/testfile.bin of=/dev/null bs=1M
+500+0 records in
+500+0 records out
+524288000 bytes (524 MB, 500 MiB) copied, 1.66955 s, 314 MB/s
+root@irazu-sts-7:/# rm /nfs/testfile.bin
+root@irazu-sts-7:/# 
