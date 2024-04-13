@@ -1,9 +1,9 @@
-root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 15 ./miniMD_openmpi
+root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 14 ./miniMD_openmpi
 # Create System:
 # Done .... 
 # miniMD-Reference 1.2 (MPI+OpenMP) output ...
 # Run Settings: 
-        # MPI processes: 15
+        # MPI processes: 14
         # OpenMP threads: 1
         # Inputfile: in.lj.miniMD
         # Datafile: None
@@ -31,12 +31,12 @@ root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 15 
 # Starting dynamics ...
 # Timestep T U P Time
 0 1.440000e+00 -6.773368e+00 -5.019669e+00  0.000
-100 8.291813e-01 -5.862677e+00 -4.405604e-02 28.166
+100 8.291813e-01 -5.862677e+00 -4.405604e-02 32.583
 
 
 # Performance Summary:
 # MPI_proc OMP_threads nsteps natoms t_total t_force t_neigh t_comm t_other performance perf/thread grep_string t_extra
-15 1 100 8388608 28.166004 20.729747 3.375581 2.836316 1.224360 29782741.158872 1985516.077258 PERF_SUMMARY 0.300384
+14 1 100 8388608 32.583358 24.875243 3.750351 3.139554 0.818210 25745068.878705 1838933.491336 PERF_SUMMARY 0.252792
 
 
 root@vm-vultr-3:/mnt/beegfs/mantevo-benchmarks/miniMD/miniMD_ref# 

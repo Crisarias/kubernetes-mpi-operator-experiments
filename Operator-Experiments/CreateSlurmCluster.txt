@@ -1,33 +1,31 @@
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl create -f _v1alpha1_slurm_cluster.yaml
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl create -f _v1alpha1_slurm_cluster.yaml
 mpicluster.crisarias.com/poascluster created
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl get pods -n poas-ns --watch
-NAME         READY   STATUS    RESTARTS   AGE
-poas-sts-0   0/1     Pending   0          8s
-poas-sts-0   0/1     Pending   0          10s
-poas-sts-0   0/1     ContainerCreating   0          10s
-poas-sts-0   0/1     ContainerCreating   0          10s
-poas-sts-0   0/1     Running             0          14s
-poas-sts-0   0/1     Running             0          30s
-poas-sts-0   1/1     Running             0          30s
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl get pods -n poas-ns --watch
+NAME         READY   STATUS              RESTARTS   AGE
+poas-sts-0   0/1     ContainerCreating   0          0s
+poas-sts-0   0/1     Running             0          2s
+poas-sts-0   0/1     Running             0          20s
+poas-sts-0   1/1     Running             0          20s
 poas-sts-1   0/1     Pending             0          0s
 poas-sts-1   0/1     Pending             0          0s
 poas-sts-1   0/1     ContainerCreating   0          0s
-poas-sts-1   0/1     ContainerCreating   0          1s
+poas-sts-1   0/1     ContainerCreating   0          0s
 poas-sts-1   0/1     Running             0          2s
-poas-sts-1   0/1     Running             0          21s
+poas-sts-1   0/1     Running             0          20s
 poas-sts-1   1/1     Running             0          21s
 poas-sts-2   0/1     Pending             0          0s
 poas-sts-2   0/1     Pending             0          0s
 poas-sts-2   0/1     ContainerCreating   0          0s
 poas-sts-2   0/1     ContainerCreating   0          0s
 poas-sts-2   0/1     Running             0          2s
+poas-sts-2   0/1     Running             0          20s
 poas-sts-2   1/1     Running             0          20s
 poas-sts-3   0/1     Pending             0          0s
 poas-sts-3   0/1     Pending             0          0s
 poas-sts-3   0/1     ContainerCreating   0          0s
-poas-sts-3   0/1     ContainerCreating   0          1s
+poas-sts-3   0/1     ContainerCreating   0          0s
 poas-sts-3   0/1     Running             0          2s
-poas-sts-3   0/1     Running             0          21s
+poas-sts-3   0/1     Running             0          20s
 poas-sts-3   1/1     Running             0          21s
 poas-sts-4   0/1     Pending             0          0s
 poas-sts-4   0/1     Pending             0          0s
@@ -39,56 +37,49 @@ poas-sts-4   1/1     Running             0          20s
 poas-sts-5   0/1     Pending             0          0s
 poas-sts-5   0/1     Pending             0          0s
 poas-sts-5   0/1     ContainerCreating   0          0s
-poas-sts-5   0/1     ContainerCreating   0          1s
+poas-sts-5   0/1     ContainerCreating   0          0s
 poas-sts-5   0/1     Running             0          2s
-poas-sts-5   0/1     Running             0          21s
-poas-sts-5   1/1     Running             0          21s
+poas-sts-5   0/1     Running             0          20s
+poas-sts-5   1/1     Running             0          20s
 poas-sts-6   0/1     Pending             0          0s
 poas-sts-6   0/1     Pending             0          0s
-poas-sts-6   0/1     ContainerCreating   0          0s
-poas-sts-6   0/1     ContainerCreating   0          0s
-poas-sts-6   0/1     Running             0          2s
-poas-sts-6   0/1     Running             0          20s
-poas-sts-6   1/1     Running             0          20s
+poas-sts-6   0/1     ContainerCreating   0          1s
+poas-sts-6   0/1     ContainerCreating   0          1s
+poas-sts-6   0/1     Running             0          3s
+poas-sts-6   0/1     Running             0          21s
+poas-sts-6   1/1     Running             0          21s
 poas-sts-7   0/1     Pending             0          0s
 poas-sts-7   0/1     Pending             0          0s
 poas-sts-7   0/1     ContainerCreating   0          0s
-poas-sts-7   0/1     ContainerCreating   0          1s
+poas-sts-7   0/1     ContainerCreating   0          0s
 poas-sts-7   0/1     Running             0          2s
-poas-sts-7   0/1     Running             0          21s
-poas-sts-7   1/1     Running             0          21s
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl exec -it poas-sts-0 -n poas-ns -- bash
-root@poas-sts-0:/# cd /nfs && git clone https://github.com/Crisarias/mpich-examples && cd mpich-examples/mpi-hello-world/code && make && srun -n 105 ./mpi_hello_world > /nfs/out.txt
-Cloning into 'mpich-examples'...
-remote: Enumerating objects: 12, done.
-remote: Counting objects: 100% (12/12), done.
-remote: Compressing objects: 100% (10/10), done.
-remote: Total 12 (delta 0), reused 9 (delta 0), pack-reused 0
-Receiving objects: 100% (12/12), 8.83 KiB | 904.00 KiB/s, done.
-mpicc -o mpi_hello_world mpi_hello_world.c
-root@poas-sts-0:/nfs/mpich-examples/mpi-hello-world/code# 
-exit
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl delete -f _v1alpha1_slurm_cluster.yaml
+poas-sts-7   0/1     Running             0          20s
+poas-sts-7   1/1     Running             0          20s
+^Croot@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl apply -f _v1alpha1_slurm_job.yaml
+mpijob.crisarias.com/slurmjob created
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl delete -f _v1alpha1_slurm_job.yaml
+mpijob.crisarias.com "slurmjob" deleted
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl delete -f _v1alpha1_slurm_cluster.yaml
 mpicluster.crisarias.com "poascluster" deleted
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# 
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# 
 
 
 
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl create -f _v1alpha1_slurm_cluster.yaml
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl apply -f _v1alpha1_slurm_cluster.yaml 
 mpicluster.crisarias.com/poascluster created
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl get pods -n poas-ns --watch
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl get pods -n poas-ns --watch
 NAME         READY   STATUS    RESTARTS   AGE
-poas-sts-0   0/1     Pending   0          2s
-poas-sts-0   0/1     Pending   0          15s
-poas-sts-0   0/1     ContainerCreating   0          15s
-poas-sts-0   0/1     ContainerCreating   0          15s
-poas-sts-0   0/1     Running             0          16s
-poas-sts-0   0/1     Running             0          35s
-poas-sts-0   1/1     Running             0          35s
+poas-sts-0   0/1     Pending   0          1s
+poas-sts-0   0/1     Pending   0          14s
+poas-sts-0   0/1     ContainerCreating   0          14s
+poas-sts-0   0/1     ContainerCreating   0          14s
+poas-sts-0   0/1     Running             0          14s
+poas-sts-0   0/1     Running             0          34s
+poas-sts-0   1/1     Running             0          34s
 poas-sts-1   0/1     Pending             0          0s
 poas-sts-1   0/1     Pending             0          0s
 poas-sts-1   0/1     ContainerCreating   0          0s
-poas-sts-1   0/1     ContainerCreating   0          1s
+poas-sts-1   0/1     ContainerCreating   0          0s
 poas-sts-1   0/1     Running             0          2s
 poas-sts-1   0/1     Running             0          21s
 poas-sts-1   1/1     Running             0          21s
@@ -103,14 +94,14 @@ poas-sts-3   0/1     Pending             0          0s
 poas-sts-3   0/1     Pending             0          0s
 poas-sts-3   0/1     ContainerCreating   0          0s
 poas-sts-3   0/1     ContainerCreating   0          1s
-poas-sts-3   0/1     Running             0          1s
+poas-sts-3   0/1     Running             0          2s
 poas-sts-3   0/1     Running             0          21s
 poas-sts-3   1/1     Running             0          21s
 poas-sts-4   0/1     Pending             0          0s
 poas-sts-4   0/1     Pending             0          0s
 poas-sts-4   0/1     ContainerCreating   0          0s
 poas-sts-4   0/1     ContainerCreating   0          0s
-poas-sts-4   0/1     Running             0          1s
+poas-sts-4   0/1     Running             0          0s
 poas-sts-4   0/1     Running             0          20s
 poas-sts-4   1/1     Running             0          20s
 poas-sts-5   0/1     Pending             0          0s
@@ -124,49 +115,42 @@ poas-sts-6   0/1     Pending             0          0s
 poas-sts-6   0/1     Pending             0          0s
 poas-sts-6   0/1     ContainerCreating   0          0s
 poas-sts-6   0/1     ContainerCreating   0          0s
-poas-sts-6   0/1     Running             0          1s
+poas-sts-6   0/1     Running             0          0s
 poas-sts-6   0/1     Running             0          20s
 poas-sts-6   1/1     Running             0          20s
 poas-sts-7   0/1     Pending             0          0s
 poas-sts-7   0/1     Pending             0          0s
 poas-sts-7   0/1     ContainerCreating   0          0s
 poas-sts-7   0/1     ContainerCreating   0          1s
-poas-sts-7   0/1     Running             0          2s
+poas-sts-7   0/1     Running             0          1s
+poas-sts-7   0/1     Running             0          21s
 poas-sts-7   1/1     Running             0          21s
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl exec -it poas-sts-0 -n poas-ns -- bash
-root@poas-sts-0:/# cd /nfs && git clone https://github.com/Crisarias/mpich-examples && cd mpich-examples/mpi-hello-world/code && make && srun -n 105 ./mpi_hello_world > /nfs/out.txt
-Cloning into 'mpich-examples'...
-remote: Enumerating objects: 12, done.
-remote: Counting objects: 100% (12/12), done.
-remote: Compressing objects: 100% (10/10), done.
-remote: Total 12 (delta 0), reused 9 (delta 0), pack-reused 0
-Receiving objects: 100% (12/12), 8.83 KiB | 1004.00 KiB/s, done.
-mpicc -o mpi_hello_world mpi_hello_world.c
-root@poas-sts-0:/nfs/mpich-examples/mpi-hello-world/code# 
-exit
-command terminated with exit code 130
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl delete -f _v1alpha1_slurm_cluster.yaml
+^Croot@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl apply -f _v1alpha1_slurm_job.yaml
+mpijob.crisarias.com/slurmjob created
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl delete -f _v1alpha1_slurm_job.yaml
+mpijob.crisarias.com "slurmjob" deleted
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl delete -f _v1alpha1_slurm_cluster.yaml
 mpicluster.crisarias.com "poascluster" deleted
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# 
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# 
 
 
 
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl create -f _v1alpha1_slurm_cluster.yaml
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl apply -f _v1alpha1_slurm_cluster.yaml 
 mpicluster.crisarias.com/poascluster created
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl get pods -n poas-ns --watch
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl get pods -n poas-ns --watch
 NAME         READY   STATUS    RESTARTS   AGE
+poas-sts-0   0/1     Pending   0          1s
 poas-sts-0   0/1     Pending   0          2s
-poas-sts-0   0/1     Pending   0          8s
-poas-sts-0   0/1     ContainerCreating   0          8s
-poas-sts-0   0/1     ContainerCreating   0          8s
-poas-sts-0   0/1     Running             0          8s
-poas-sts-0   0/1     Running             0          28s
-poas-sts-0   1/1     Running             0          28s
+poas-sts-0   0/1     ContainerCreating   0          2s
+poas-sts-0   0/1     ContainerCreating   0          2s
+poas-sts-0   0/1     Running             0          3s
+poas-sts-0   0/1     Running             0          22s
+poas-sts-0   1/1     Running             0          22s
 poas-sts-1   0/1     Pending             0          0s
 poas-sts-1   0/1     Pending             0          0s
 poas-sts-1   0/1     ContainerCreating   0          0s
-poas-sts-1   0/1     ContainerCreating   0          1s
-poas-sts-1   0/1     Running             0          2s
+poas-sts-1   0/1     ContainerCreating   0          0s
+poas-sts-1   0/1     Running             0          1s
 poas-sts-1   0/1     Running             0          21s
 poas-sts-1   1/1     Running             0          21s
 poas-sts-2   0/1     Pending             0          0s
@@ -179,8 +163,9 @@ poas-sts-2   1/1     Running             0          20s
 poas-sts-3   0/1     Pending             0          0s
 poas-sts-3   0/1     Pending             0          0s
 poas-sts-3   0/1     ContainerCreating   0          0s
-poas-sts-3   0/1     ContainerCreating   0          1s
-poas-sts-3   0/1     Running             0          2s
+poas-sts-3   0/1     ContainerCreating   0          0s
+poas-sts-3   0/1     Running             0          1s
+poas-sts-3   0/1     Running             0          21s
 poas-sts-3   1/1     Running             0          21s
 poas-sts-4   0/1     Pending             0          0s
 poas-sts-4   0/1     Pending             0          0s
@@ -188,41 +173,32 @@ poas-sts-4   0/1     ContainerCreating   0          0s
 poas-sts-4   0/1     ContainerCreating   0          0s
 poas-sts-4   0/1     Running             0          1s
 poas-sts-4   0/1     Running             0          20s
-poas-sts-4   1/1     Running             0          21s
+poas-sts-4   1/1     Running             0          20s
 poas-sts-5   0/1     Pending             0          0s
 poas-sts-5   0/1     Pending             0          0s
 poas-sts-5   0/1     ContainerCreating   0          0s
 poas-sts-5   0/1     ContainerCreating   0          0s
-poas-sts-5   0/1     Running             0          0s
-poas-sts-5   0/1     Running             0          20s
-poas-sts-5   1/1     Running             0          20s
+poas-sts-5   0/1     Running             0          1s
+poas-sts-5   0/1     Running             0          21s
+poas-sts-5   1/1     Running             0          21s
 poas-sts-6   0/1     Pending             0          0s
 poas-sts-6   0/1     Pending             0          0s
 poas-sts-6   0/1     ContainerCreating   0          0s
 poas-sts-6   0/1     ContainerCreating   0          0s
 poas-sts-6   0/1     Running             0          1s
-poas-sts-6   1/1     Running             0          21s
+poas-sts-6   0/1     Running             0          20s
+poas-sts-6   1/1     Running             0          20s
 poas-sts-7   0/1     Pending             0          0s
 poas-sts-7   0/1     Pending             0          0s
 poas-sts-7   0/1     ContainerCreating   0          0s
 poas-sts-7   0/1     ContainerCreating   0          0s
-poas-sts-7   0/1     Running             0          0s
-poas-sts-7   0/1     Running             0          20s
-poas-sts-7   1/1     Running             0          20s
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl exec -it poas-sts-0 -n poas-ns -- bash
-root@poas-sts-0:/# cd /nfs && git clone https://github.com/Crisarias/mpich-examples && cd mpich-examples/mpi-hello-world/code && make && srun -n 105 ./mpi_hello_world > /nfs/out.txt
-Cloning into 'mpich-examples'...
-remote: Enumerating objects: 12, done.
-remote: Counting objects: 100% (12/12), done.
-remote: Compressing objects: 100% (10/10), done.
-remote: Total 12 (delta 0), reused 9 (delta 0), pack-reused 0
-Receiving objects: 100% (12/12), 8.83 KiB | 1.10 MiB/s, done.
-mpicc -o mpi_hello_world mpi_hello_world.c
-root@poas-sts-0:/nfs/mpich-examples/mpi-hello-world/code# exit
-exit
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# kubectl delete -f _v1alpha1_slurm_cluster.yaml
+poas-sts-7   0/1     Running             0          1s
+poas-sts-7   0/1     Running             0          21s
+poas-sts-7   1/1     Running             0          21s
+^Croot@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl apply -f _v1alpha1_slurm_job.yaml
+mpijob.crisarias.com/slurmjob created
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl delete -f _v1alpha1_slurm_job.yaml
+mpijob.crisarias.com "slurmjob" deleted
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl delete -f _v1alpha1_slurm_cluster.yaml
 mpicluster.crisarias.com "poascluster" deleted
-root@vm-vultr-1:~/kubernetes-mpi-operator-samples/samples# 
-
-
-
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# 
