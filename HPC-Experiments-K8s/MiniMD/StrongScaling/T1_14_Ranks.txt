@@ -31,12 +31,12 @@ root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 14 ./mini
 # Starting dynamics ...
 # Timestep T U P Time
 0 1.440000e+00 -6.773368e+00 -5.019670e+00  0.000
-100 7.783215e-01 -5.788559e+00 -2.310384e-02 10.242
+100 7.783215e-01 -5.788559e+00 -2.310384e-02  9.952
 
 
 # Performance Summary:
 # MPI_proc OMP_threads nsteps natoms t_total t_force t_neigh t_comm t_other performance perf/thread grep_string t_extra
-14 1 100 2949120 10.242390 7.462874 1.296067 1.296265 0.187184 28793279.887481 2056662.849106 PERF_SUMMARY 0.081165
+14 1 100 2949120 9.952540 7.467720 1.297086 0.982582 0.205152 29631832.645138 2116559.474653 PERF_SUMMARY 0.069485
 
 
 root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# 

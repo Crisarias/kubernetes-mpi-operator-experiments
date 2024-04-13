@@ -1,34 +1,34 @@
 root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 15 ./miniFE.x nx=1000 ny=1000 nz=50
-      creating/filling mesh...0.0495639s, total time: 0.0495639
-generating matrix structure...4.85565s, total time: 4.90521
-         assembling FE data...6.53903s, total time: 11.4442
-      imposing Dirichlet BC...1.78318s, total time: 13.2274
-      imposing Dirichlet BC...0.072355s, total time: 13.2998
-making matrix indices local...2.78026s, total time: 16.08
+      creating/filling mesh...0.0580461s, total time: 0.0580461
+generating matrix structure...4.9436s, total time: 5.00165
+         assembling FE data...6.50403s, total time: 11.5057
+      imposing Dirichlet BC...1.75967s, total time: 13.2654
+      imposing Dirichlet BC...0.0705349s, total time: 13.3359
+making matrix indices local...2.78056s, total time: 16.1164
 Starting CG solver ... 
 Initial Residual = 225.987
 Iteration = 5   Residual = 1.0881
 
-miniFE.x:973 terminated with signal 7 at PC=7fa0e7338980 SP=7ffd80b768c8.  Backtrace:
-/lib/x86_64-linux-gnu/libc.so.6(+0x1a0980)[0x7fa0e7338980]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x2177c6)[0x7fa0e790b7c6]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x260e01)[0x7fa0e7954e01]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x2128924)[0x7fa0e981c924]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fb85)[0x7fa0e7933b85]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fc7f)[0x7fa0e7933c7f]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x215a7e6)[0x7fa0e984e7e6]
-/lib/x86_64-linux-gnu/libmpich.so.12(PMPI_Send+0x507)[0x7fa0e78090c7]
-./miniFE.x(+0x13ab2)[0x55ed99d70ab2]
-./miniFE.x(+0x14401)[0x55ed99d71401]
-./miniFE.x(+0x18577)[0x55ed99d75577]
-./miniFE.x(+0x6755)[0x55ed99d63755]
-/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7fa0e71c1d90]
-/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7fa0e71c1e40]
-./miniFE.x(+0x6a35)[0x55ed99d63a35]
+miniFE.x:6668 terminated with signal 7 at PC=7f8c03927977 SP=7ffda03d7b98.  Backtrace:
+/lib/x86_64-linux-gnu/libc.so.6(+0x1a0977)[0x7f8c03927977]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x2177c6)[0x7f8c03efa7c6]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x260e01)[0x7f8c03f43e01]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x2128924)[0x7f8c05e0b924]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fb85)[0x7f8c03f22b85]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fc7f)[0x7f8c03f22c7f]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x215a7e6)[0x7f8c05e3d7e6]
+/lib/x86_64-linux-gnu/libmpich.so.12(PMPI_Send+0x507)[0x7f8c03df80c7]
+./miniFE.x(+0x13ab2)[0x55cb4c0a7ab2]
+./miniFE.x(+0x14401)[0x55cb4c0a8401]
+./miniFE.x(+0x18577)[0x55cb4c0ac577]
+./miniFE.x(+0x6755)[0x55cb4c09a755]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7f8c037b0d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7f8c037b0e40]
+./miniFE.x(+0x6a35)[0x55cb4c09aa35]
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   PID 974 RUNNING AT irazu-sts-0.irazu-headless-svc.irazu-ns.svc.cluster.local
+=   PID 6669 RUNNING AT irazu-sts-0.irazu-headless-svc.irazu-ns.svc.cluster.local
 =   EXIT CODE: 9
 =   CLEANING UP REMAINING PROCESSES
 =   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES

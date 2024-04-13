@@ -1,10 +1,10 @@
 root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 90 ./miniFE.x nx=1000 ny=1000 nz=50
-      creating/filling mesh...0.11103s, total time: 0.111031
-generating matrix structure...2.47377s, total time: 2.5848
-         assembling FE data...1.13074s, total time: 3.71554
-      imposing Dirichlet BC...0.311538s, total time: 4.02707
-      imposing Dirichlet BC...0.0128639s, total time: 4.03994
-making matrix indices local...0.450112s, total time: 4.49005
+      creating/filling mesh...0.0876861s, total time: 0.0876861
+generating matrix structure...2.61044s, total time: 2.69813
+         assembling FE data...1.11247s, total time: 3.81059
+      imposing Dirichlet BC...0.289828s, total time: 4.10042
+      imposing Dirichlet BC...0.011888s, total time: 4.11231
+making matrix indices local...0.487473s, total time: 4.59978
 Starting CG solver ... 
 Initial Residual = 225.987
 Iteration = 5   Residual = 1.0881
@@ -42,14 +42,14 @@ Build:
   CXXFLAGS: '-O3'
   using MPI: yes
   Threading: none
-Run Date/Time: 2024-04-11, 07-45-16
+Run Date/Time: 2024-04-13, 06-24-55
 Rows-per-proc Load Imbalance: 
   Largest (from avg, %): 12.2478
   Std Dev (%): 6.63225
 Matrix structure generation: 
-  Mat-struc-gen Time: 2.47377
+  Mat-struc-gen Time: 2.61044
 FE assembly: 
-  FE assembly Time: 1.13074
+  FE assembly Time: 1.11247
 Matrix attributes: 
   Global Nrows: 51102051
   Global NNZ: 1359906151
@@ -64,20 +64,20 @@ Matrix attributes:
 CG solve: 
   Iterations: 50
   Final Resid Norm: 0.102399
-  WAXPY Time: 0.195996
+  WAXPY Time: 0.133672
   WAXPY Flops: 2.28e+10
-  WAXPY Mflops: 116329
-  DOT Time: 2.43811
+  WAXPY Mflops: 170566
+  DOT Time: 3.08713
   DOT Flops: 1e+10
-  DOT Mflops: 4101.54
-  MATVEC Time: 2.71609
+  DOT Mflops: 3239.25
+  MATVEC Time: 0.891019
   MATVEC Flops: 1.3871e+11
-  MATVEC Mflops: 51069.9
+  MATVEC Mflops: 155676
   Total: 
-    Total CG Time: 5.3636
+    Total CG Time: 4.12186
     Total CG Flops: 1.7151e+11
-    Total CG Mflops: 31976.7
-  Time per iteration: 0.107272
-Total Program Time: 9.97274
+    Total CG Mflops: 41610
+  Time per iteration: 0.0824371
+Total Program Time: 8.81596
 
 root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# 
