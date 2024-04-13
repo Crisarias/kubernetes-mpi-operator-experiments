@@ -1,4 +1,4 @@
-iperf -c 192.168.84.197 -t 5
+Storage test
 
 root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl get pods -n irazu-ns -o wide
 NAME          READY   STATUS    RESTARTS   AGE   IP                NODE          NOMINATED NODE   READINESS GATES
@@ -12,47 +12,63 @@ irazu-sts-6   1/1     Running   0          18m   192.168.14.8      vm-vultr-4   
 irazu-sts-7   1/1     Running   0          18m   192.168.51.68     vm-vultr-9    <none>           <none>
 root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# 
 
-root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl get pods --all-namespaces
+Network test and experiments
+
+root@vm-vultr-2:~# kubectl get po -n irazu-ns -o wide
+NAME          READY   STATUS    RESTARTS   AGE    IP                NODE          NOMINATED NODE   READINESS GATES
+irazu-sts-0   1/1     Running   0          4h6m   192.168.68.3      vm-vultr-10   <none>           <none>
+irazu-sts-1   1/1     Running   0          4h6m   192.168.204.129   vm-vultr-6    <none>           <none>
+irazu-sts-2   1/1     Running   0          4h6m   192.168.11.67     vm-vultr-7    <none>           <none>
+irazu-sts-3   1/1     Running   0          4h5m   192.168.84.195    vm-vultr-3    <none>           <none>
+irazu-sts-4   1/1     Running   0          4h5m   192.168.114.4     vm-vultr-8    <none>           <none>
+irazu-sts-5   1/1     Running   0          4h5m   192.168.14.3      vm-vultr-4    <none>           <none>
+irazu-sts-6   1/1     Running   0          4h4m   192.168.207.198   vm-vultr-5    <none>           <none>
+irazu-sts-7   1/1     Running   0          4h4m   192.168.51.69     vm-vultr-9    <none>           <none>
+root@vm-vultr-2:~# 
+
+All pods
+
+root@vm-vultr-2:~# kubectl get pods --all-namespaces
 NAMESPACE     NAME                                                              READY   STATUS      RESTARTS   AGE
-irazu-ns      irazu-sts-0                                                       1/1     Running     0          21m
-irazu-ns      irazu-sts-1                                                       1/1     Running     0          20m
-irazu-ns      irazu-sts-2                                                       1/1     Running     0          20m
-irazu-ns      irazu-sts-3                                                       1/1     Running     0          20m
-irazu-ns      irazu-sts-4                                                       1/1     Running     0          19m
-irazu-ns      irazu-sts-5                                                       1/1     Running     0          19m
-irazu-ns      irazu-sts-6                                                       1/1     Running     0          19m
-irazu-ns      irazu-sts-7                                                       1/1     Running     0          18m
-kube-system   calico-kube-controllers-787f445f84-7b74l                          1/1     Running     0          28m
-kube-system   calico-node-2qrps                                                 1/1     Running     0          28m
-kube-system   calico-node-76lww                                                 1/1     Running     0          28m
-kube-system   calico-node-8tv6p                                                 1/1     Running     0          28m
-kube-system   calico-node-b447v                                                 1/1     Running     0          28m
-kube-system   calico-node-h7nxq                                                 1/1     Running     0          28m
-kube-system   calico-node-mv2bn                                                 1/1     Running     0          28m
-kube-system   calico-node-t7nt5                                                 1/1     Running     0          28m
-kube-system   calico-node-tq7pp                                                 1/1     Running     0          28m
-kube-system   calico-node-vvx27                                                 1/1     Running     0          28m
-kube-system   coredns-5dd5756b68-rvrsk                                          1/1     Running     0          30m
-kube-system   coredns-5dd5756b68-x6cts                                          1/1     Running     0          30m
-kube-system   etcd-vm-vultr-2                                                   1/1     Running     0          31m
-kube-system   kube-apiserver-vm-vultr-2                                         1/1     Running     0          31m
-kube-system   kube-controller-manager-vm-vultr-2                                1/1     Running     0          31m
-kube-system   kube-proxy-4nclb                                                  1/1     Running     0          29m
-kube-system   kube-proxy-6r86g                                                  1/1     Running     0          29m
-kube-system   kube-proxy-b9q2l                                                  1/1     Running     0          29m
-kube-system   kube-proxy-bjjj4                                                  1/1     Running     0          29m
-kube-system   kube-proxy-kzgm2                                                  1/1     Running     0          29m
-kube-system   kube-proxy-tgjl6                                                  1/1     Running     0          28m
-kube-system   kube-proxy-tswq8                                                  1/1     Running     0          30m
-kube-system   kube-proxy-wz426                                                  1/1     Running     0          29m
-kube-system   kube-proxy-xjcq4                                                  1/1     Running     0          29m
-kube-system   kube-scheduler-vm-vultr-2                                         1/1     Running     0          31m
-olm           catalog-operator-59dfc8c594-rcxd8                                 1/1     Running     0          27m
-olm           olm-operator-79978456c6-9lgxg                                     1/1     Running     0          27m
-olm           operatorhubio-catalog-8d7d5                                       1/1     Running     0          27m
-olm           packageserver-777c5c9d74-4zv5l                                    1/1     Running     0          27m
-olm           packageserver-777c5c9d74-vpxbb                                    1/1     Running     0          27m
-operators     3625f8a9d54bb318f9d6dd0431a6a9cc681b5e7bf2a1227ae9b378cf2cx56r5   0/1     Completed   0          24m
-operators     kubernetes-mpi-operator-catalog-x8tzk                             1/1     Running     0          26m
-operators     kubernetes-mpi-operator-controller-manager-858dd79f75-v69dd       2/2     Running     0          23m
-root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# 
+irazu-ns      irazu-sts-0                                                       1/1     Running     0          4h7m
+irazu-ns      irazu-sts-1                                                       1/1     Running     0          4h6m
+irazu-ns      irazu-sts-2                                                       1/1     Running     0          4h6m
+irazu-ns      irazu-sts-3                                                       1/1     Running     0          4h6m
+irazu-ns      irazu-sts-4                                                       1/1     Running     0          4h5m
+irazu-ns      irazu-sts-5                                                       1/1     Running     0          4h5m
+irazu-ns      irazu-sts-6                                                       1/1     Running     0          4h5m
+irazu-ns      irazu-sts-7                                                       1/1     Running     0          4h4m
+kube-system   calico-kube-controllers-787f445f84-6bdjx                          1/1     Running     0          4h10m
+kube-system   calico-node-42bdj                                                 1/1     Running     0          4h10m
+kube-system   calico-node-5qsbg                                                 1/1     Running     0          4h10m
+kube-system   calico-node-cwdfh                                                 1/1     Running     0          4h10m
+kube-system   calico-node-fsqxr                                                 1/1     Running     0          4h10m
+kube-system   calico-node-gj4np                                                 1/1     Running     0          4h10m
+kube-system   calico-node-gt2mg                                                 1/1     Running     0          4h10m
+kube-system   calico-node-vjm4c                                                 1/1     Running     0          4h10m
+kube-system   calico-node-w69rq                                                 1/1     Running     0          4h10m
+kube-system   calico-node-zxwcv                                                 1/1     Running     0          4h10m
+kube-system   coredns-5dd5756b68-bwwx7                                          1/1     Running     0          4h13m
+kube-system   coredns-5dd5756b68-vz5fn                                          1/1     Running     0          4h13m
+kube-system   etcd-vm-vultr-2                                                   1/1     Running     0          4h13m
+kube-system   kube-apiserver-vm-vultr-2                                         1/1     Running     0          4h13m
+kube-system   kube-controller-manager-vm-vultr-2                                1/1     Running     0          4h13m
+kube-system   kube-proxy-5lhnq                                                  1/1     Running     0          4h13m
+kube-system   kube-proxy-5qwxc                                                  1/1     Running     0          4h12m
+kube-system   kube-proxy-65lgs                                                  1/1     Running     0          4h12m
+kube-system   kube-proxy-89n8m                                                  1/1     Running     0          4h13m
+kube-system   kube-proxy-gc2fz                                                  1/1     Running     0          4h12m
+kube-system   kube-proxy-gqtdd                                                  1/1     Running     0          4h12m
+kube-system   kube-proxy-t4272                                                  1/1     Running     0          4h12m
+kube-system   kube-proxy-vbg42                                                  1/1     Running     0          4h12m
+kube-system   kube-proxy-wvdzp                                                  1/1     Running     0          4h12m
+kube-system   kube-scheduler-vm-vultr-2                                         1/1     Running     0          4h13m
+olm           catalog-operator-59dfc8c594-64qj9                                 1/1     Running     0          4h9m
+olm           olm-operator-79978456c6-d6cjd                                     1/1     Running     0          4h9m
+olm           operatorhubio-catalog-zmfr7                                       1/1     Running     0          4h9m
+olm           packageserver-559df5b57d-g75g4                                    1/1     Running     0          4h9m
+olm           packageserver-559df5b57d-xflxx                                    1/1     Running     0          4h9m
+operators     3625f8a9d54bb318f9d6dd0431a6a9cc681b5e7bf2a1227ae9b378cf2csl862   0/1     Completed   0          4h8m
+operators     kubernetes-mpi-operator-catalog-q5j59                             1/1     Running     0          4h9m
+operators     kubernetes-mpi-operator-controller-manager-858dd79f75-295zh       2/2     Running     0          4h7m
+root@vm-vultr-2:~# 
