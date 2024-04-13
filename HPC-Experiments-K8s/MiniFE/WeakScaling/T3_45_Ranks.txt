@@ -1,29 +1,29 @@
-root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 45 ./miniFE.x nx=1000 ny=500 nz=10
-      creating/filling mesh...0.0243459s, total time: 0.0243459
-generating matrix structure...0.529863s, total time: 0.554209
-         assembling FE data...0.282917s, total time: 0.837126
-      imposing Dirichlet BC...0.048599s, total time: 0.885725
-      imposing Dirichlet BC...0.00202417s, total time: 0.887749
-making matrix indices local...0.22027s, total time: 1.10802
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 45 ./miniFE.x nx=3000 ny=2000 nz=10
+      creating/filling mesh...0.147506s, total time: 0.147506
+generating matrix structure...6.98704s, total time: 7.13455
+         assembling FE data...3.49459s, total time: 10.6291
+      imposing Dirichlet BC...0.727113s, total time: 11.3562
+      imposing Dirichlet BC...0.0258999s, total time: 11.3821
+making matrix indices local...2.30964s, total time: 13.6918
 Starting CG solver ... 
-Initial Residual = 75.3538
-Iteration = 5   Residual = 2.87276
-Iteration = 10   Residual = 1.36507
-Iteration = 15   Residual = 0.892875
-Iteration = 20   Residual = 0.662075
-Iteration = 25   Residual = 0.525219
-Iteration = 30   Residual = 0.454589
-Iteration = 35   Residual = 0.375444
-Iteration = 40   Residual = 0.325947
-Iteration = 45   Residual = 0.287712
-Iteration = 50   Residual = 0.257238
-Final Resid Norm: 0.257238
+Initial Residual = 149.627
+Iteration = 5   Residual = 4.49811
+Iteration = 10   Residual = 2.09601
+Iteration = 15   Residual = 1.36528
+Iteration = 20   Residual = 1.30551
+Iteration = 25   Residual = 0.825098
+Iteration = 30   Residual = 0.680723
+Iteration = 35   Residual = 0.579145
+Iteration = 40   Residual = 0.633562
+Iteration = 45   Residual = 0.452354
+Iteration = 50   Residual = 0.404833
+Final Resid Norm: 0.404833
 Mini-Application Name: miniFE
 Mini-Application Version: 2.0
 Global Run Parameters: 
   dimensions: 
-    nx: 1000
-    ny: 500
+    nx: 3000
+    ny: 2000
     nz: 10
   load_imbalance: 0
   mv_overlap_comm_comp: 0 (no)
@@ -42,42 +42,42 @@ Build:
   CXXFLAGS: '-O3'
   using MPI: yes
   Threading: none
-Run Date/Time: 2024-04-11, 07-47-57
+Run Date/Time: 2024-04-13, 03-06-00
 Rows-per-proc Load Imbalance: 
-  Largest (from avg, %): 23.606
-  Std Dev (%): 16.5955
+  Largest (from avg, %): 22.9454
+  Std Dev (%): 16.6028
 Matrix structure generation: 
-  Mat-struc-gen Time: 0.529863
+  Mat-struc-gen Time: 6.98704
 FE assembly: 
-  FE assembly Time: 0.282917
+  FE assembly Time: 3.49459
 Matrix attributes: 
-  Global Nrows: 5516511
-  Global NNZ: 139639531
-  Global Memory (GB): 1.60169
-  Pll Memory Overhead (MB): 36.0302
-  Rows per proc MIN: 90636
-  Rows per proc MAX: 145920
-  Rows per proc AVG: 122589
-  NNZ per proc MIN: 2444184
-  NNZ per proc MAX: 3606240
-  NNZ per proc AVG: 3.1031e+06
+  Global Nrows: 66055011
+  Global NNZ: 1674465031
+  Global Memory (GB): 19.2058
+  Pll Memory Overhead (MB): 417.51
+  Rows per proc MIN: 1089576
+  Rows per proc MAX: 1740464
+  Rows per proc AVG: 1.46789e+06
+  NNZ per proc MIN: 29418552
+  NNZ per proc MAX: 43076484
+  NNZ per proc AVG: 3.72103e+07
 CG solve: 
   Iterations: 50
-  Final Resid Norm: 0.257238
-  WAXPY Time: 0.0154045
-  WAXPY Flops: 2.28e+09
-  WAXPY Mflops: 148009
-  DOT Time: 0.600289
-  DOT Flops: 1e+09
-  DOT Mflops: 1665.86
-  MATVEC Time: 0.177969
-  MATVEC Flops: 1.42432e+10
-  MATVEC Mflops: 80032.3
+  Final Resid Norm: 0.404833
+  WAXPY Time: 0.821022
+  WAXPY Flops: 2.736e+10
+  WAXPY Mflops: 33324.3
+  DOT Time: 7.27229
+  DOT Flops: 1.2e+10
+  DOT Mflops: 1650.1
+  MATVEC Time: 4.40689
+  MATVEC Flops: 1.70795e+11
+  MATVEC Mflops: 38756.4
   Total: 
-    Total CG Time: 0.798471
-    Total CG Flops: 1.75232e+10
-    Total CG Mflops: 21946
-  Time per iteration: 0.0159694
-Total Program Time: 1.9395
+    Total CG Time: 12.5416
+    Total CG Flops: 2.10155e+11
+    Total CG Mflops: 16756.7
+  Time per iteration: 0.250832
+Total Program Time: 26.4483
 
 root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# 

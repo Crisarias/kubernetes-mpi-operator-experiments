@@ -12,15 +12,15 @@ root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 15 ./mini
         # ForceStyle: LJ
         # Force Parameters: 1.00 1.00
         # Units: LJ
-        # Atoms: 1048576
-        # System size: 107.49 107.49 107.49 (unit cells: 64 64 64)
+        # Atoms: 8388608
+        # System size: 429.98 214.99 107.49 (unit cells: 256 128 64)
         # Density: 0.844200
         # Force cutoff: 2.500000
         # Timestep size: 0.005000
 # Technical Settings: 
         # Neigh cutoff: 2.800000
         # Half neighborlists: 1
-        # Neighbor bins: 53 53 53
+        # Neighbor bins: 213 106 53
         # Neighbor frequency: 20
         # Sorting frequency: 20
         # Thermo frequency: 100
@@ -31,30 +31,48 @@ root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 15 ./mini
 
 # Starting dynamics ...
 # Timestep T U P Time
-0 1.440000e+00 -6.773368e+00 -5.019670e+00  0.000
+0 1.440000e+00 -6.773368e+00 -5.019669e+00  0.000
 
-miniMD_openmpi:671 terminated with signal 7 at PC=7f34cea8c97b SP=7ffc0ad1e0f8.  Backtrace:
-/lib/x86_64-linux-gnu/libc.so.6(+0x1a097b)[0x7f34cea8c97b]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x2177c6)[0x7f34cf0a97c6]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x260e01)[0x7f34cf0f2e01]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x23b8eb)[0x7f34cf0cd8eb]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x212897c)[0x7f34d0fba97c]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fb85)[0x7f34cf0d1b85]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fc7f)[0x7f34cf0d1c7f]
-/lib/x86_64-linux-gnu/libmpich.so.12(+0x215a7e6)[0x7f34d0fec7e6]
-/lib/x86_64-linux-gnu/libmpich.so.12(PMPI_Send+0x507)[0x7f34cefa70c7]
-./miniMD_openmpi(+0xf434)[0x556a47e96434]
-./miniMD_openmpi(+0x54a9)[0x556a47e8c4a9]
-/lib/x86_64-linux-gnu/libgomp.so.1(GOMP_parallel+0x46)[0x7f34ceb49a16]
-./miniMD_openmpi(+0x577c)[0x556a47e8c77c]
-./miniMD_openmpi(+0x345d)[0x556a47e8a45d]
-/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7f34ce915d90]
-/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7f34ce915e40]
-./miniMD_openmpi(+0x4065)[0x556a47e8b065]
+miniMD_openmpi:3049 terminated with signal 7 at PC=7fc3d9bd9977 SP=7ffda802bfd8.  Backtrace:
+/lib/x86_64-linux-gnu/libc.so.6(+0x1a0977)[0x7fc3d9bd9977]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x2177c6)[0x7fc3da1f67c6]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x260e01)[0x7fc3da23fe01]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x2128924)[0x7fc3dc107924]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fb85)[0x7fc3da21eb85]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fc7f)[0x7fc3da21ec7f]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x215a7e6)[0x7fc3dc1397e6]
+/lib/x86_64-linux-gnu/libmpich.so.12(PMPI_Send+0x507)[0x7fc3da0f40c7]
+./miniMD_openmpi(+0xf434)[0x55769cf2b434]
+./miniMD_openmpi(+0x54a9)[0x55769cf214a9]
+/lib/x86_64-linux-gnu/libgomp.so.1(GOMP_parallel+0x46)[0x7fc3d9c96a16]
+./miniMD_openmpi(+0x577c)[0x55769cf2177c]
+./miniMD_openmpi(+0x345d)[0x55769cf1f45d]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7fc3d9a62d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7fc3d9a62e40]
+./miniMD_openmpi(+0x4065)[0x55769cf20065]
+
+miniMD_openmpi:3048 terminated with signal 7 at PC=7f322193c97b SP=7fffb3eb8a28.  Backtrace:
+/lib/x86_64-linux-gnu/libc.so.6(+0x1a097b)[0x7f322193c97b]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x2177c6)[0x7f3221f597c6]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x260e01)[0x7f3221fa2e01]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x23b8eb)[0x7f3221f7d8eb]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x212897c)[0x7f3223e6a97c]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fb85)[0x7f3221f81b85]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fc7f)[0x7f3221f81c7f]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x215a7e6)[0x7f3223e9c7e6]
+/lib/x86_64-linux-gnu/libmpich.so.12(PMPI_Send+0x507)[0x7f3221e570c7]
+./miniMD_openmpi(+0xf2c9)[0x562418d532c9]
+./miniMD_openmpi(+0x543c)[0x562418d4943c]
+/lib/x86_64-linux-gnu/libgomp.so.1(GOMP_parallel+0x46)[0x7f32219f9a16]
+./miniMD_openmpi(+0x577c)[0x562418d4977c]
+./miniMD_openmpi(+0x345d)[0x562418d4745d]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7f32217c5d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7f32217c5e40]
+./miniMD_openmpi(+0x4065)[0x562418d48065]
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   PID 667 RUNNING AT irazu-sts-0.irazu-headless-svc.irazu-ns.svc.cluster.local
+=   PID 3046 RUNNING AT irazu-sts-0.irazu-headless-svc.irazu-ns.svc.cluster.local
 =   EXIT CODE: 9
 =   CLEANING UP REMAINING PROCESSES
 =   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES

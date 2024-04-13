@@ -1,83 +1,39 @@
-root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 15 ./miniFE.x nx=500 ny=250 nz=10
-      creating/filling mesh...0.0038271s, total time: 0.0038271
-generating matrix structure...0.111027s, total time: 0.114854
-         assembling FE data...0.18065s, total time: 0.295504
-      imposing Dirichlet BC...0.039088s, total time: 0.334592
-      imposing Dirichlet BC...0.00175405s, total time: 0.336346
-making matrix indices local...0.277417s, total time: 0.613763
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 15 ./miniFE.x nx=2000 ny=1000 nz=10
+      creating/filling mesh...0.0503571s, total time: 0.0503581
+generating matrix structure...1.28525s, total time: 1.33561
+         assembling FE data...2.91981s, total time: 4.25542
+      imposing Dirichlet BC...1.00238s, total time: 5.2578
+      imposing Dirichlet BC...0.028008s, total time: 5.28581
+making matrix indices local...2.44732s, total time: 7.73313
 Starting CG solver ... 
-Initial Residual = 53.332
-Iteration = 5   Residual = 2.02425
-Iteration = 10   Residual = 0.958376
-Iteration = 15   Residual = 0.624232
-Iteration = 20   Residual = 0.460715
-Iteration = 25   Residual = 0.364035
-Iteration = 30   Residual = 0.30772
-Iteration = 35   Residual = 0.257089
-Iteration = 40   Residual = 0.221891
-Iteration = 45   Residual = 0.19462
-Iteration = 50   Residual = 0.172862
-Final Resid Norm: 0.172862
-Mini-Application Name: miniFE
-Mini-Application Version: 2.0
-Global Run Parameters: 
-  dimensions: 
-    nx: 500
-    ny: 250
-    nz: 10
-  load_imbalance: 0
-  mv_overlap_comm_comp: 0 (no)
-  number of processors: 15
-  ScalarType: double
-  GlobalOrdinalType: int
-  LocalOrdinalType: int
-Platform: 
-  hostname: irazu-sts-0
-  kernel name: 'Linux'
-  kernel release: '5.15.0-101-generic'
-  processor: 'x86_64'
-Build: 
-  CXX: '/usr/bin/mpicxx'
-  compiler version: 'g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0'
-  CXXFLAGS: '-O3'
-  using MPI: yes
-  Threading: none
-Run Date/Time: 2024-04-11, 04-44-12
-Rows-per-proc Load Imbalance: 
-  Largest (from avg, %): 29.4704
-  Std Dev (%): 21.0986
-Matrix structure generation: 
-  Mat-struc-gen Time: 0.111027
-FE assembly: 
-  FE assembly Time: 0.18065
-Matrix attributes: 
-  Global Nrows: 1383261
-  Global NNZ: 34944781
-  Global Memory (GB): 0.400844
-  Pll Memory Overhead (MB): 8.51022
-  Rows per proc MIN: 71500
-  Rows per proc MAX: 108216
-  Rows per proc AVG: 92217.4
-  NNZ per proc MIN: 1923432
-  NNZ per proc MAX: 2586584
-  NNZ per proc AVG: 2.32965e+06
-CG solve: 
-  Iterations: 50
-  Final Resid Norm: 0.172862
-  WAXPY Time: 0.0144422
-  WAXPY Flops: 5.7e+08
-  WAXPY Mflops: 39467.7
-  DOT Time: 0.156946
-  DOT Flops: 2.5e+08
-  DOT Mflops: 1592.91
-  MATVEC Time: 0.177194
-  MATVEC Flops: 3.56437e+09
-  MATVEC Mflops: 20115.7
-  Total: 
-    Total CG Time: 0.3527
-    Total CG Flops: 4.38437e+09
-    Total CG Mflops: 12430.9
-  Time per iteration: 0.007054
-Total Program Time: 0.974115
+Initial Residual = 106.517
+Iteration = 5   Residual = 4.0696
 
+miniFE.x:850 terminated with signal 7 at PC=7f9deb29997b SP=7ffe195b0da8.  Backtrace:
+/lib/x86_64-linux-gnu/libc.so.6(+0x1a097b)[0x7f9deb29997b]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x2177c6)[0x7f9deb86c7c6]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x260e01)[0x7f9deb8b5e01]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x2128924)[0x7f9ded77d924]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fb85)[0x7f9deb894b85]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x23fc7f)[0x7f9deb894c7f]
+/lib/x86_64-linux-gnu/libmpich.so.12(+0x215a7e6)[0x7f9ded7af7e6]
+/lib/x86_64-linux-gnu/libmpich.so.12(PMPI_Send+0x507)[0x7f9deb76a0c7]
+./miniFE.x(+0x13ab2)[0x5642bbca4ab2]
+./miniFE.x(+0x14401)[0x5642bbca5401]
+./miniFE.x(+0x18577)[0x5642bbca9577]
+./miniFE.x(+0x6755)[0x5642bbc97755]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7f9deb122d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7f9deb122e40]
+./miniFE.x(+0x6a35)[0x5642bbc97a35]
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 836 RUNNING AT irazu-sts-0.irazu-headless-svc.irazu-ns.svc.cluster.local
+=   EXIT CODE: 9
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Killed (signal 9)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions
 root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# 

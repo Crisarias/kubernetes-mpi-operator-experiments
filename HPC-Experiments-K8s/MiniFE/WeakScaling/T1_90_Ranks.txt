@@ -1,29 +1,29 @@
-root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 90 ./miniFE.x nx=2000 ny=2000 nz=10
-      creating/filling mesh...0.132048s, total time: 0.132048
-generating matrix structure...3.34585s, total time: 3.4779
-         assembling FE data...1.35597s, total time: 4.83387
-      imposing Dirichlet BC...0.342016s, total time: 5.17589
-      imposing Dirichlet BC...0.011807s, total time: 5.1877
-making matrix indices local...1.45999s, total time: 6.64768
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 90 ./miniFE.x nx=4000 ny=3000 nz=10
+      creating/filling mesh...0.16749s, total time: 0.16749
+generating matrix structure...9.86255s, total time: 10.03
+         assembling FE data...3.91076s, total time: 13.9408
+      imposing Dirichlet BC...1.14898s, total time: 15.0898
+      imposing Dirichlet BC...0.0334339s, total time: 15.1232
+making matrix indices local...4.58186s, total time: 19.7051
 Starting CG solver ... 
-Initial Residual = 148.925
-Iteration = 5   Residual = 3.09591
-Iteration = 10   Residual = 1.41692
-Iteration = 15   Residual = 1.5047
-Iteration = 20   Residual = 0.706744
-Iteration = 25   Residual = 0.555097
-Iteration = 30   Residual = 0.696003
-Iteration = 35   Residual = 0.397131
-Iteration = 40   Residual = 0.343788
-Iteration = 45   Residual = 0.44608
-Iteration = 50   Residual = 0.27522
-Final Resid Norm: 0.27522
+Initial Residual = 182.916
+Iteration = 5   Residual = 4.95434
+Iteration = 10   Residual = 2.29513
+Iteration = 15   Residual = 1.49264
+Iteration = 20   Residual = 1.54978
+Iteration = 25   Residual = 0.903227
+Iteration = 30   Residual = 0.744864
+Iteration = 35   Residual = 0.634167
+Iteration = 40   Residual = 0.561298
+Iteration = 45   Residual = 0.495433
+Iteration = 50   Residual = 0.443377
+Final Resid Norm: 0.443377
 Mini-Application Name: miniFE
 Mini-Application Version: 2.0
 Global Run Parameters: 
   dimensions: 
-    nx: 2000
-    ny: 2000
+    nx: 4000
+    ny: 3000
     nz: 10
   load_imbalance: 0
   mv_overlap_comm_comp: 0 (no)
@@ -42,42 +42,42 @@ Build:
   CXXFLAGS: '-O3'
   using MPI: yes
   Threading: none
-Run Date/Time: 2024-04-11, 07-50-28
+Run Date/Time: 2024-04-13, 03-57-56
 Rows-per-proc Load Imbalance: 
-  Largest (from avg, %): 75.9923
-  Std Dev (%): 33.8324
+  Largest (from avg, %): 75.956
+  Std Dev (%): 33.8405
 Matrix structure generation: 
-  Mat-struc-gen Time: 3.34585
+  Mat-struc-gen Time: 9.86255
 FE assembly: 
-  FE assembly Time: 1.35597
+  FE assembly Time: 3.91076
 Matrix attributes: 
-  Global Nrows: 44044011
-  Global NNZ: 1116372031
-  Global Memory (GB): 12.8046
-  Pll Memory Overhead (MB): 489.127
-  Rows per proc MIN: 325674
-  Rows per proc MAX: 783464
-  Rows per proc AVG: 489378
-  NNZ per proc MIN: 8787204
-  NNZ per proc MAX: 21142044
-  NNZ per proc AVG: 1.24041e+07
+  Global Nrows: 132077011
+  Global NNZ: 3348651031
+  Global Memory (GB): 38.4081
+  Pll Memory Overhead (MB): 1459.79
+  Rows per proc MIN: 977089
+  Rows per proc MAX: 2347840
+  Rows per proc AVG: 1.46752e+06
+  NNZ per proc MIN: 26381403
+  NNZ per proc MAX: 63375840
+  NNZ per proc AVG: 3.72072e+07
 CG solve: 
   Iterations: 50
-  Final Resid Norm: 0.27522
-  WAXPY Time: 0.122395
-  WAXPY Flops: 1.824e+10
-  WAXPY Mflops: 149026
-  DOT Time: 3.28171
-  DOT Flops: 8e+09
-  DOT Mflops: 2437.76
-  MATVEC Time: 1.22629
-  MATVEC Flops: 1.1387e+11
-  MATVEC Mflops: 92857.2
+  Final Resid Norm: 0.443377
+  WAXPY Time: 0.57958
+  WAXPY Flops: 5.472e+10
+  WAXPY Mflops: 94413.1
+  DOT Time: 12.6653
+  DOT Flops: 2.4e+10
+  DOT Mflops: 1894.94
+  MATVEC Time: 2.73871
+  MATVEC Flops: 3.41562e+11
+  MATVEC Mflops: 124717
   Total: 
-    Total CG Time: 4.6419
-    Total CG Flops: 1.4011e+11
-    Total CG Mflops: 30183.7
-  Time per iteration: 0.0928381
-Total Program Time: 11.4375
+    Total CG Time: 16.0206
+    Total CG Flops: 4.20282e+11
+    Total CG Mflops: 26233.8
+  Time per iteration: 0.320413
+Total Program Time: 36.1473
 
-root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# 
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic#

@@ -1,29 +1,29 @@
-root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 75 ./miniFE.x nx=2000 ny=1000 nz=10
-      creating/filling mesh...0.0746911s, total time: 0.0746911
-generating matrix structure...1.25603s, total time: 1.33072
-         assembling FE data...0.813851s, total time: 2.14457
-      imposing Dirichlet BC...0.212386s, total time: 2.35696
-      imposing Dirichlet BC...0.0070169s, total time: 2.36398
-making matrix indices local...0.412875s, total time: 2.77685
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 75 ./miniFE.x nx=4000 ny=2500 nz=10
+      creating/filling mesh...0.163012s, total time: 0.163013
+generating matrix structure...5.66546s, total time: 5.82847
+         assembling FE data...4.14761s, total time: 9.97607
+      imposing Dirichlet BC...1.19061s, total time: 11.1667
+      imposing Dirichlet BC...0.034466s, total time: 11.2011
+making matrix indices local...2.34551s, total time: 13.5467
 Starting CG solver ... 
-Initial Residual = 106.517
-Iteration = 5   Residual = 4.0696
-Iteration = 10   Residual = 1.93698
-Iteration = 15   Residual = 1.26928
-Iteration = 20   Residual = 0.943025
-Iteration = 25   Residual = 0.755201
-Iteration = 30   Residual = 0.632801
-Iteration = 35   Residual = 0.538048
-Iteration = 40   Residual = 0.46835
-Iteration = 45   Residual = 0.414449
-Iteration = 50   Residual = 0.37153
-Final Resid Norm: 0.37153
+Initial Residual = 167.474
+Iteration = 5   Residual = 5.32705
+Iteration = 10   Residual = 2.49255
+Iteration = 15   Residual = 1.62592
+Iteration = 20   Residual = 1.20602
+Iteration = 25   Residual = 0.995157
+Iteration = 30   Residual = 0.811357
+Iteration = 35   Residual = 0.690722
+Iteration = 40   Residual = 0.601201
+Iteration = 45   Residual = 0.55884
+Iteration = 50   Residual = 0.483227
+Final Resid Norm: 0.483227
 Mini-Application Name: miniFE
 Mini-Application Version: 2.0
 Global Run Parameters: 
   dimensions: 
-    nx: 2000
-    ny: 1000
+    nx: 4000
+    ny: 2500
     nz: 10
   load_imbalance: 0
   mv_overlap_comm_comp: 0 (no)
@@ -42,42 +42,42 @@ Build:
   CXXFLAGS: '-O3'
   using MPI: yes
   Threading: none
-Run Date/Time: 2024-04-11, 07-50-00
+Run Date/Time: 2024-04-13, 03-56-49
 Rows-per-proc Load Imbalance: 
-  Largest (from avg, %): 61.4053
-  Std Dev (%): 29.8427
+  Largest (from avg, %): 61.836
+  Std Dev (%): 29.8433
 Matrix structure generation: 
-  Mat-struc-gen Time: 1.25603
+  Mat-struc-gen Time: 5.66546
 FE assembly: 
-  FE assembly Time: 0.813851
+  FE assembly Time: 4.14761
 Matrix attributes: 
-  Global Nrows: 22033011
-  Global NNZ: 558279031
-  Global Memory (GB): 6.40341
-  Pll Memory Overhead (MB): 192.676
-  Rows per proc MIN: 189600
-  Rows per proc MAX: 432432
-  Rows per proc AVG: 293773
-  NNZ per proc MIN: 5119200
-  NNZ per proc MAX: 11392260
-  NNZ per proc AVG: 7.44372e+06
+  Global Nrows: 110071511
+  Global NNZ: 2790604531
+  Global Memory (GB): 32.0075
+  Pll Memory Overhead (MB): 951.62
+  Rows per proc MIN: 947250
+  Rows per proc MAX: 2162160
+  Rows per proc AVG: 1.46762e+06
+  NNZ per proc MIN: 25575750
+  NNZ per proc MAX: 56899032
+  NNZ per proc AVG: 3.72081e+07
 CG solve: 
   Iterations: 50
-  Final Resid Norm: 0.37153
-  WAXPY Time: 0.126661
-  WAXPY Flops: 9.12e+09
-  WAXPY Mflops: 72003.3
-  DOT Time: 1.38052
-  DOT Flops: 4e+09
-  DOT Mflops: 2897.45
-  MATVEC Time: 0.878919
-  MATVEC Flops: 5.69445e+10
-  MATVEC Mflops: 64789.2
+  Final Resid Norm: 0.483227
+  WAXPY Time: 0.543306
+  WAXPY Flops: 4.56e+10
+  WAXPY Mflops: 83930.7
+  DOT Time: 12.492
+  DOT Flops: 2e+10
+  DOT Mflops: 1601.03
+  MATVEC Time: 3.60818
+  MATVEC Flops: 2.84642e+11
+  MATVEC Mflops: 78887.9
   Total: 
-    Total CG Time: 2.39492
-    Total CG Flops: 7.00645e+10
-    Total CG Mflops: 29255.4
-  Time per iteration: 0.0478984
-Total Program Time: 5.23477
+    Total CG Time: 16.6816
+    Total CG Flops: 3.50242e+11
+    Total CG Mflops: 20995.6
+  Time per iteration: 0.333633
+Total Program Time: 30.6953
 
 root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# 

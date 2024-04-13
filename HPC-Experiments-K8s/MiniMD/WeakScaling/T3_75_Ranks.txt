@@ -11,15 +11,15 @@ root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 75 ./mini
         # ForceStyle: LJ
         # Force Parameters: 1.00 1.00
         # Units: LJ
-        # Atoms: 16777216
-        # System size: 429.98 429.98 107.49 (unit cells: 256 256 64)
+        # Atoms: 41943040
+        # System size: 859.95 537.47 107.49 (unit cells: 512 320 64)
         # Density: 0.844200
         # Force cutoff: 2.500000
         # Timestep size: 0.005000
 # Technical Settings: 
         # Neigh cutoff: 2.800000
         # Half neighborlists: 1
-        # Neighbor bins: 213 213 53
+        # Neighbor bins: 426 266 53
         # Neighbor frequency: 20
         # Sorting frequency: 20
         # Thermo frequency: 100
@@ -31,12 +31,12 @@ root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# mpirun -np 75 ./mini
 # Starting dynamics ...
 # Timestep T U P Time
 0 1.440000e+00 -6.773368e+00 -5.019669e+00  0.000
-100 8.115069e-01 -5.839611e+00 3.788907e-02 13.807
+100 7.239200e-01 -5.711003e+00 4.170559e-01 33.312
 
 
 # Performance Summary:
 # MPI_proc OMP_threads nsteps natoms t_total t_force t_neigh t_comm t_other performance perf/thread grep_string t_extra
-75 1 100 16777216 13.807276 8.134681 1.414737 3.986666 0.271193 121509961.951146 1620132.826015 PERF_SUMMARY 0.181380
+75 1 100 41943040 33.312273 19.283337 3.328090 10.236477 0.464369 125908668.932091 1678782.252428 PERF_SUMMARY 0.544056
 
 
 root@irazu-sts-0:/nfs/mantevo-benchmarks/miniMD/miniMD_ref# 

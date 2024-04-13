@@ -1,29 +1,29 @@
-root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 105 ./miniFE.x nx=4000 ny=2000 nz=10
-      creating/filling mesh...0.142061s, total time: 0.142061
-generating matrix structure...5.79157s, total time: 5.93363
-         assembling FE data...2.24613s, total time: 8.17976
-      imposing Dirichlet BC...0.634313s, total time: 8.81407
-      imposing Dirichlet BC...0.0196149s, total time: 8.83369
-making matrix indices local...2.65211s, total time: 11.4858
+root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# mpirun -np 105 ./miniFE.x nx=4000 ny=3500 nz=10
+      creating/filling mesh...0.179914s, total time: 0.179914
+generating matrix structure...10.017s, total time: 10.1969
+         assembling FE data...3.9599s, total time: 14.1568
+      imposing Dirichlet BC...1.0702s, total time: 15.227
+      imposing Dirichlet BC...0.0334861s, total time: 15.2605
+making matrix indices local...4.51196s, total time: 19.7725
 Starting CG solver ... 
-Initial Residual = 150.604
-Iteration = 5   Residual = 5.7601
-Iteration = 10   Residual = 2.74376
-Iteration = 15   Residual = 1.79946
-Iteration = 20   Residual = 1.33811
-Iteration = 25   Residual = 1.06471
-Iteration = 30   Residual = 1.00351
-Iteration = 35   Residual = 0.765578
-Iteration = 40   Residual = 0.667056
-Iteration = 45   Residual = 0.590894
-Iteration = 50   Residual = 0.530245
-Final Resid Norm: 0.530245
+Initial Residual = 197.216
+Iteration = 5   Residual = 4.64328
+Iteration = 10   Residual = 2.1369
+Iteration = 15   Residual = 1.38705
+Iteration = 20   Residual = 1.06839
+Iteration = 25   Residual = 0.839963
+Iteration = 30   Residual = 0.692155
+Iteration = 35   Residual = 0.613538
+Iteration = 40   Residual = 0.521752
+Iteration = 45   Residual = 0.460379
+Iteration = 50   Residual = 0.502157
+Final Resid Norm: 0.502157
 Mini-Application Name: miniFE
 Mini-Application Version: 2.0
 Global Run Parameters: 
   dimensions: 
     nx: 4000
-    ny: 2000
+    ny: 3500
     nz: 10
   load_imbalance: 0
   mv_overlap_comm_comp: 0 (no)
@@ -42,42 +42,42 @@ Build:
   CXXFLAGS: '-O3'
   using MPI: yes
   Threading: none
-Run Date/Time: 2024-04-11, 07-53-14
+Run Date/Time: 2024-04-13, 04-02-34
 Rows-per-proc Load Imbalance: 
-  Largest (from avg, %): 74.9563
-  Std Dev (%): 36.4443
+  Largest (from avg, %): 74.9562
+  Std Dev (%): 36.4437
 Matrix structure generation: 
-  Mat-struc-gen Time: 5.79157
+  Mat-struc-gen Time: 10.017
 FE assembly: 
-  FE assembly Time: 2.24613
+  FE assembly Time: 3.9599
 Matrix attributes: 
-  Global Nrows: 88066011
-  Global NNZ: 2232558031
-  Global Memory (GB): 25.6069
-  Pll Memory Overhead (MB): 1126.76
-  Rows per proc MIN: 560466
-  Rows per proc MAX: 1336668
-  Rows per proc AVG: 838724
-  NNZ per proc MIN: 15118680
-  NNZ per proc MAX: 35360838
-  NNZ per proc AVG: 2.12625e+07
+  Global Nrows: 154082511
+  Global NNZ: 3906697531
+  Global Memory (GB): 44.8088
+  Pll Memory Overhead (MB): 1966.69
+  Rows per proc MIN: 981000
+  Rows per proc MAX: 2337168
+  Rows per proc AVG: 1.46745e+06
+  NNZ per proc MIN: 26477184
+  NNZ per proc MAX: 61847712
+  NNZ per proc AVG: 3.72066e+07
 CG solve: 
   Iterations: 50
-  Final Resid Norm: 0.530245
-  WAXPY Time: 0.557137
-  WAXPY Flops: 3.648e+10
-  WAXPY Mflops: 65477.7
-  DOT Time: 6.83713
-  DOT Flops: 1.6e+10
-  DOT Mflops: 2340.16
-  MATVEC Time: 4.69991
-  MATVEC Flops: 2.27721e+11
-  MATVEC Mflops: 48452.2
+  Final Resid Norm: 0.502157
+  WAXPY Time: 0.641499
+  WAXPY Flops: 6.384e+10
+  WAXPY Mflops: 99517
+  DOT Time: 11.4589
+  DOT Flops: 2.8e+10
+  DOT Mflops: 2443.52
+  MATVEC Time: 3.72168
+  MATVEC Flops: 3.98483e+11
+  MATVEC Mflops: 107071
   Total: 
-    Total CG Time: 12.1132
-    Total CG Flops: 2.80201e+11
-    Total CG Mflops: 23131.9
-  Time per iteration: 0.242264
-Total Program Time: 23.8892
+    Total CG Time: 15.8558
+    Total CG Flops: 4.90323e+11
+    Total CG Mflops: 30924
+  Time per iteration: 0.317115
+Total Program Time: 36.1042
 
 root@irazu-sts-0:/nfs/mantevo-benchmarks/miniFE-2.2.0/ref/basic# 
