@@ -1,0 +1,646 @@
+(pytorch-gpu-nvidia) root@barva-sts-0:/nfs/ai-benchmarks# python run_ai_bench_training.py 
+2024-05-19 04:05:12.743225: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-05-19 04:05:12.788885: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-05-19 04:05:12.788926: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-05-19 04:05:12.790374: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-05-19 04:05:12.797465: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-05-19 04:05:13.574111: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+
+>>   AI-Benchmark-v.0.1.2   
+>>   Let the AI Games begin..
+
+Start Time = 04:05:14
+2024-05-19 04:05:15.430902: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:15.481878: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:15.482084: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.075526: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.075681: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.075799: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.075881: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+2024-05-19 04:05:17.076507: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.076658: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.076767: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.076959: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.077087: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.077195: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+2024-05-19 04:05:17.077340: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.077508: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.077689: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.077859: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.077995: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:17.078070: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+*  TF Version: 2.15.0
+*  Platform: Linux-5.15.0-102-generic-x86_64-with-glibc2.35
+*  CPU: N/A
+*  CPU RAM: 59 GB
+*  GPU/0: GRID A100D-3-40C MIG 3g.37gb
+*  GPU RAM: 34.9 GB
+*  CUDA Version: 12.1
+*  CUDA Build: V12.1.66
+
+The benchmark is running...
+The tests might take up to 20 minutes
+Please don't interrupt the script
+
+1/19. MobileNet-V2
+
+2024-05-19 04:05:24.078720: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:24.078906: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:24.079009: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:24.079477: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:24.079616: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:24.079714: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:24.079910: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:24.080060: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:24.080183: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+2024-05-19 04:05:24.238582: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:388] MLIR V1 optimization pass is not enabled
+2024-05-19 04:05:30.835723: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8906
+Training Time: 7419 ms
+Training Time: 106 ms
+Training Time: 95 ms
+Training Time: 96 ms
+Training Time: 95 ms
+Training Time: 94 ms
+Training Time: 94 ms
+Training Time: 94 ms
+Training Time: 94 ms
+Training Time: 94 ms
+Training Time: 96 ms
+Training Time: 95 ms
+Training Time: 93 ms
+Training Time: 93 ms
+Training Time: 93 ms
+Training Time: 95 ms
+Training Time: 96 ms
+Training Time: 95 ms
+Training Time: 95 ms
+Training Time: 94 ms
+Training Time: 96 ms
+Training Time: 96 ms
+
+1.1 - training  | batch=50, size=224x224: 95.2 ± 2.6 ms
+
+2/19. Inception-V3
+
+2024-05-19 04:05:42.824256: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:42.824572: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:42.824721: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:42.824970: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:42.825110: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:05:42.825215: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 10219 ms
+Training Time: 112 ms
+Training Time: 111 ms
+Training Time: 111 ms
+Training Time: 111 ms
+Training Time: 112 ms
+Training Time: 111 ms
+Training Time: 113 ms
+Training Time: 112 ms
+Training Time: 114 ms
+Training Time: 113 ms
+Training Time: 113 ms
+Training Time: 112 ms
+Training Time: 113 ms
+Training Time: 114 ms
+Training Time: 113 ms
+Training Time: 112 ms
+Training Time: 111 ms
+Training Time: 111 ms
+Training Time: 111 ms
+Training Time: 110 ms
+Training Time: 110 ms
+
+2.1 - training  | batch=20, size=346x346: 112 ± 1 ms
+
+3/19. Inception-V4
+
+2024-05-19 04:06:02.388744: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:02.388951: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:02.389055: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:02.389232: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:02.389344: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:02.389422: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 9546 ms
+Training Time: 109 ms
+Training Time: 109 ms
+Training Time: 109 ms
+Training Time: 109 ms
+Training Time: 109 ms
+Training Time: 109 ms
+Training Time: 108 ms
+Training Time: 108 ms
+Training Time: 108 ms
+Training Time: 108 ms
+Training Time: 110 ms
+Training Time: 109 ms
+Training Time: 108 ms
+Training Time: 109 ms
+Training Time: 108 ms
+Training Time: 109 ms
+Training Time: 108 ms
+Training Time: 109 ms
+Training Time: 108 ms
+Training Time: 109 ms
+Training Time: 109 ms
+
+3.1 - training  | batch=10, size=346x346: 108.7 ± 0.6 ms
+
+4/19. Inception-ResNet-V2
+
+2024-05-19 04:06:20.958908: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:20.959140: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:20.959241: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:20.959398: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:20.959502: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:20.959592: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 10846 ms
+Training Time: 116 ms
+Training Time: 116 ms
+Training Time: 115 ms
+Training Time: 116 ms
+Training Time: 119 ms
+Training Time: 116 ms
+Training Time: 115 ms
+Training Time: 115 ms
+Training Time: 115 ms
+Training Time: 115 ms
+Training Time: 115 ms
+Training Time: 116 ms
+Training Time: 116 ms
+Training Time: 116 ms
+Training Time: 116 ms
+Training Time: 115 ms
+Training Time: 115 ms
+Training Time: 116 ms
+Training Time: 115 ms
+Training Time: 116 ms
+Training Time: 116 ms
+
+4.1 - training  | batch=8, size=346x346: 115.7 ± 0.9 ms
+
+5/19. ResNet-V2-50
+
+2024-05-19 04:06:45.624638: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:45.624851: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:45.624953: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:45.625118: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:45.625221: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:45.625303: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 5463 ms
+Training Time: 67 ms
+Training Time: 65 ms
+Training Time: 65 ms
+Training Time: 64 ms
+Training Time: 65 ms
+Training Time: 65 ms
+Training Time: 65 ms
+Training Time: 64 ms
+Training Time: 65 ms
+Training Time: 64 ms
+Training Time: 65 ms
+Training Time: 65 ms
+Training Time: 65 ms
+Training Time: 66 ms
+Training Time: 65 ms
+Training Time: 64 ms
+Training Time: 64 ms
+Training Time: 64 ms
+Training Time: 64 ms
+Training Time: 65 ms
+Training Time: 64 ms
+
+5.1 - training  | batch=10, size=346x346: 64.8 ± 0.7 ms
+
+6/19. ResNet-V2-152
+
+2024-05-19 04:06:56.545983: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:56.546197: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:56.546305: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:56.546478: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:56.546583: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:06:56.546672: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 6750 ms
+Training Time: 88 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 88 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 87 ms
+Training Time: 86 ms
+Training Time: 87 ms
+
+6.1 - training  | batch=10, size=256x256: 87.0 ± 0.4 ms
+
+7/19. VGG-16
+
+2024-05-19 04:07:15.107693: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:15.108410: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:15.108600: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:15.108763: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:15.108875: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:15.108954: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 2807 ms
+Training Time: 67 ms
+Training Time: 67 ms
+Training Time: 67 ms
+Training Time: 67 ms
+Training Time: 66 ms
+Training Time: 66 ms
+Training Time: 66 ms
+Training Time: 66 ms
+Training Time: 66 ms
+Training Time: 66 ms
+Training Time: 67 ms
+Training Time: 66 ms
+Training Time: 65 ms
+Training Time: 66 ms
+Training Time: 66 ms
+Training Time: 66 ms
+Training Time: 66 ms
+Training Time: 66 ms
+Training Time: 66 ms
+Training Time: 67 ms
+Training Time: 66 ms
+
+7.1 - training  | batch=2, size=224x224: 66.2 ± 0.5 ms
+
+8/19. SRCNN 9-5-5
+
+2024-05-19 04:07:21.065359: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:21.065583: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:21.065684: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:21.065839: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:21.065944: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:21.066024: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 11407 ms
+Training Time: 152 ms
+Training Time: 152 ms
+Training Time: 152 ms
+Training Time: 150 ms
+Training Time: 151 ms
+Training Time: 153 ms
+Training Time: 168 ms
+Training Time: 153 ms
+Training Time: 154 ms
+Training Time: 150 ms
+Training Time: 152 ms
+Training Time: 153 ms
+Training Time: 152 ms
+Training Time: 152 ms
+Training Time: 169 ms
+Training Time: 166 ms
+Training Time: 169 ms
+Training Time: 169 ms
+Training Time: 169 ms
+Training Time: 152 ms
+Training Time: 152 ms
+
+8.1 - training  | batch=10, size=512x512: 157 ± 7 ms
+
+9/19. VGG-19 Super-Res
+
+2024-05-19 04:07:50.615001: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:50.615213: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:50.615315: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:50.615462: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:50.615563: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:07:50.615646: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 1673 ms
+Training Time: 127 ms
+Training Time: 126 ms
+Training Time: 126 ms
+Training Time: 126 ms
+Training Time: 126 ms
+Training Time: 127 ms
+Training Time: 126 ms
+Training Time: 127 ms
+Training Time: 127 ms
+Training Time: 127 ms
+Training Time: 126 ms
+Training Time: 126 ms
+Training Time: 127 ms
+Training Time: 126 ms
+Training Time: 126 ms
+Training Time: 126 ms
+Training Time: 126 ms
+Training Time: 126 ms
+Training Time: 127 ms
+Training Time: 127 ms
+Training Time: 128 ms
+
+9.1 - training  | batch=10, size=224x224: 126.5 ± 0.6 ms
+
+10/19. ResNet-SRGAN
+
+2024-05-19 04:08:06.032891: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:06.033182: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:06.033294: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:06.033465: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:06.033578: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:06.033663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 3798 ms
+Training Time: 95 ms
+Training Time: 93 ms
+Training Time: 92 ms
+Training Time: 93 ms
+Training Time: 91 ms
+Training Time: 92 ms
+Training Time: 92 ms
+Training Time: 91 ms
+Training Time: 93 ms
+Training Time: 92 ms
+Training Time: 92 ms
+Training Time: 92 ms
+Training Time: 92 ms
+Training Time: 92 ms
+Training Time: 92 ms
+Training Time: 93 ms
+Training Time: 92 ms
+Training Time: 91 ms
+Training Time: 94 ms
+Training Time: 92 ms
+Training Time: 95 ms
+
+10.1 - training  | batch=5, size=512x512: 92.4 ± 1.1 ms
+
+11/19. ResNet-DPED
+
+2024-05-19 04:08:19.987855: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:19.988162: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:19.988278: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:19.988450: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:19.988611: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:19.988698: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 2975 ms
+Training Time: 104 ms
+Training Time: 103 ms
+Training Time: 103 ms
+Training Time: 103 ms
+Training Time: 104 ms
+Training Time: 103 ms
+Training Time: 103 ms
+Training Time: 102 ms
+Training Time: 103 ms
+Training Time: 103 ms
+Training Time: 102 ms
+Training Time: 103 ms
+Training Time: 102 ms
+Training Time: 103 ms
+Training Time: 103 ms
+Training Time: 103 ms
+Training Time: 102 ms
+Training Time: 103 ms
+Training Time: 103 ms
+Training Time: 103 ms
+Training Time: 104 ms
+
+11.1 - training  | batch=15, size=128x128: 103.0 ± 0.6 ms
+
+12/19. U-Net
+
+2024-05-19 04:08:40.793982: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:40.794185: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:40.794304: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:40.794464: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:40.794577: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:40.794658: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 9110 ms
+Training Time: 114 ms
+Training Time: 114 ms
+Training Time: 113 ms
+Training Time: 113 ms
+Training Time: 112 ms
+Training Time: 113 ms
+Training Time: 113 ms
+Training Time: 114 ms
+Training Time: 113 ms
+Training Time: 115 ms
+Training Time: 113 ms
+Training Time: 113 ms
+Training Time: 113 ms
+Training Time: 114 ms
+Training Time: 112 ms
+Training Time: 113 ms
+Training Time: 113 ms
+Training Time: 113 ms
+Training Time: 114 ms
+Training Time: 114 ms
+Training Time: 114 ms
+
+12.1 - training  | batch=4, size=256x256: 113.3 ± 0.7 ms
+
+13/19. Nvidia-SPADE
+
+2024-05-19 04:08:55.934744: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:55.934951: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:55.935060: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:55.935208: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:55.935312: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:08:55.935389: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 8288 ms
+Training Time: 63 ms
+Training Time: 63 ms
+Training Time: 62 ms
+Training Time: 62 ms
+Training Time: 62 ms
+Training Time: 62 ms
+Training Time: 61 ms
+Training Time: 61 ms
+Training Time: 62 ms
+Training Time: 61 ms
+Training Time: 61 ms
+Training Time: 61 ms
+Training Time: 61 ms
+Training Time: 62 ms
+Training Time: 62 ms
+Training Time: 62 ms
+Training Time: 62 ms
+Training Time: 61 ms
+Training Time: 62 ms
+Training Time: 63 ms
+Training Time: 62 ms
+
+13.1 - training  | batch=1, size=128x128: 61.8 ± 0.7 ms
+
+14/19. ICNet
+
+2024-05-19 04:09:10.530345: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:10.530558: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:10.530662: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:10.530823: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:10.530979: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:10.531066: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 6384 ms
+Training Time: 444 ms
+Training Time: 444 ms
+Training Time: 441 ms
+Training Time: 442 ms
+Training Time: 441 ms
+Training Time: 539 ms
+Training Time: 517 ms
+Training Time: 532 ms
+Training Time: 436 ms
+Training Time: 427 ms
+Training Time: 519 ms
+Training Time: 517 ms
+Training Time: 441 ms
+Training Time: 451 ms
+Training Time: 451 ms
+
+14.1 - training  | batch=10, size=1024x1536: 469 ± 40 ms
+
+15/19. PSPNet
+
+2024-05-19 04:09:41.802474: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:41.802686: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:41.802789: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:41.802937: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:41.803043: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:41.803137: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 7457 ms
+Training Time: 71 ms
+Training Time: 70 ms
+Training Time: 70 ms
+Training Time: 69 ms
+Training Time: 70 ms
+Training Time: 69 ms
+Training Time: 70 ms
+Training Time: 69 ms
+Training Time: 70 ms
+Training Time: 70 ms
+Training Time: 70 ms
+Training Time: 71 ms
+Training Time: 70 ms
+Training Time: 69 ms
+Training Time: 69 ms
+Training Time: 69 ms
+Training Time: 69 ms
+Training Time: 69 ms
+Training Time: 69 ms
+Training Time: 71 ms
+Training Time: 69 ms
+
+15.1 - training  | batch=1, size=512x512: 69.7 ± 0.7 ms
+
+16/19. DeepLab
+
+2024-05-19 04:09:54.428686: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:54.428942: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:54.429049: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:54.429236: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:54.429348: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:09:54.429433: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+Training Time: 6197 ms
+Training Time: 63 ms
+Training Time: 62 ms
+Training Time: 62 ms
+Training Time: 62 ms
+Training Time: 63 ms
+Training Time: 63 ms
+Training Time: 62 ms
+Training Time: 63 ms
+Training Time: 62 ms
+Training Time: 63 ms
+Training Time: 62 ms
+Training Time: 62 ms
+Training Time: 63 ms
+Training Time: 62 ms
+Training Time: 61 ms
+Training Time: 62 ms
+Training Time: 62 ms
+Training Time: 61 ms
+Training Time: 61 ms
+Training Time: 61 ms
+Training Time: 61 ms
+
+16.1 - training  | batch=1, size=384x384: 62.0 ± 0.7 ms
+
+17/19. Pixel-RNN
+
+2024-05-19 04:10:08.018223: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:10:08.018439: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:10:08.018546: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:10:08.018713: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:10:08.018819: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:10:08.018899: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+2024-05-19 04:10:08.313999: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:10:08.314193: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:10:08.314294: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:10:08.314539: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:10:08.314674: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:10:08.314771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+2024-05-19 04:10:29.519831: W tensorflow/c/c_api.cc:305] Operation '{name:'conv2d_out_logits/biases/Adam_1/Assign' id:47115 op device:{requested: '', assigned: ''} def:{{{node conv2d_out_logits/biases/Adam_1/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](conv2d_out_logits/biases/Adam_1, conv2d_out_logits/biases/Adam_1/Initializer/zeros)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+Training Time: 26917 ms
+Training Time: 2197 ms
+Training Time: 2083 ms
+Training Time: 2146 ms
+Training Time: 1984 ms
+
+17.1 - training  | batch=10, size=64x64: 2102 ± 79 ms
+
+18/19. LSTM-Sentiment
+
+2024-05-19 04:11:08.853043: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:11:08.853307: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:11:08.853418: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:11:08.853625: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:11:08.853747: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:11:08.853835: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+2024-05-19 04:11:09.165791: W tensorflow/c/c_api.cc:305] Operation '{name:'Variable_1/Adam_1/Assign' id:325 op device:{requested: '', assigned: ''} def:{{{node Variable_1/Adam_1/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](Variable_1/Adam_1, Variable_1/Adam_1/Initializer/zeros)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+Training Time: 1701 ms
+Training Time: 1022 ms
+Training Time: 1031 ms
+Training Time: 990 ms
+Training Time: 1007 ms
+Training Time: 1024 ms
+Training Time: 980 ms
+Training Time: 967 ms
+Training Time: 1012 ms
+Training Time: 968 ms
+Training Time: 1041 ms
+Training Time: 1001 ms
+Training Time: 1030 ms
+Training Time: 1040 ms
+Training Time: 999 ms
+Training Time: 925 ms
+Training Time: 977 ms
+Training Time: 969 ms
+Training Time: 1016 ms
+Training Time: 1013 ms
+Training Time: 1011 ms
+Training Time: 970 ms
+
+18.1 - training  | batch=10, size=1024x300: 1000 ± 29 ms
+
+19/19. GNMT-Translation
+
+2024-05-19 04:11:32.501042: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:11:32.501318: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:11:32.501425: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:11:32.501598: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:11:32.501708: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-05-19 04:11:32.501791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 35709 MB memory:  -> device: 0, name: GRID A100D-3-40C MIG 3g.37gb, pci bus id: 0000:06:00.0, compute capability: 8.0
+2024-05-19 04:11:32.774687: W tensorflow/c/c_api.cc:305] Operation '{name:'index_to_string/table_init' id:13 op device:{requested: '', assigned: ''} def:{{{node index_to_string/table_init}} = InitializeTableFromTextFileV2[_has_manual_control_dependencies=true, delimiter="\t", key_index=-1, offset=0, value_index=-2, vocab_size=-1](index_to_string, index_to_string/table_init/asset_filepath)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+
+Device Training Score: 21726
+
+For more information and results, please visit http://ai-benchmark.com/alpha
+
+End Time = 04:11:33
+Execution time in minutes = 6.320347633333333
+(pytorch-gpu-nvidia) root@barva-sts-0:/nfs/ai-benchmarks# 
