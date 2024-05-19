@@ -1,0 +1,64 @@
+Kubernetes nodes
+
+root@vm-vultr-2:~# kubectl get no -o wide
+NAME         STATUS   ROLES           AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION       CONTAINER-RUNTIME
+vm-vultr-2   Ready    control-plane   2m38s   v1.28.8   10.51.96.4    <none>        Ubuntu 22.04.4 LTS   5.15.0-102-generic   containerd://1.6.31
+vm-vultr-5   Ready    <none>          86s     v1.28.8   10.51.96.3    <none>        Ubuntu 22.04.4 LTS   5.15.0-102-generic   containerd://1.6.31
+vm-vultr-6   Ready    <none>          72s     v1.28.8   10.51.96.6    <none>        Ubuntu 22.04.4 LTS   5.15.0-102-generic   containerd://1.6.31
+root@vm-vultr-2:~# 
+
+Kubernetes AI Cluster
+
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl get pods -n barva-ns -o wide
+NAME          READY   STATUS    RESTARTS   AGE     IP                NODE         NOMINATED NODE   READINESS GATES
+barva-sts-0   1/1     Running   0          8m20s   192.168.207.204   vm-vultr-5   <none>           <none>
+barva-sts-1   1/1     Running   0          4m19s   192.168.204.158   vm-vultr-6   <none>           <none>
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# 
+
+
+All pods
+
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# kubectl get pods --all-namespaces
+NAMESPACE      NAME                                                              READY   STATUS      RESTARTS   AGE
+barva-ns       barva-sts-0                                                       1/1     Running     0          7m50s
+barva-ns       barva-sts-1                                                       1/1     Running     0          3m49s
+gpu-operator   gpu-feature-discovery-4vsd9                                       1/1     Running     0          18m
+gpu-operator   gpu-feature-discovery-5s78l                                       1/1     Running     0          18m
+gpu-operator   gpu-operator-1716079724-node-feature-discovery-gc-5b64f8b6vmbdk   1/1     Running     0          19m
+gpu-operator   gpu-operator-1716079724-node-feature-discovery-master-dd5cr6vs6   1/1     Running     0          19m
+gpu-operator   gpu-operator-1716079724-node-feature-discovery-worker-6fdfr       1/1     Running     0          19m
+gpu-operator   gpu-operator-1716079724-node-feature-discovery-worker-gfbt8       1/1     Running     0          19m
+gpu-operator   gpu-operator-1716079724-node-feature-discovery-worker-qdpv9       1/1     Running     0          19m
+gpu-operator   gpu-operator-55868fdb9d-wfsbw                                     1/1     Running     0          19m
+gpu-operator   nvidia-container-toolkit-daemonset-jdl8p                          1/1     Running     0          18m
+gpu-operator   nvidia-container-toolkit-daemonset-q9g5q                          1/1     Running     0          18m
+gpu-operator   nvidia-cuda-validator-bphlg                                       0/1     Completed   0          18m
+gpu-operator   nvidia-cuda-validator-j2kcp                                       0/1     Completed   0          18m
+gpu-operator   nvidia-dcgm-exporter-6gp52                                        1/1     Running     0          18m
+gpu-operator   nvidia-dcgm-exporter-csdc6                                        1/1     Running     0          18m
+gpu-operator   nvidia-device-plugin-daemonset-4gphl                              1/1     Running     0          18m
+gpu-operator   nvidia-device-plugin-daemonset-6z7hh                              1/1     Running     0          18m
+gpu-operator   nvidia-operator-validator-dwvcv                                   1/1     Running     0          18m
+gpu-operator   nvidia-operator-validator-m8hrr                                   1/1     Running     0          18m
+kube-system    calico-kube-controllers-787f445f84-q8jhc                          1/1     Running     0          20m
+kube-system    calico-node-ftxp7                                                 1/1     Running     0          20m
+kube-system    calico-node-lh674                                                 1/1     Running     0          20m
+kube-system    calico-node-vchch                                                 1/1     Running     0          20m
+kube-system    coredns-5dd5756b68-p4dm8                                          1/1     Running     0          22m
+kube-system    coredns-5dd5756b68-pjj6r                                          1/1     Running     0          22m
+kube-system    etcd-vm-vultr-2                                                   1/1     Running     0          22m
+kube-system    kube-apiserver-vm-vultr-2                                         1/1     Running     0          22m
+kube-system    kube-controller-manager-vm-vultr-2                                1/1     Running     0          22m
+kube-system    kube-proxy-9x2f5                                                  1/1     Running     0          21m
+kube-system    kube-proxy-jzw5c                                                  1/1     Running     0          21m
+kube-system    kube-proxy-pqsk5                                                  1/1     Running     0          22m
+kube-system    kube-scheduler-vm-vultr-2                                         1/1     Running     0          22m
+olm            catalog-operator-59dfc8c594-c5t7z                                 1/1     Running     0          14m
+olm            olm-operator-79978456c6-lkw5m                                     1/1     Running     0          14m
+olm            operatorhubio-catalog-cf5fm                                       1/1     Running     0          14m
+olm            packageserver-69d7bf7cf-mg2x5                                     1/1     Running     0          14m
+olm            packageserver-69d7bf7cf-tffqx                                     1/1     Running     0          14m
+operators      3625f8a9d54bb318f9d6dd0431a6a9cc681b5e7bf2a1227ae9b378cf2czbwfl   0/1     Completed   0          10m
+operators      kubernetes-mpi-operator-catalog-ssnv5                             1/1     Running     0          10m
+operators      kubernetes-mpi-operator-controller-manager-77799d796d-jcmrg       2/2     Running     0          9m56s
+root@vm-vultr-2:~/kubernetes-mpi-operator-samples/samples# 

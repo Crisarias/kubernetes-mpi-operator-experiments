@@ -1,0 +1,90 @@
+(pytorch-gpu-nvidia) root@vm-vultr-5:/mnt/beegfs/ai-benchmarks/LambdaLabsML-examples/pytorch/distributed/resnet# torchrun --nproc_per_node=1 --nnodes=1 --node_rank=0 --master_addr=10.51.96.3 --master_port=1234 main.py --backend=nccl --batch_size=4096 --learning_rate=0.05 --num_epochs=60 --arch=resnet50
+Start Time = 22:00:22
+/root/miniconda/envs/pytorch-gpu-nvidia/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/root/miniconda/envs/pytorch-gpu-nvidia/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/root/miniconda/envs/pytorch-gpu-nvidia/lib/python3.10/site-packages/torch/nn/modules/conv.py:456: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608935911/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return F.conv2d(input, weight, bias, self.stride,
+---------------------------------------------------------------------------
+Epoch: 0, Accuracy: 0.0
+---------------------------------------------------------------------------
+samples_per_sec: 6110.8638
+samples_per_sec: 6135.7792
+samples_per_sec: 5929.1116
+samples_per_sec: 6113.3170
+samples_per_sec: 6087.5344
+samples_per_sec: 6131.4406
+samples_per_sec: 6095.6531
+samples_per_sec: 6139.0545
+samples_per_sec: 6134.0348
+---------------------------------------------------------------------------
+Epoch: 10, Accuracy: 0.1338
+---------------------------------------------------------------------------
+samples_per_sec: 6089.0822
+samples_per_sec: 6113.0230
+samples_per_sec: 6089.8051
+samples_per_sec: 6126.4577
+samples_per_sec: 6149.0539
+samples_per_sec: 5916.7032
+samples_per_sec: 6090.3563
+samples_per_sec: 6136.1669
+samples_per_sec: 6144.4878
+samples_per_sec: 6171.8727
+---------------------------------------------------------------------------
+Epoch: 20, Accuracy: 0.2595
+---------------------------------------------------------------------------
+samples_per_sec: 6153.5117
+samples_per_sec: 6163.4388
+samples_per_sec: 6080.5459
+samples_per_sec: 6118.1522
+samples_per_sec: 6091.5296
+samples_per_sec: 6057.6827
+samples_per_sec: 6098.3807
+samples_per_sec: 5948.8760
+samples_per_sec: 6170.6582
+samples_per_sec: 6127.4430
+---------------------------------------------------------------------------
+Epoch: 30, Accuracy: 0.3687
+---------------------------------------------------------------------------
+samples_per_sec: 6110.3270
+samples_per_sec: 6105.6516
+samples_per_sec: 6091.2227
+samples_per_sec: 6102.5302
+samples_per_sec: 6128.7840
+samples_per_sec: 6083.8434
+samples_per_sec: 6130.5349
+samples_per_sec: 6089.4101
+samples_per_sec: 6110.4002
+samples_per_sec: 6152.5663
+---------------------------------------------------------------------------
+Epoch: 40, Accuracy: 0.6196
+---------------------------------------------------------------------------
+samples_per_sec: 6136.6312
+samples_per_sec: 6080.4365
+samples_per_sec: 6108.1854
+samples_per_sec: 6106.9618
+samples_per_sec: 6112.2820
+samples_per_sec: 6129.3538
+samples_per_sec: 5999.6239
+samples_per_sec: 6110.2733
+samples_per_sec: 6098.0122
+samples_per_sec: 6049.5353
+---------------------------------------------------------------------------
+Epoch: 50, Accuracy: 0.6283
+---------------------------------------------------------------------------
+samples_per_sec: 6001.5396
+samples_per_sec: 6114.6096
+samples_per_sec: 6030.1364
+samples_per_sec: 6146.1772
+samples_per_sec: 6101.2550
+samples_per_sec: 6132.2108
+samples_per_sec: 6103.6948
+samples_per_sec: 6111.1100
+samples_per_sec: 6116.6552
+---------------------------------------------------------------------------
+Epoch: 59, Accuracy: 0.7191
+---------------------------------------------------------------------------
+samples_per_sec: 6118.6024
+End Time = 22:09:29
+Execution time in minutes = 9.123618083333334

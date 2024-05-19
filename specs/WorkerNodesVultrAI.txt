@@ -1,0 +1,104 @@
+(pytorch-gpu-nvidia) root@vm-vultr-5:~# lscpu
+Architecture:            x86_64
+  CPU op-mode(s):        32-bit, 64-bit
+  Address sizes:         40 bits physical, 48 bits virtual
+  Byte Order:            Little Endian
+CPU(s):                  6
+  On-line CPU(s) list:   0-5
+Vendor ID:               GenuineIntel
+  Model name:            Intel Xeon Processor (Cascadelake)
+    CPU family:          6
+    Model:               85
+    Thread(s) per core:  2
+    Core(s) per socket:  3
+    Socket(s):           1
+    Stepping:            6
+    BogoMIPS:            5985.93
+    Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_go
+                         od nopl xtopology cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdra
+                         nd hypervisor lahf_lm abm cpuid_fault invpcid_single pti ssbd ibrs ibpb fsgsbase bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq clflushopt clwb av
+                         x512cd avx512bw avx512vl xsaveopt arat pku ospke avx512_vnni
+Virtualization features: 
+  Hypervisor vendor:     Microsoft
+  Virtualization type:   full
+Caches (sum of all):     
+  L1d:                   192 KiB (6 instances)
+  L1i:                   192 KiB (6 instances)
+  L2:                    12 MiB (3 instances)
+  L3:                    16 MiB (1 instance)
+NUMA:                    
+  NUMA node(s):          1
+  NUMA node0 CPU(s):     0-5
+Vulnerabilities:         
+  Gather data sampling:  Unknown: Dependent on hypervisor status
+  Itlb multihit:         KVM: Mitigation: VMX unsupported
+  L1tf:                  Mitigation; PTE Inversion
+  Mds:                   Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+  Meltdown:              Mitigation; PTI
+  Mmio stale data:       Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+  Retbleed:              Mitigation; IBRS
+  Spec rstack overflow:  Not affected
+  Spec store bypass:     Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+  Spectre v1:            Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:            Mitigation; IBRS, IBPB conditional, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected
+  Srbds:                 Not affected
+  Tsx async abort:       Not affected
+(pytorch-gpu-nvidia) root@vm-vultr-5:~# 
+
+(pytorch-gpu-nvidia) root@vm-vultr-5:~# lsmem
+RANGE                                 SIZE  STATE REMOVABLE  BLOCK
+0x0000000000000000-0x000000007fffffff   2G online       yes   0-15
+0x0000000100000000-0x0000000f7fffffff  58G online       yes 32-495
+
+Memory block size:       128M
+Total online memory:      60G
+Total offline memory:      0B
+(pytorch-gpu-nvidia) root@vm-vultr-5:~# 
+
+(pytorch-gpu-nvidia) root@vm-vultr-5:~# lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0  63.9M  1 loop /snap/core20/2105
+loop1    7:1    0    87M  1 loop /snap/lxd/27037
+loop2    7:2    0  40.4M  1 loop /snap/snapd/20671
+loop3    7:3    0  38.7M  1 loop /snap/snapd/21465
+loop4    7:4    0  63.9M  1 loop /snap/core20/2318
+loop5    7:5    0    87M  1 loop /snap/lxd/28373
+sr0     11:0    1  1024M  0 rom  
+vda    252:0    0   700G  0 disk 
+├─vda1 252:1    0   512M  0 part /boot/efi
+└─vda2 252:2    0 699.5G  0 part /
+(pytorch-gpu-nvidia) root@vm-vultr-5:~# 
+
+(pytorch-gpu-nvidia) root@vm-vultr-5:~# nvidia-smi
+Sat May 18 20:20:14 2024       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.125.06   Driver Version: 525.125.06   CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  GRID A100D-3-40C    On   | 00000000:06:00.0 Off |                   On |
+| N/A   N/A    P0    N/A /  N/A |      0MiB / 40960MiB |     N/A      Default |
+|                               |                      |              Enabled |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| MIG devices:                                                                |
++------------------+----------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |         Memory-Usage |        Vol|         Shared        |
+|      ID  ID  Dev |           BAR1-Usage | SM     Unc| CE  ENC  DEC  OFA  JPG|
+|                  |                      |        ECC|                       |
+|==================+======================+===========+=======================|
+|  0    0   0   0  |      0MiB / 37611MiB | 42      0 |  3   0    2    0    0 |
+|                  |      0MiB /  4096MiB |           |                       |
++------------------+----------------------+-----------+-----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+(pytorch-gpu-nvidia) root@vm-vultr-5:~# 

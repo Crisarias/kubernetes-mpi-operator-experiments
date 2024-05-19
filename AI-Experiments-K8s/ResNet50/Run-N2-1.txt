@@ -1,0 +1,123 @@
+(pytorch-gpu-nvidia) root@barva-sts-0:/nfs/ai-benchmarks/LambdaLabsML-examples/pytorch/distributed/resnet# /opt/.openmpi/bin/mpirun -H barva-sts-0:1,barva-sts-1:1 -x MASTER_ADDR=barva-sts-0 -x MASTER_PORT=1234 -x PATH -bind-to none -map-by slot -mca pml ob1 -mca btl ^openib python3 main.py --backend=nccl --batch_size=2048 --learning_rate=0.05 --num_epochs=61 --arch=resnet50
+Start Time = 01:50:56
+Start Time = 01:50:56
+/root/miniconda/envs/pytorch-gpu-nvidia/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/root/miniconda/envs/pytorch-gpu-nvidia/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/root/miniconda/envs/pytorch-gpu-nvidia/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/root/miniconda/envs/pytorch-gpu-nvidia/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/root/miniconda/envs/pytorch-gpu-nvidia/lib/python3.10/site-packages/torch/nn/modules/conv.py:456: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608935911/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return F.conv2d(input, weight, bias, self.stride,
+/root/miniconda/envs/pytorch-gpu-nvidia/lib/python3.10/site-packages/torch/nn/modules/conv.py:456: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at /opt/conda/conda-bld/pytorch_1712608935911/work/aten/src/ATen/native/cudnn/Conv_v8.cpp:919.)
+  return F.conv2d(input, weight, bias, self.stride,
+---------------------------------------------------------------------------
+Epoch: 0, Accuracy: 0.0
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+Epoch: 0, Accuracy: 0.0
+---------------------------------------------------------------------------
+samples_per_sec: 10020.0658
+samples_per_sec: 10402.0957
+samples_per_sec: 10614.6748
+samples_per_sec: 9864.6591
+samples_per_sec: 10026.5962
+samples_per_sec: 9622.4539
+samples_per_sec: 9995.1228
+ssh: connect to host 0.0.0.192 port 22: Connection timed out
+samples_per_sec: 10196.2335
+samples_per_sec: 10059.3462
+---------------------------------------------------------------------------
+Epoch: 10, Accuracy: 0.1641
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+Epoch: 10, Accuracy: 0.1641
+---------------------------------------------------------------------------
+samples_per_sec: 10229.5084
+samples_per_sec: 10394.4392
+samples_per_sec: 9753.8537
+samples_per_sec: 10422.3822
+samples_per_sec: 10454.4871
+samples_per_sec: 10456.8019
+samples_per_sec: 10152.8840
+samples_per_sec: 10229.1626
+samples_per_sec: 10090.4747
+samples_per_sec: 10148.5289
+---------------------------------------------------------------------------
+Epoch: 20, Accuracy: 0.2889
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+Epoch: 20, Accuracy: 0.2889
+---------------------------------------------------------------------------
+samples_per_sec: 10304.5912
+samples_per_sec: 10131.6526
+samples_per_sec: 10025.1897
+samples_per_sec: 10350.2622
+samples_per_sec: 10208.3695
+samples_per_sec: 10336.2911
+samples_per_sec: 10024.5112
+samples_per_sec: 10361.4736
+samples_per_sec: 9959.0105
+samples_per_sec: 10280.6055
+---------------------------------------------------------------------------
+Epoch: 30, Accuracy: 0.4719
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+Epoch: 30, Accuracy: 0.4719
+---------------------------------------------------------------------------
+samples_per_sec: 10117.7792
+samples_per_sec: 9970.7545
+samples_per_sec: 10291.9433
+samples_per_sec: 10081.9090
+samples_per_sec: 10293.2539
+samples_per_sec: 10001.5830
+samples_per_sec: 10057.9451
+samples_per_sec: 10319.9581
+samples_per_sec: 10206.1671
+samples_per_sec: 10390.9568
+---------------------------------------------------------------------------
+Epoch: 40, Accuracy: 0.5707
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+Epoch: 40, Accuracy: 0.5707
+---------------------------------------------------------------------------
+samples_per_sec: 10036.0043
+samples_per_sec: 10361.7029
+samples_per_sec: 10535.8850
+samples_per_sec: 10301.5365
+samples_per_sec: 10120.5186
+samples_per_sec: 10347.9723
+samples_per_sec: 9877.3870
+samples_per_sec: 10334.0371
+samples_per_sec: 10006.9642
+samples_per_sec: 10485.4878
+---------------------------------------------------------------------------
+Epoch: 50, Accuracy: 0.678
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+Epoch: 50, Accuracy: 0.678
+---------------------------------------------------------------------------
+samples_per_sec: 10379.1239
+samples_per_sec: 10613.1127
+samples_per_sec: 9726.1121
+samples_per_sec: 10358.0588
+samples_per_sec: 9854.7331
+samples_per_sec: 9766.5064
+samples_per_sec: 10417.7258
+samples_per_sec: 9769.0854
+samples_per_sec: 10270.3801
+samples_per_sec: 10577.4150
+---------------------------------------------------------------------------
+Epoch: 60, Accuracy: 0.7125
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+Epoch: 60, Accuracy: 0.7125
+---------------------------------------------------------------------------
+End Time = 01:56:39
+Execution time in minutes = 5.718202233333333
+samples_per_sec: 10331.6086
+End Time = 01:56:39
+Execution time in minutes = 5.720424633333334
+(pytorch-gpu-nvidia) root@barva-sts-0:/nfs/ai-benchmarks/LambdaLabsML-examples/pytorch/distributed/resnet# 
